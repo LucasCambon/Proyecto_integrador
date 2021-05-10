@@ -10,21 +10,21 @@ Se apunta al público de gamers, aficionados al gaming/videojuegos y coleccionis
 
 ## Página referentes del proyecto
 
-* [Steam] (https://store.steampowered.com/) 
-* [Blizzard - Shop.battle.net] (https://us.shop.battle.net/en-us) 
-* [Epic Games] (https://www.epicgames.com/store/en-US/) 
-* [Black Desert] (https://payment.sea.playblackdesert.com/Pay/Package/) 
-* [Humble Bundle] (https://www.humblebundle.com/store?hmb_source=navbar)
-* [G2A] (https://www.g2a.com/)
+* [Steam](https://store.steampowered.com/) 
+* [Blizzard - Shop.battle.net](https://us.shop.battle.net/en-us) 
+* [Epic Games](https://www.epicgames.com/store/en-US/) 
+* [Black Desert](https://payment.sea.playblackdesert.com/Pay/Package/) 
+* [Humble Bundle](https://www.humblebundle.com/store?hmb_source=navbar)
+* [G2A](https://www.g2a.com/)
 
 ## Autores
 
-* **Alan Merkin** - Idea original, diseño y programación - [AlanGMerkin] (https://github.com/AlanGMerkin)
-* **Esteban Gonzalez** - Idea original, diseño y programación - [EstebanGZ91] (https://github.com/EstebanGZ91)
-* **Lucas Cambon** - Idea original, diseño y programación - [LucasCambon] (https://github.com/LucasCambon)
+* **Alan Merkin** - Idea original, diseño y programación - [AlanGMerkin](https://github.com/AlanGMerkin)
+* **Esteban Gonzalez** - Idea original, diseño y programación - [EstebanGZ91](https://github.com/EstebanGZ91)
+* **Lucas Cambon** - Idea original, diseño y programación - [LucasCambon](https://github.com/LucasCambon)
 
 ## Link del tablero
 
-* [Tablero de Trello] (https://trello.com/b/9yGaanli/proyecto-integrador-grupo-5)
+* [Tablero de Trello](https://trello.com/b/9yGaanli/proyecto-integrador-grupo-5)
 
 
