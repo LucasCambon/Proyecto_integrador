@@ -19,8 +19,8 @@ Se apunta al público de gamers, aficionados al gaming/videojuegos y coleccionis
 
 ## Autores
 
-* **Alan Merkin** - Tengo 29 años, soy de la Provincia de Buenos Aires, estudiante de Programacion Web en Digital House, músico y apasionado por el gaming - [AlanGMerkin](https://github.com/AlanGMerkin)
-* **Esteban Gonzalez** - Tengo 37 años, de Capital Federal, Buenos aires. Estudiante de Programación Web en Digital House. Aficionado al fútbol, video juegos y jugador federado de tenis de mesa - [EstebanGZ91](https://github.com/EstebanGZ91)
+* **Alan Merkin** - Tengo 37 años, de Capital Federal, Buenos aires. Estudiante de Programación Web en Digital House. Aficionado al fútbol, video juegos y jugador federado de tenis de mesa. - [AlanGMerkin](https://github.com/AlanGMerkin)
+* **Esteban Gonzalez** - Tengo 29 años, soy de la Provincia de Buenos Aires, estudiante de Programacion Web en Digital House, músico y apasionado por el gaming. - [EstebanGZ91](https://github.com/EstebanGZ91)
 * **Lucas Cambon** - Tengo 22 años, soy estudiante de ingenieria en informática y programación web. Fanático apasionado de la música, programación, la buena animación, videojuegos y todo su entorno - [LucasCambon](https://github.com/LucasCambon)
 
 ## Link del tablero
