@@ -1,0 +1,23 @@
+{
+  "name": "proyecto_integrador",
+  "version": "1.0.0",
+  "description": "Proyecto de E-Commerce relacionado a la compra de videojuegos, merchandising, features ingame, bundles, y contenido exclusivo.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasCambon/Proyecto_integrador.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LucasCambon/Proyecto_integrador/issues"
+  },
+  "homepage": "https://github.com/LucasCambon/Proyecto_integrador#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
