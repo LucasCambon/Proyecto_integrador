@@ -23,8 +23,8 @@ Se apunta al público de gamers, aficionados al gaming/videojuegos y coleccionis
 * **Esteban Gonzalez** - Tengo 29 años, soy de la Provincia de Buenos Aires, estudiante de Programacion Web en Digital House, músico y apasionado por el gaming. - [EstebanGZ91](https://github.com/EstebanGZ91)
 * **Lucas Cambon** - Tengo 22 años, soy estudiante de ingenieria en informática y programación web. Fanático apasionado de la música, programación, la buena animación, videojuegos y todo su entorno - [LucasCambon](https://github.com/LucasCambon)
 
-## Link del tablero
+## Tablero y Wireframes
 
 * [Tablero de Trello](https://trello.com/b/9yGaanli/proyecto-integrador-grupo-5)
 
-
+* [Wireframes](https://marvelapp.com/prototype/14h8c0ie/screen/79213596)
