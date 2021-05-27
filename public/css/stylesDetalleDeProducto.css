@@ -1,0 +1,132 @@
+
+.cuerpoPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+}
+
+.slideShowBox {
+    display: flex;
+    background-color: #26292D;
+    align-items: flex-end;
+    justify-items: center;
+}
+
+.descripcionDelProducto
+{
+    display: flex;
+    color: gray;
+    justify-content: left;
+}
+
+.barraSuperior {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    background-color: black;
+    justify-content: space-around;
+}
+
+* {
+    background-color: #26292D;
+}
+
+.botonPrecio {
+    margin-left: 75%;
+    margin-bottom: 3%;
+    background-color: forestgreen;
+    color: whitesmoke;
+    border: none;
+    box-shadow: #26292D;
+    height: 75px;
+    width: 200px;
+
+}
+
+.linkPrecio {
+    display: flex;
+    text-decoration: none;
+    color: #ACC1D7;
+    font-size: 38px;
+    text-align: center;
+    background: none;
+    justify-content: center;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    margin-left: 10%;
+    padding: 3%;
+
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 0 0 25em;
+    margin-left: 10%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    justify-content: space-between;
+    
+}
+
+.wishlist {
+    display: flex;
+    align-self: flex-start;
+    border: none;
+}
+
+.links {
+    display: flex;
+    text-decoration: none;
+    color: #ACC1D7;
+    justify-content: center;
+    background-color: forestgreen;
+    font-size: 1.5em;
+    align-content: center;
+    text-align: center;
+    padding: 3px 3px;   
+}
+
+.botonWishlist {
+    display: flex;
+    border: none;
+    flex-grow: 2;
+    background-color: forestgreen;
+    height: 56px;
+    width: 125px;
+}
+
+.botonAlCarrito {
+    display: flex;
+    border: none;
+    flex-grow: 2;
+    background-color: forestgreen;
+    height: 56px;
+    width: 125px;
+}
+
+.botonComprar {
+    display: flex;
+    border: none;
+    flex-grow: 2;
+    background-color: forestgreen;
+    height: 56px;
+    width: 125px;
+}
+
+.iconos {
+    border: none;
+    background-color: forestgreen;
+    color: #ACC1D7;
+}
