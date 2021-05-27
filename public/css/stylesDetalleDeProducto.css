@@ -68,7 +68,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    flex: 0 0 25em;
+    flex: 0 0 30em;
     margin-left: 10%;
 }
 
@@ -90,43 +90,80 @@
     display: flex;
     text-decoration: none;
     color: #ACC1D7;
-    justify-content: center;
-    background-color: forestgreen;
+    justify-self: center;
+    background: none;
     font-size: 1.5em;
-    align-content: center;
-    text-align: center;
-    padding: 3px 3px;   
+    align-self: center;
+    padding: 2px 2px;   
 }
 
 .botonWishlist {
     display: flex;
     border: none;
     flex-grow: 2;
-    background-color: forestgreen;
-    height: 56px;
-    width: 125px;
+    background-color: rgb(0, 95, 0);
+    height: 66px;
+    width: 150px;
 }
 
 .botonAlCarrito {
     display: flex;
     border: none;
     flex-grow: 2;
-    background-color: forestgreen;
-    height: 56px;
-    width: 125px;
+    background-color: rgb(0, 95, 0);
+    height: 66px;
+    width: 150px;
 }
 
 .botonComprar {
     display: flex;
     border: none;
     flex-grow: 2;
-    background-color: forestgreen;
-    height: 56px;
-    width: 125px;
+    background-color: rgb(0, 95, 0);
+    height: 66px;
+    width: 150px;
 }
 
 .iconos {
+    display: flex;
+    align-self: center;
+    justify-self: left;
     border: none;
-    background-color: forestgreen;
+    background-color: rgb(0, 95, 0);
     color: #ACC1D7;
+    
+}
+
+.texto {
+    background: none;
+    margin-left: 20%;
+}
+
+
+.productosRelacionados {
+    margin-top: 5%;
+}
+
+.t-h2 {
+    display: flex;
+    color:#d6cfa4b2;
+    justify-content: center;
+    font-size: 2em;
+}
+
+.Imagenes {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+
+}
+
+.t-comprar {
+    color:rgba(226, 220, 174, 0.884);
+    margin-left: 30%;
+}
+
+.productosRelacionados-hr {
+    margin-top: -1em;
+    border: 1px solid #7E55F3;
 }
