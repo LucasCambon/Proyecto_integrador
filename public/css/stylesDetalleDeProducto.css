@@ -11,6 +11,7 @@
     background-color: #26292D;
     align-items: flex-end;
     justify-items: center;
+    padding-top: 5em;
 }
 
 .descripcionDelProducto
@@ -59,8 +60,9 @@
     flex-direction: row;
     align-items: stretch;
     width: 100%;
-    margin-left: 10%;
+    
     padding: 3%;
+    
 
 }
 
@@ -76,7 +78,7 @@
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    justify-content: space-between;
+    justify-content:space-between;
     
 }
 
@@ -90,10 +92,10 @@
     display: flex;
     text-decoration: none;
     color: #ACC1D7;
-    justify-self: center;
+    justify-content: center;
     background: none;
     font-size: 1.5em;
-    align-self: center;
+    align-content: center;
     padding: 2px 2px;   
 }
 
@@ -102,8 +104,11 @@
     border: none;
     flex-grow: 2;
     background-color: rgb(0, 95, 0);
-    height: 66px;
-    width: 150px;
+    height: 6em;
+    width: 16em;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
 }
 
 .botonAlCarrito {
@@ -111,8 +116,11 @@
     border: none;
     flex-grow: 2;
     background-color: rgb(0, 95, 0);
-    height: 66px;
-    width: 150px;
+    height: 6em;
+    width: 16em;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .botonComprar {
@@ -120,14 +128,17 @@
     border: none;
     flex-grow: 2;
     background-color: rgb(0, 95, 0);
-    height: 66px;
-    width: 150px;
+    height: 6em;
+    width: 16em;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .iconos {
     display: flex;
     align-self: center;
-    justify-self: left;
+    justify-self: flex-start;
     border: none;
     background-color: rgb(0, 95, 0);
     color: #ACC1D7;
@@ -135,8 +146,11 @@
 }
 
 .texto {
+    display: flex;
+    flex-flow: row;
     background: none;
-    margin-left: 20%;
+    justify-content: center;
+    align-content: center;
 }
 
 
@@ -160,10 +174,18 @@
 
 .t-comprar {
     color:rgba(226, 220, 174, 0.884);
-    margin-left: 30%;
+
 }
 
 .productosRelacionados-hr {
     margin-top: -1em;
     border: 1px solid #7E55F3;
+}
+
+.descripcionDelProducto-textbox {
+    display: flex;
+    font-size: 2em;
+    align-content: flex-start;
+    justify-content: flex-start;
+    margin-top: -2%;
 }
