@@ -1,19 +1,3 @@
-
-.cuerpoPrincipal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-}
-
-.slideShowBox {
-    display: flex;
-    background-color: #26292D;
-    align-items: flex-end;
-    justify-items: center;
-    padding-top: 5em;
-}
-
 .descripcionDelProducto
 {
     display: flex;
@@ -21,6 +5,13 @@
     justify-content: left;
 }
 
+
+/* BODY */
+body {
+    background-color: #090013!important;
+}
+
+/* HEADER */
 .barraSuperior {
     display: flex;
     flex-wrap: wrap;
@@ -28,71 +19,47 @@
     background-color: black;
     justify-content: space-around;
 }
-
-* {
-    background-color: #26292D;
+/* CAROUSEL */        
+ #carousel {
+       padding: 2% 15% 1% 15%;
 }
-
-.botonPrecio {
-    margin-left: 75%;
-    margin-bottom: 3%;
-    background-color: forestgreen;
-    color: whitesmoke;
-    border: none;
-    box-shadow: #26292D;
-    height: 75px;
-    width: 200px;
-
+.carousel-item {
+    border: 5px solid black;
 }
-
-.linkPrecio {
+/* CUADRO PRECIO */
+.cuadroPrecio {
     display: flex;
-    text-decoration: none;
-    color: #ACC1D7;
-    font-size: 38px;
-    text-align: center;
-    background: none;
-    justify-content: center;
+    margin: 0 0 0 70%;
+    display: inline-block;
+    top: 70%;
+    border: 2px solid darkorchid ;
+    padding: 0 2rem 0 2rem;
+    background-color: rgba(78, 79, 165, 0.219);
+    box-shadow: 10px 5px 5px rgb(54, 7, 134); 
 }
-
-.fila {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    width: 100%;
-    padding: 3%;   
-
+.display-2 {
+    color: gold;
+    background-color: rgba(78, 79, 165, 0.021);
+    margin: 0;   
 }
-
-.columna {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 0 0 30em;
-    margin-left: 10%;
+/* CONTAINER (DESCRIPCION DE PRECIO Y BOTONES + RECOMENDADOS) */
+#hrPrecio {
+    border: 1px solid darkorchid;
 }
-
+/* CONTAINER - DESCRIPCION DE PRODUCTO */
+#cuadroProd {
+    background-color: rgb(22, 22, 22)!important;
+    border: 1px solid darkorchid;
+}
+#nomProd {
+    color: #d6cfa4b2!important;
+}
 .botones {
     display: flex;
     flex-direction: row;
-    flex-basis: 100%;
-    justify-content:space-between;
-    
+    justify-content: space-around;
 }
-
-
-
-.links {
-    display: flex;
-    text-decoration: none;
-    color: #ACC1D7;
-    justify-content: center;
-    background: transparent;
-    
-    align-content: center;
-       
-}
-
+/* ICONOS */
 .iconos-heart {
     display: flex;
     align-self: center;
@@ -109,7 +76,17 @@
     border: none;
     background-color: transparent;
     padding-right: 1rem;
-    color: darkslateblue;    
+    color: darkcyan;    
+}
+
+.iconos-coins {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+    color: rgb(206, 185, 2);
 }
 
 .texto {
@@ -183,13 +160,40 @@
 }
 
 .container {
-    padding: 5rem;
-    background-color: #26292D;
-}
-#carousel {
-    padding: 5% 20% 0% 20%;   
+    padding: 0rem auto 5rem auto;
+    margin: 0 auto 0 auto;
 }
 
-body {
-    background-color: #26292D!important;
+
+.img-prod-rel {
+    border: 2px solid #6e42c118;
 }
+
+
+
+.lead {
+    font-style: italic;
+    font-size: 1.5rem!important;
+}
+
+.btn-lg {
+    font-size: 2rem!important;
+}
+
+.btn-outline-success {
+    color: gold!important;
+    border-color: darkorchid!important;
+    
+}
+.btn-outline-success:hover {
+    background-color: rgba(78, 79, 165, 0.219)!important;
+}
+.btn-success {
+    color: goldenrod!important;
+    background-color: rgba(78, 79, 165, 0.219)!important;
+    border-color: goldenrod!important;
+    
+}
+
+
+

@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
  </head>
-  
- 
  <body>
     <header>
         <section class="barraSuperior">
@@ -39,8 +37,8 @@
             </div>
         </section>
 
-    </header> 
-
+    </header>
+ <main> 
     <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" data-bs-pause="hover">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -61,74 +59,57 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Próximo</span>
         </button>
-        
-      </div>
-        <!--<section class="container">
-            <img class="img-fluid" src="../public/img/y9DpT.jpg" alt="imagenproducto">
-            <div class="LogoPrecio">
-                <a class="linkPrecio" href="../views/carrito.html"><button class="botonPrecio">Precio</buton></a>
-            </div>    
-        </section>--->
-        
-        <div class="logoPrecio">
-            <a class="linkPrecio" href="../views/carrito.html"><button class="botonPrecio">Precio</buton></a>
-        </div>
-        <section class="container">        
-            <div class="row">
-                <div class="col">    
-                    <div class="h-100 p-5 text-white bg-dark rounded-3">
-                        <h2>Descripción del Producto</h2>
-                        <hr class="my-4">
-                            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis illo necessitatibus ad iste fugit doloremque, ex, quae porro facilis saepe ipsum? Consectetur, vitae eos. Labore quisquam amet illo vero?</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <section class="botones">
-                        <button type="button" class="btn btn-outline-success btn-lg">
-                            <a class="links" href="/views/index.html"><i class="far fa-heart fa-2x iconos-heart"></i>Wishlist</a>
-                        </button>
-                        <button type="button" class="btn btn-outline-success btn-lg">
-                            <a class="links" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-2x iconos-cart"></i>Al Carrito</a>
-                        </button>
-                        <button type="button" class="btn btn-success btn-lg">   
-                            <a class="links" href="../views/carrito.html">Comprar</a>
-                        </button> 
-                    </section>
-                    <section class="productosRelacionados">
-                        
-                        <div class="productosRelacionados Titulo">
-                            <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
-                        </div>
-                        <hr class="productosRelacionados-hr">
-                        <div class="productosRelacionados Imagenes">
-                            <div class="rounded float-start">
-                                <a href="../views/index.html"><img src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
-                            </div>
-                            <div class="rounded mx-auto d-block">
-                                <a href="../views/index.html"><img src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
-                            </div>
-                            <div class="rounded float-end">
-                                <a href="../views/index.html"><img src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
-                            </div>
-                        </div>
-                    </section>
+    </div>
+    <div class="cuadroPrecio">
+        <p class="display-2">Precio</p>
+    </div>    
+    <section class="container">        
+        <hr id="hrPrecio">
+        <div class="row">
+            <div class="col">    
+                <div class="h-100 p-5 text-white bg-dark rounded-3" id="cuadroProd">
+                    <h2 id="nomProd">Nombre del Producto</h2>
+                    <hr id="hrPrecio">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis illo necessitatibus ad iste fugit doloremque, ex, quae porro facilis saepe ipsum? Consectetur, vitae eos. Labore quisquam amet illo vero?</p>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="col">
+                <section class="botones">
+                    <a class="btn btn-outline-success btn-lg" href="/views/index.html"><i class="far fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
+                    <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
+                </section>
+                <section class="productosRelacionados"> 
+                    <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
+                    <hr class="productosRelacionados-hr">
+                    <div class="productosRelacionados Imagenes">
+                        <div class="rounded float-start">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
+                        </div>
+                        <div class="rounded mx-auto d-block">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
+                        </div>
+                        <div class="rounded float-end">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+ </main>
     <footer>
+    <hr id="hrPrecio">
     <br>
     <br>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <h1>FOOTER</h1>
+    <h1 style="text-align: center;">FOOTER</h1>
     <br>
     <br>
-    <hr>
+    <hr id="hrPrecio">
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
  </body>
-
 </html>
