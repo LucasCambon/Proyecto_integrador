@@ -5,7 +5,7 @@
 }
 
 body {
-background-color: grey;
+background-color: #202040!important;
 }
 
 .form-registro {
@@ -25,7 +25,7 @@ background-color: grey;
     margin-bottom: 20px;
 }
 
-.controles {
+.datos_a_ingresar {
     width: 100%;
     background-color: #24303c;
     padding: 10px;
@@ -75,5 +75,51 @@ background-color: grey;
 .IconosRedes {
     display: flex;
     justify-content: center;
+}
+
+.Facebook {
+    color: rgb(39, 118, 192);
+}
+
+
+
+
+/* FOOTER */
+
+
+.footer {
+    text-align: center;
+    background-color: #202040;
+}
+
+
+.footer2 {
+    text-align: center;
+    background-color: #202040;
+}
+
+.footer2 a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.logoSpartanGames {
+    background-color: #202040;
+}
+
+.linksFooter1 a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
+}
+
+.linksFooter2 a {
+    font-size: 12px;
+        color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
 }
 

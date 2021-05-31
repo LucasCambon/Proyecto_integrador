@@ -9,6 +9,6 @@ app.listen(3000, () =>
 
 
 app.get("/", (req, res) => {
-    let htmlPath= path.join(__dirname, "/views/index.html")
+    let htmlPath= path.join(__dirname, "/views/registro.html")
     res.sendFile(htmlPath)
 });
