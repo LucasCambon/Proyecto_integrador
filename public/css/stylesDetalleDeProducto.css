@@ -60,9 +60,7 @@
     flex-direction: row;
     align-items: stretch;
     width: 100%;
-    
-    padding: 3%;
-    
+    padding: 3%;   
 
 }
 
@@ -82,67 +80,36 @@
     
 }
 
-.wishlist {
-    display: flex;
-    align-self: flex-start;
-    border: none;
-}
+
 
 .links {
     display: flex;
     text-decoration: none;
     color: #ACC1D7;
     justify-content: center;
-    background: none;
-    font-size: 1.5em;
+    background: transparent;
+    
     align-content: center;
-    padding: 2px 2px;   
+       
 }
 
-.botonWishlist {
-    display: flex;
-    border: none;
-    flex-grow: 2;
-    background-color: rgb(0, 95, 0);
-    height: 6em;
-    width: 16em;
-    justify-content: center;
-    align-content: center;
-    flex-direction: row;
-}
-
-.botonAlCarrito {
-    display: flex;
-    border: none;
-    flex-grow: 2;
-    background-color: rgb(0, 95, 0);
-    height: 6em;
-    width: 16em;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-.botonComprar {
-    display: flex;
-    border: none;
-    flex-grow: 2;
-    background-color: rgb(0, 95, 0);
-    height: 6em;
-    width: 16em;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-.iconos {
+.iconos-heart {
     display: flex;
     align-self: center;
     justify-self: flex-start;
     border: none;
-    background-color: rgb(0, 95, 0);
-    color: #ACC1D7;
-    
+    background-color: transparent;
+    padding-right: 1rem;
+    color: darkred;    
+}
+.iconos-cart {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+    color: darkslateblue;    
 }
 
 .texto {
@@ -163,18 +130,19 @@
     color:#d6cfa4b2;
     justify-content: center;
     font-size: 2em;
+    margin-bottom: 5%;
 }
 
 .Imagenes {
     display: flex;
     flex-direction: row;
-    align-content: flex-end;
+    align-content: center;
 
 }
 
 .t-comprar {
     color:rgba(226, 220, 174, 0.884);
-
+    
 }
 
 .productosRelacionados-hr {
@@ -186,6 +154,42 @@
     display: flex;
     font-size: 2em;
     align-content: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: -2%;
+    border: 2px solid gray;
+    padding: 1%;
+    
+}
+
+.ico-botones {
+    display:flex;
+    background-color: transparent;
+    float: left;
+    align-self: center;
+    
+}
+
+.ico-palabra {
+    display:flex;
+    background-color: transparent;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.my-4 {
+    color: #6f42c1;
+    margin: 0;
+    /*background-color: #292b2c;*/
+}
+
+.container {
+    padding: 5rem;
+    background-color: #26292D;
+}
+#carousel {
+    padding: 5% 20% 0% 20%;   
+}
+
+body {
+    background-color: #26292D!important;
 }
