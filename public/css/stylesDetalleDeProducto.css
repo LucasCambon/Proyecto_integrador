@@ -1,16 +1,7 @@
-.descripcionDelProducto
-{
-    display: flex;
-    color: gray;
-    justify-content: left;
-}
-
-
 /* BODY */
 body {
     background-color: #090013!important;
 }
-
 /* HEADER */
 .barraSuperior {
     display: flex;
@@ -26,6 +17,7 @@ body {
 .carousel-item {
     border: 5px solid black;
 }
+
 /* CUADRO PRECIO */
 .cuadroPrecio {
     display: flex;
@@ -43,6 +35,11 @@ body {
     margin: 0;   
 }
 /* CONTAINER (DESCRIPCION DE PRECIO Y BOTONES + RECOMENDADOS) */
+/* CONTAINER */
+.container {
+    padding: 0rem auto 5rem auto;
+    margin: 0 auto 0 auto;
+}
 #hrPrecio {
     border: 1px solid darkorchid;
 }
@@ -52,12 +49,33 @@ body {
     border: 1px solid darkorchid;
 }
 #nomProd {
-    color: #d6cfa4b2!important;
+    color: rgb(255, 181, 111)!important;
 }
+.lead {
+    font-style: italic;
+    font-size: 1.5rem!important;
+}
+/* CONTAINER - COLUMNAS */
+/* CONTAINER - BOTONES */
 .botones {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.btn-lg {
+    font-size: 2rem!important;
+}
+.btn-outline-success {
+    color: gold!important;
+    border-color: darkorchid!important;
+}
+.btn-outline-success:hover {
+    background-color: rgba(78, 79, 165, 0.219)!important;
+}
+.btn-success {
+    color: goldenrod!important;
+    background-color: rgba(78, 79, 165, 0.219)!important;
+    border-color: goldenrod!important;   
 }
 /* ICONOS */
 .iconos-heart {
@@ -78,7 +96,6 @@ body {
     padding-right: 1rem;
     color: darkcyan;    
 }
-
 .iconos-coins {
     display: flex;
     align-self: center;
@@ -88,112 +105,26 @@ body {
     padding-right: 1rem;
     color: rgb(206, 185, 2);
 }
-
-.texto {
-    display: flex;
-    flex-flow: row;
-    background: none;
-    justify-content: center;
-    align-content: center;
-}
-
-
+/* RELACIONADOS */
 .productosRelacionados {
     margin-top: 5%;
 }
-
 .t-h2 {
     display: flex;
-    color:#d6cfa4b2;
+    color:rgb(255, 181, 111);
     justify-content: center;
     font-size: 2em;
     margin-bottom: 5%;
 }
-
 .Imagenes {
     display: flex;
     flex-direction: row;
     align-content: center;
-
 }
-
-.t-comprar {
-    color:rgba(226, 220, 174, 0.884);
-    
-}
-
 .productosRelacionados-hr {
     margin-top: -1em;
-    border: 1px solid #7E55F3;
+    border: 1px solid darkorchid;
 }
-
-.descripcionDelProducto-textbox {
-    display: flex;
-    font-size: 2em;
-    align-content: flex-start;
-    justify-content: center;
-    margin-top: -2%;
-    border: 2px solid gray;
-    padding: 1%;
-    
-}
-
-.ico-botones {
-    display:flex;
-    background-color: transparent;
-    float: left;
-    align-self: center;
-    
-}
-
-.ico-palabra {
-    display:flex;
-    background-color: transparent;
-    margin-left: 10px;
-    align-self: center;
-}
-
-.my-4 {
-    color: #6f42c1;
-    margin: 0;
-    /*background-color: #292b2c;*/
-}
-
-.container {
-    padding: 0rem auto 5rem auto;
-    margin: 0 auto 0 auto;
-}
-
-
 .img-prod-rel {
     border: 2px solid #6e42c118;
 }
-
-
-
-.lead {
-    font-style: italic;
-    font-size: 1.5rem!important;
-}
-
-.btn-lg {
-    font-size: 2rem!important;
-}
-
-.btn-outline-success {
-    color: gold!important;
-    border-color: darkorchid!important;
-    
-}
-.btn-outline-success:hover {
-    background-color: rgba(78, 79, 165, 0.219)!important;
-}
-.btn-success {
-    color: goldenrod!important;
-    background-color: rgba(78, 79, 165, 0.219)!important;
-    border-color: goldenrod!important;
-    
-}
-
-
-
