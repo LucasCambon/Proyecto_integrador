@@ -1,0 +1,40 @@
+
+.footer {
+    text-align: center;
+    background-color: #202040;
+}
+
+
+.footer2 {
+    text-align: center;
+    background-color: #202040;
+}
+
+.footer2 a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.logoSpartanGames {
+    background-color: #202040;
+}
+
+.linksFooter1 a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
+}
+
+.linksFooter2 a {
+    font-size: 12px;
+        color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
+}
+
+.derechosReservados {
+    color: black;
+}
