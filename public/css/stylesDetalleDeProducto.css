@@ -1,0 +1,130 @@
+/* BODY */
+body {
+    background-color: #090013!important;
+}
+/* HEADER */
+.barraSuperior {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    background-color: black;
+    justify-content: space-around;
+}
+/* CAROUSEL */        
+ #carousel {
+       padding: 2% 15% 1% 15%;
+}
+.carousel-item {
+    border: 5px solid black;
+}
+
+/* CUADRO PRECIO */
+.cuadroPrecio {
+    display: flex;
+    margin: 0 0 0 70%;
+    display: inline-block;
+    top: 70%;
+    border: 2px solid darkorchid ;
+    padding: 0 2rem 0 2rem;
+    background-color: rgba(78, 79, 165, 0.219);
+    box-shadow: 10px 5px 5px rgb(54, 7, 134); 
+}
+.display-2 {
+    color: gold;
+    background-color: rgba(78, 79, 165, 0.021);
+    margin: 0;   
+}
+/* CONTAINER (DESCRIPCION DE PRECIO Y BOTONES + RECOMENDADOS) */
+/* CONTAINER */
+.container {
+    padding: 0rem auto 5rem auto;
+    margin: 0 auto 0 auto;
+}
+#hrPrecio {
+    border: 1px solid darkorchid;
+}
+/* CONTAINER - DESCRIPCION DE PRODUCTO */
+#cuadroProd {
+    background-color: rgb(22, 22, 22)!important;
+    border: 1px solid darkorchid;
+}
+#nomProd {
+    color: rgb(255, 181, 111)!important;
+}
+.lead {
+    font-style: italic;
+    font-size: 1.5rem!important;
+}
+/* CONTAINER - COLUMNAS */
+/* CONTAINER - BOTONES */
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.btn-lg {
+    font-size: 2rem!important;
+}
+.btn-outline-success {
+    color: gold!important;
+    border-color: darkorchid!important;
+}
+.btn-outline-success:hover {
+    background-color: rgba(78, 79, 165, 0.219)!important;
+}
+.btn-success {
+    color: goldenrod!important;
+    background-color: rgba(78, 79, 165, 0.219)!important;
+    border-color: goldenrod!important;   
+}
+/* ICONOS */
+.iconos-heart {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+    color: darkred;    
+}
+.iconos-cart {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+    color: darkcyan;    
+}
+.iconos-coins {
+    display: flex;
+    align-self: center;
+    justify-self: flex-start;
+    border: none;
+    background-color: transparent;
+    padding-right: 1rem;
+    color: rgb(206, 185, 2);
+}
+/* RELACIONADOS */
+.productosRelacionados {
+    margin-top: 5%;
+}
+.t-h2 {
+    display: flex;
+    color:rgb(255, 181, 111);
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 5%;
+}
+.Imagenes {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.productosRelacionados-hr {
+    margin-top: -1em;
+    border: 1px solid darkorchid;
+}
+.img-prod-rel {
+    border: 2px solid #6e42c118;
+}
