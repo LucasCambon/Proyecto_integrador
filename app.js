@@ -12,3 +12,4 @@ app.get("/", (req, res) => {
     let htmlPath= path.join(__dirname, "/views/index.html")
     res.sendFile(htmlPath)
 });
+
