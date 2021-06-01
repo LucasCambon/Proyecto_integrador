@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="/css/estilos_registro.css">
+    <link rel="stylesheet" href="/public/css/estilos_registro.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Formulario Registro</title>
 </head>
@@ -107,8 +107,10 @@
         <label for="contraseña"></label>
         <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
         <label for="boton"></label>
-        <input class="boton" type="submit" value="Registrar">
-
+        <div class="d-grid gap-2">
+            <input class="btn btn-primary" type="submit" value="Registrarme">              
+        </div>
+      
     </form>
 
         <p>Estoy de acuerdo con <a href="#">Términos y condiciones</a></p>
@@ -122,11 +124,13 @@
         </div>
 
     </section>
+    
+    <br>
 
     <footer class="footer">     
         <section class="footer2">
           <div>
-             <a href="return_home"><img src="/img/logo.png" alt="Logo Spartan Games" class="logoSpartanGames"></img></a>
+             <a href="return_home"><img src="/public/img/logo.png" alt="Logo Spartan Games" class="logoSpartanGames"></img></a>
           </div>
           <div class="linksFooter1">
              <a href="empleos">   EMPLEOS   </a>
@@ -146,6 +150,8 @@
            </div>    
         </section>
       </footer>   
+      <br>
+      <br>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
