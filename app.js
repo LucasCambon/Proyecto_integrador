@@ -6,7 +6,7 @@ app.use('/public/img', express.static(__dirname +'/public/img'));
 app.listen(3000, () =>
     console.log("Levantando el servidor")
     );      
-app.use('/public/css/stylesDetalleDeProducto.css',express.static(__dirname + '/public/css/stylesDetalleDeProducto.css'));
+app.use('/public/css/stylesDetalleDeProducto.css',express.static(__dirname + '/public/css/stylesDetalleDeProducto.css'),express.static(__dirname + '/public/img/logo.jpg'));
 
 
 app.get("/", (req, res) => {
