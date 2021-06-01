@@ -3,13 +3,172 @@ body {
     background-color: #090013!important;
 }
 /* HEADER */
-.barraSuperior {
+
+.navBar{
     display: flex;
-    flex-wrap: wrap;
-    color: grey;
-    background-color: black;
-    justify-content: space-around;
+    width: 100%;
 }
+
+.parteIzq{
+    display: flex;
+    align-items: stretch;
+
+}
+
+.parteDer{
+    display: flex;
+    align-items: stretch;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+    margin-left: 3%;
+}
+
+.botones{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+}
+
+.botonNavBar{
+    width: 100px;
+}
+
+.busqueda{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+}
+
+.logeo{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+}
+
+.wrapper {
+    border:1px solid #000;
+    display:inline-block;
+}
+
+input,
+button {
+    background-color:transparent;
+    border:0;
+    
+}
+
+.barra{
+    width: 250px;
+    height: 40px;
+}
+
+.logoOculto{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    padding: 0 15px;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+
+@media only screen and (min-width: 977px) {
+    div.menuOculto{
+        display: none;
+    }
+    div.toogleBar{
+        display: none;
+    }
+  }
+
+@media only screen and (max-width: 2000px) {
+    div.logoOculto{
+        display: none;
+    }
+  }
+@media only screen and (max-width: 977px){
+    form.busqueda{
+        display: none;
+    }
+    div.botones{
+        display: none;
+    }
+}
+@media only screen and (max-width: 596px){
+    div.logeo{
+        display: none;
+    }
+    div.logo{
+        display: none;
+    }
+}
+
+
+.btn-outline-secondary{
+    background-color: #282380!important;
+    color: #b5179e!important;
+    box-shadow: #480ca8 0px 0px 0px 3px!important;
+    border: none!important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #90137E!important;
+    color:#480ca8!important;
+}
+
 /* CAROUSEL */        
  #carousel {
        padding: 2% 15% 1% 15%;
@@ -127,4 +286,55 @@ body {
 }
 .img-prod-rel {
     border: 2px solid #6e42c118;
+}
+
+
+/* FOOOTER */
+
+.footer {
+    text-align: center;
+    background-color: #202040;
+}
+
+.derechosReservados {
+    color: darkgoldenrod;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px) {
+    .botones {
+        padding-top: 2rem;
+    }
+    .img-prod-rel {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769) {
+    .img-prod-rel {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+    }
+    .col {
+        width: 75%;
+        height: auto;
+    }
+  
+    
+}
+
+@media (max-width: 768px) {
+    .cuadroPrecio {
+        display: flex;
+        justify-content:center;
+        width: 25%;
+        
+    }
 }
