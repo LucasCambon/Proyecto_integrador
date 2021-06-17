@@ -1,16 +1,27 @@
 const express = require("express");
 const app = express();
-const path = require('path');
+const mainRoutes = require("./src/routes/mainRoutes")
+const productsRoutes = require("./src/routes/productsRoutes")
+const usersRoutes = require("./src/routes/usersRoutes")
+var path = require('path');
 
-app.use('/public/img', express.static(__dirname +'/public/img'));
-app.use('/public/css', express.static(__dirname + '/public/css'));
+app.use('/public', express.static(__dirname +'/public'));
 
-app.listen(3000, () =>
-    console.log("Levantando el servidor")
-    );
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Servidor corriendo");
+})
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'ejs');
+app.use("/", mainRoutes)
+app.use("/", productsRoutes)
+app.use("/", usersRoutes)
 
 
-app.get("/", (req, res) => {
+
+
+/*app.get("/", (req, res) => {
     let htmlPath= path.join(__dirname, "/views/index.html")
     res.sendFile(htmlPath)
-});
+});*/

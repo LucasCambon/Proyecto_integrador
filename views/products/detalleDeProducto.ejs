@@ -10,63 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
  </head>
  <body>
-	<header>
+	
+    <%- include("../partials/header") %>
 
-        <nav class="navbar">
-            <div class="toogleBar">
-                <div id="mySidebar" class="sidebar">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), ShowAndHide()">×</a>
-                    <a href="#">Home</a>
-                    <a href="#">Juegos</a>
-                    <a href="#">Servicios</a>
-                    <a href="#">Gear</a>
-                    <a href="#">Log In</a>
-                </div>
-                
-                <div id="main">
-                    <button id="botonToggle" class="fa fa-bars fa-2x" onclick="openNav(), ShowAndHide()"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onClick = "this.style.visibility= 'hidden';">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> 
-                </div>
-            </div>            
-            <section class="parteIzq">
-                <div class="logo">
-                    <button class="btn btn-outline-secondary botonNavBar" type="button">LOGO</button>
-                </div>
-                <div class="botones">
-                    <button class="btn btn-outline-secondary dropdown-toggle botonNavBar" type="button" data-bs-toggle="dropdown" aria-expanded="false">Juegos</button>
-                    <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Juego 1</a></li>
-                    <li><a class="dropdown-item" href="#">Juego 2</a></li>
-                    <li><a class="dropdown-item" href="#">Juego 3</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Tienda completa</a></li>
-                    </ul>
-                </div>
-                <div class="botones">
-                    <button class="btn btn-outline-secondary botonNavBar" type="button">Servicios</button>
-                </div>
-                <div class="botones">
-                    <button class="btn btn-outline-secondary botonNavBar" type="button">Gear</button>
-                </div>
-            </section>
-            <section class="parteDer">   
-                <form class="busqueda">
-                    <label class=".wrapper">
-                        <button class="fa fa-search fa-2x" aria-hidden="true"></button>
-                        <input class="barra" type="search" name="barraDeBusqueda" placeholder="Buscar en la tienda"></input type="submit" value="buscar">
-                    </label>
-                </form>
-                <div class="logeo">
-                    <button class="btn btn-outline-secondary" type="button">Log In</button>
-                </div>
-            </section>
-            <div class="logoOculto">
-                <button class="btn btn-outline-secondary botonNavBar" type="button">LOGO</button>
-            </div>      
-        </nav>
-
-    </header>
  <main> 
     <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" data-bs-pause="hover">
         <div class="carousel-inner">
@@ -130,31 +76,8 @@
     <br>
     <br>
  </main>
-    <footer class="footer">
-    <hr id="hrPrecio">
-    <section class="footer2">
-        <div>
-           <a href="return_home"><img src="../public/img/logo.jpg" alt="Logo Spartan Games" class="logoSpartanGames"></img></a>
-        </div>
-        <div class="linksFooter1">
-           <a href="empleos">   EMPLEOS   </a>
-           <a href="información">   INFORMACIÓN   </a>
-           <a href="asistencia">   ASISTENCIA   </a>
-           <a href="contacto">   CONTACTO   </a>
-           <a href="prensa">   PRENSA   </a>
-           <a href="api">   API</a>
-        </div>
-           <p class="derechosReservados">©2021 SPARTAN GAMES, INC. TODOS LOS DERECHOS RESERVADOS.</p>
-           <p class="derechosReservados">Todas las marcas comerciales a las que se hace referencia son propiedad de sus respectivos dueños.</p>
-        <div class="linksFooter2">
-           <a href="privacidad">   PRIVACIDAD   </a>
-           <a href="legal">   LEGAL   </a>
-           <a href="términos">   TÉRMINOS   </a>
-           <a href="cookie_policy">   COOKIE POLICY</a>
-         </div>    
-      </section>
-    <hr id="hrPrecio">
-    </footer>
+    
+ <%- include("../partials/footer") %>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
  </body>
