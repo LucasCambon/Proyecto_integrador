@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: #202040!important;
+}
+
+.form-ingreso {
+    width: 400px;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+
+.form-ingreso h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.datos_a_ingresar {
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-ingreso p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.form-ingreso a {
+    color: #1f53c5;
+    text-decoration: underline;
+}
+
+
+.form-ingreso a:hover {
+    color:white;
+    text-decoration: underline;
+}
+
+.form-ingreso .boton {
+    width: 100%;
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+.Redes { 
+    font-size: 2em;
+    text-align: center;
+    margin-right: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.IconosRedes {
+    display: flex;
+    justify-content: center;
+}
+
+.Facebook {
+    color: rgb(39, 118, 192);
+}
+
+
+
+/* FOOTER */
+
+
+
+.footer {
+    text-align: center;
+    background-color: #202040;
+}
+
+
+.footer2 {
+    text-align: center;
+    background-color: #202040;
+}
+
+.footer2 a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.logoSpartanGames {
+    background-color: #202040;
+}
+
+.linksFooter1 a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
+}
+
+.linksFooter2 a {
+    font-size: 12px;
+        color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    word-spacing: 5pt;
+}
+
+.derechosReservados {
+    color: black;
+}

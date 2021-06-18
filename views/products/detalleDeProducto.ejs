@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+
+ <head>
+    <meta charset="utf-8">
+    <title>Detalle de Producto</title>
+    <link rel="stylesheet" href="../public/css/stylesDetalleDeProducto.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ </head>
+ <body>
+	
+    <%- include("../partials/header") %>
+
+ <main> 
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" data-bs-pause="hover">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/public/img/y9DpT.jpg"  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+    <div class="cuadroPrecio">
+        <p class="display-2">Precio</p>
+    </div>    
+    <section class="container">        
+        <hr id="hrPrecio">
+        <div class="row">
+            <div class="col">    
+                <div class="h-100 p-5 text-white bg-dark rounded-3" id="cuadroProd">
+                    <h2 id="nomProd">Nombre del Producto</h2>
+                    <hr id="hrPrecio">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis illo necessitatibus ad iste fugit doloremque, ex, quae porro facilis saepe ipsum? Consectetur, vitae eos. Labore quisquam amet illo vero?</p>
+                </div>
+            </div>
+            <div class="col">
+                <section class="botones">
+                    <a class="btn btn-outline-success btn-lg" href="/views/index.html"><i class="far fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
+                    <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
+                </section>
+                <section class="productosRelacionados"> 
+                    <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
+                    <hr class="productosRelacionados-hr">
+                    <div class="productosRelacionados Imagenes">
+                        <div class="rounded float-start">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
+                        </div>
+                        <div class="rounded mx-auto d-block">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
+                        </div>
+                        <div class="rounded float-end">
+                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+ </main>
+    
+ <%- include("../partials/footer") %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+ </body>
+</html>
