@@ -8,7 +8,7 @@ const controladorUsers  =
     },
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
-    }
+    },
 }
 
 module.exports = controladorUsers;
