@@ -1,0 +1,58 @@
+<header>
+
+    <nav class="navbar">
+        <div class="toogleBar">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), ShowAndHide()">×</a>
+                <a href="../">Home</a>
+                <a href="#">Juegos</a>
+                <a href="#">Servicios</a>
+                <a href="#">Gear</a>
+                <a href="../ingreso">Ingreso</a>
+                <a href="../registro">Registro</a>
+            </div>
+            
+            <div id="main">
+                <button id="botonToggle" class="fa fa-bars fa-2x" onclick="openNav(), ShowAndHide()"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onClick = "this.style.visibility= 'hidden';">
+                    <span class="navbar-toggler-icon"></span>
+                </button> 
+            </div>
+        </div>            
+        <section class="parteIzq">
+            <div class="logo">
+                <a href="../" class="btn btn-outline-secondary botonNavBar" type="button">LOGO</a>
+            </div>
+            <div class="botones">
+                <button class="btn btn-outline-secondary dropdown-toggle botonNavBar" type="button" data-bs-toggle="dropdown" aria-expanded="false">Juegos</button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Juego 1</a></li>
+                <li><a class="dropdown-item" href="#">Juego 2</a></li>
+                <li><a class="dropdown-item" href="#">Juego 3</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Tienda completa</a></li>
+                </ul>
+            </div>
+            <div class="botones">
+                <button class="btn btn-outline-secondary botonNavBar" type="button">Servicios</button>
+            </div>
+            <div class="botones">
+                <button class="btn btn-outline-secondary botonNavBar" type="button">Gear</button>
+            </div>
+        </section>
+        <section class="parteDer">   
+            <form class="busqueda">
+                <label class=".wrapper">
+                    <button class="fa fa-search fa-2x" aria-hidden="true"></button>
+                    <input class="barra" type="search" name="barraDeBusqueda" placeholder="Buscar en la tienda"></input type="submit" value="buscar">
+                </label>
+            </form>
+            <div class="logeo">
+                <a href="../registro" class="btn btn-outline-secondary" type="button">Registrate</a>
+            </div>
+            <div class="logeo">
+                <a href="../ingreso" class="btn btn-outline-secondary" type="button">Log In</a>
+            </div>
+        </section>   
+    </nav>
+
+</header>
