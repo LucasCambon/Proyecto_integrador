@@ -8,11 +8,7 @@ const controladorUsers  =
     },
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
-<<<<<<< HEAD
     },
-=======
-    }
->>>>>>> EstebanGonzalez
 }
 
 module.exports = controladorUsers;
