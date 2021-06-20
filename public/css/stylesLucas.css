@@ -75,27 +75,18 @@
     display: flex;
     align-items: stretch;
     padding: 0 15px;
-<<<<<<< HEAD
     
-=======
->>>>>>> EstebanGonzalez
 }
 
 .botonNavBar{
     width: 100px;
-<<<<<<< HEAD
     position: relative;
         z-index: 2;
-=======
->>>>>>> EstebanGonzalez
 }
 
 .busqueda{
     position: relative;
-<<<<<<< HEAD
         z-index: 2;
-=======
->>>>>>> EstebanGonzalez
     display: flex;
     align-items: stretch;
     padding: 0 15px;
@@ -103,17 +94,11 @@
 
 .logeo{
     position: relative;
-<<<<<<< HEAD
         z-index: 2;
     display: flex;
     align-items: stretch;
     padding: 0 15px;
         
-=======
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
->>>>>>> EstebanGonzalez
 }
 
 .wrapper {
@@ -243,11 +228,7 @@ button {
         flex-direction: column;
         height: 250px;
         width: 250px!important;
-<<<<<<< HEAD
         margin: 10px;
-=======
-        margin: auto;
->>>>>>> EstebanGonzalez
         margin-bottom: 40px;
         align-content: center;
         flex-wrap: wrap;
@@ -371,11 +352,6 @@ body {
 }
 
 .cuerpo{
-<<<<<<< HEAD
-
-=======
-    background-color: #202040;
->>>>>>> EstebanGonzalez
     margin: auto 0;
     display: flex;
     flex-direction: column;
@@ -385,10 +361,7 @@ body {
 .tz-gallery{
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     align-self: center;
-=======
->>>>>>> EstebanGonzalez
 }
 
 .lightbox{
@@ -446,12 +419,8 @@ body {
 }
 
 header{
-<<<<<<< HEAD
     background: rgb(9,0,19);
     background-image: radial-gradient(circle, rgba(42,0,90,1)30%, rgba(12,0,12,1), rgba(9,0,19,1));
-=======
-    background-color: #1A074B;
->>>>>>> EstebanGonzalez
 }
 
 .resumen{
@@ -566,7 +535,6 @@ select{
 
 .footer {
     text-align: center;
-<<<<<<< HEAD
 
     position: relative;
        display: block;
@@ -577,15 +545,6 @@ select{
 
 .footer2 {
     text-align: center;
-=======
-    background-color: #202040;
-}
-
-
-.footer2 {
-    text-align: center;
-    background-color: #202040;
->>>>>>> EstebanGonzalez
 }
 
 .footer2 a {
@@ -593,13 +552,6 @@ select{
     font-family: sans-serif;
 }
 
-<<<<<<< HEAD
-
-=======
-.logoSpartanGames {
-    background-color: #202040;
-}
->>>>>>> EstebanGonzalez
 
 .linksFooter1 a {
     font-size: 16px;
@@ -624,7 +576,3 @@ select{
     font-weight: bold;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> EstebanGonzalez
