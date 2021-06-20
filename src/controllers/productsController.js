@@ -9,7 +9,7 @@ const controladorProducts =
     detalleDeProducto: (req, res) =>{
         res.render("./products/detalleDeProducto");
     },
-    edicion_producto: (req, res) =>{
+    edicion_productos: (req, res) =>{
         res.render("./products/edicion_producto");
     },
     listado_productos: (req, res) =>{
