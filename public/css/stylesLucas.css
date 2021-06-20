@@ -566,7 +566,6 @@ select{
 
 .footer {
     text-align: center;
-<<<<<<< HEAD
 
     position: relative;
        display: block;
@@ -577,15 +576,6 @@ select{
 
 .footer2 {
     text-align: center;
-=======
-    background-color: #202040;
-}
-
-
-.footer2 {
-    text-align: center;
-    background-color: #202040;
->>>>>>> EstebanGonzalez
 }
 
 .footer2 a {
@@ -593,13 +583,6 @@ select{
     font-family: sans-serif;
 }
 
-<<<<<<< HEAD
-
-=======
-.logoSpartanGames {
-    background-color: #202040;
-}
->>>>>>> EstebanGonzalez
 
 .linksFooter1 a {
     font-size: 16px;
