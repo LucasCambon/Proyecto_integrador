@@ -51,6 +51,7 @@
     width: 100%;
 }
 
+
 .parteIzq{
     display: flex;
     align-items: stretch;
@@ -60,6 +61,8 @@
 .parteDer{
     display: flex;
     align-items: stretch;
+    position: relative;
+        left: -50px;
 }
 
 .logo{
@@ -175,6 +178,7 @@ button {
   #main {
     transition: margin-left .5s;
     position: relative;
+        z-index: 2;
     display: flex;
     align-items: stretch;
     padding: 0 15px;
@@ -185,7 +189,7 @@ button {
   
 
 
-@media only screen and (min-width: 977px) {
+@media only screen and (min-width: 1040px) {
     div.menuOculto{
         display: none;
     }
@@ -200,7 +204,7 @@ button {
     }
   }
 
-@media only screen and (max-width: 977px){
+@media only screen and (max-width: 1040px){
     form.busqueda{
         display: none;
     }
