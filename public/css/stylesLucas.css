@@ -52,6 +52,7 @@
 }
 
 
+
 .parteIzq{
     display: flex;
     align-items: stretch;
@@ -63,6 +64,10 @@
     align-items: stretch;
     position: relative;
         left: -50px;
+}
+
+.fa-search{
+    color: goldenrod;
 }
 
 .logo{
@@ -119,6 +124,9 @@ button {
 .barra{
     width: 250px;
     height: 40px;
+    color: goldenrod;
+    border:2px solid goldenrod;
+    border-radius: 5px;
 }
 
 .logoOculto{
@@ -132,7 +140,7 @@ button {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #111;
@@ -187,7 +195,13 @@ button {
     height: 40px;
   }
   
+.nombre{
+    color: goldenrod;
+}
 
+.precio{
+    color: goldenrod;
+}
 
 @media only screen and (min-width: 1040px) {
     div.menuOculto{
@@ -451,15 +465,14 @@ header{
 }
 
 .btn-outline-secondary{
-    background-color: #282380!important;
-    color: #b5179e!important;
-    box-shadow: #480ca8 0px 0px 0px 3px!important;
+    background-color: transparent!important;
+    color: goldenrod!important;
     border: none!important;
 }
 
 .btn-outline-secondary:hover {
     background-color: #90137E!important;
-    color:#480ca8!important;
+    color:gold!important;
 }
 
 .gift-card{
@@ -490,7 +503,7 @@ header{
 
 
 .fa-bars{
-    color: black!important;
+    color: goldenrod!important;
     margin-top: 5px;
 }
 
@@ -539,7 +552,6 @@ select{
 
 .footer {
     text-align: center;
-
     position: relative;
        display: block;
          z-index: 2;
@@ -559,7 +571,7 @@ select{
 
 .linksFooter1 a {
     font-size: 16px;
-    color: black;
+    color: goldenrod;
     text-decoration: none;
     font-family: sans-serif;
     font-weight: bold;
@@ -568,7 +580,7 @@ select{
 
 .linksFooter2 a {
     font-size: 12px;
-    color: black;
+    color: goldenrod;
     text-decoration: none;
     font-weight: bold;
     font-family: sans-serif;
@@ -576,7 +588,7 @@ select{
 }
 
 .derechosReservados {
-    color: black;
+    color: goldenrod;
     font-weight: bold;
 }
 
