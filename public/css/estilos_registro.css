@@ -18,6 +18,8 @@ background-color: #202040!important;
     font-family: 'calibri';
     color: white;
     box-shadow: 7px 13px 37px #000;
+    position: relative;
+        z-index: 2;
 }
 
 .form-registro h4 {
@@ -125,4 +127,56 @@ background-color: #202040!important;
 
 .derechosReservados {
     color: black;
+}
+
+
+
+.form-creaProd{
+    width: 600px;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    position: relative;
+        z-index: 2;
+}
+
+.datos_a_ingresar{
+    text-align: center;
+}
+
+.tipoProd{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gap-2{
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    section.form-creaProd{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 540px){
+    div.tipoProd{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    label.tipoLabel{
+        position: relative;
+        left: 20px;
+        top: -18px;
+    }
 }
