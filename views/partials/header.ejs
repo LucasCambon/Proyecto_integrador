@@ -46,12 +46,16 @@
                     <input class="barra" type="search" name="barraDeBusqueda" placeholder="Buscar en la tienda"></input type="submit" value="buscar">
                 </label>
             </form>
-            <div class="logeo">
-                <a href="../registro" class="btn btn-outline-secondary" type="button">Registrate</a>
+
+            <div class="botones">
+                <button class="btn btn-outline-secondary dropdown-toggle botonNavBar botonCuenta" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../registro" type="button">Registrate</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../ingreso" type="button">Log In</a></li>
+                </ul>
             </div>
-            <div class="logeo">
-                <a href="../ingreso" class="btn btn-outline-secondary" type="button">Log In</a>
-            </div>
+
         </section>   
     </nav>
 

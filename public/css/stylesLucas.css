@@ -51,6 +51,7 @@
     width: 100%;
 }
 
+
 .parteIzq{
     display: flex;
     align-items: stretch;
@@ -60,6 +61,8 @@
 .parteDer{
     display: flex;
     align-items: stretch;
+    position: relative;
+        left: -50px;
 }
 
 .logo{
@@ -175,6 +178,7 @@ button {
   #main {
     transition: margin-left .5s;
     position: relative;
+        z-index: 2;
     display: flex;
     align-items: stretch;
     padding: 0 15px;
@@ -185,7 +189,7 @@ button {
   
 
 
-@media only screen and (min-width: 977px) {
+@media only screen and (min-width: 1040px) {
     div.menuOculto{
         display: none;
     }
@@ -200,7 +204,7 @@ button {
     }
   }
 
-@media only screen and (max-width: 977px){
+@media only screen and (max-width: 1040px){
     form.busqueda{
         display: none;
     }
@@ -576,3 +580,48 @@ select{
     font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.recomendado{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.destacados{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.productos{
+    margin: 20px;
+}
+
+.fotos{
+    padding: 15px;
+    background-color: #282380;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
+}
+
+.contDesc{
+    background-color: #282380;
+    border-top: solid 1px #b5179e;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
+    
+}
+>>>>>>> Beta
