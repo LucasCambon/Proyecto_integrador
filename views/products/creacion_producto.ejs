@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="../public/css/estilos_registro.css">
+        <link rel="stylesheet" href="../public/css/stylesAlan.css">
+        <link rel="stylesheet" href="../public/css/stylesLucas.css"></link> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>Formulario Registro</title>
+    </head>
+    <body>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <script>
+                function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                }
+                
+                function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+                }
+            </script>
+
+            <SCRIPT>
+                function ShowAndHide() {
+                    var x = document.getElementById("botonToggle");
+                    if (x.style.display == 'none') {
+                        x.style.display = 'block';
+                    } else {
+                        x.style.display = 'none';
+                    }
+                }
+            </SCRIPT>
+
+
+        <%- include("../partials/header") %>
+        
+        <section class="form-creaProd">
+
+            <h4>Registro nuevo producto</h4>
+
+            <form action="/creacion_producto" method="POST">
+            
+                <label for="nombreProducto"></label>
+                <input class="datos_a_ingresar" type="text" name="nombreProducto" id="nombres" placeholder="Nombre de Producto" required>
+                <label for="descripcion"></label>
+                <textarea class="datos_a_ingresar" type="text" name="descripcion" id="descripciones" placeholder="Descripcion del Producto" required></textarea>
+                <h4>Seleccionar imagen de producto</h4>
+                <label for="imgProd"></label>
+                <input class="datos_a_ingresar" type="file" name="imgProd" id="imagenProducto" accept=".png, .img, .jpg, .jpeg" required>
+                <label for="precio"></label>
+                <input class="datos_a_ingresar" type="text" name="precio" id="precioProducto" placeholder="Precio del Producto" required>
+                <h4>Seleccionar categoría de producto</h4>
+                <label for="categoriaProducto"></label>
+                <div class="tipoProd">
+                        <input type="radio" name="categoriaProducto" id="juegos" value="juegos">
+                        <label class="tipoLabel" for="juegos">Juegos</label>
+                        <input type="radio" name="categoriaProducto" id="items" value="items">
+                        <label class="tipoLabel" for="items">Items</label>
+                        <input type="radio" name="categoriaProducto" id="bundle" value="bundle">
+                        <label class="tipoLabel" for="bundle">Bundle</label>
+                        <input type="radio" name="categoriaProducto" id="coins" value="coins">
+                        <label class="tipoLabel" for="coins">Coins</label>
+                        <input type="radio" name="categoriaProducto" id="merchandising" value="merchandising">
+                        <label class="tipoLabel" for="merchandising">Merchandising</label>
+                </div>
+                <label for="boton"></label>
+                <div class="d-grid gap-2">
+                    <input class="btn btn-primary" type="submit" value="Registrar Producto">              
+                </div>
+                <div class="d-grid gap-2">
+                    <input class="btn btn-primary" type="reset" value="Limpiar">              
+                </div>
+        </form>
+
+        </section>
+        
+        <br>
+
+        <%- include("../partials/footer") %>
+        <br>
+        <br>
+
+        
+    </body>
+
+</html>

@@ -1,13 +1,13 @@
 <header>
-
+    <div class="starsDos"></div>
     <nav class="navbar">
         <div class="toogleBar">
             <div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), ShowAndHide()">×</a>
                 <a href="../">Home</a>
-                <a href="#">Juegos</a>
+                <a href="#">Tienda</a>
                 <a href="#">Servicios</a>
-                <a href="#">Gear</a>
+                <a href="#">Ofertas</a>
                 <a href="../ingreso">Ingreso</a>
                 <a href="../registro">Registro</a>
             </div>
@@ -23,11 +23,13 @@
                 <a href="../" class="btn btn-outline-secondary botonNavBar" type="button">LOGO</a>
             </div>
             <div class="botones">
-                <button class="btn btn-outline-secondary dropdown-toggle botonNavBar" type="button" data-bs-toggle="dropdown" aria-expanded="false">Juegos</button>
+                <button class="btn btn-outline-secondary dropdown-toggle botonNavBar" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda</button>
                 <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Juego 1</a></li>
-                <li><a class="dropdown-item" href="#">Juego 2</a></li>
-                <li><a class="dropdown-item" href="#">Juego 3</a></li>
+                <li><a class="dropdown-item" href="#">Juegos</a></li>
+                <li><a class="dropdown-item" href="#">Items</a></li>
+                <li><a class="dropdown-item" href="#">Bundle</a></li>
+                <li><a class="dropdown-item" href="#">Coins</a></li>
+                <li><a class="dropdown-item" href="#">Merchandising</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Tienda completa</a></li>
                 </ul>
@@ -36,7 +38,7 @@
                 <button class="btn btn-outline-secondary botonNavBar" type="button">Servicios</button>
             </div>
             <div class="botones">
-                <button class="btn btn-outline-secondary botonNavBar" type="button">Gear</button>
+                <button class="btn btn-outline-secondary botonNavBar" type="button">Ofertas</button>
             </div>
         </section>
         <section class="parteDer">   
@@ -46,12 +48,16 @@
                     <input class="barra" type="search" name="barraDeBusqueda" placeholder="Buscar en la tienda"></input type="submit" value="buscar">
                 </label>
             </form>
-            <div class="logeo">
-                <a href="../registro" class="btn btn-outline-secondary" type="button">Registrate</a>
+
+            <div class="botones">
+                <button class="btn btn-outline-secondary dropdown-toggle botonNavBar botonCuenta" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</button>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../registro" type="button">Registrate</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../ingreso" type="button">Log In</a></li>
+                </ul>
             </div>
-            <div class="logeo">
-                <a href="../ingreso" class="btn btn-outline-secondary" type="button">Log In</a>
-            </div>
+
         </section>   
     </nav>
 
