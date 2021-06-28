@@ -19,7 +19,7 @@
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     background-color: transparent;
     width: 100vw;
-    height: 100em;
+    height: 150em;
     position: absolute;
        display: block;
          z-index: 1;
@@ -594,7 +594,8 @@ select{
 
 .recomendado{
     box-sizing: content-box;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -605,7 +606,8 @@ select{
 
 .destacados{
     box-sizing: content-box;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -614,6 +616,34 @@ select{
     max-height: 100%;
 }
 
+@media only screen and (max-width: 850px) {
+    section.recomendado{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    section.destacados{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    div.stars{
+        height: 200em;
+    }
+
+}
+
+@media only screen and (max-width: 560px) {
+    section.recomendado{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    section.destacados{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    div.stars{
+        height: 370em;
+    }
+}
 
 .productos{
     margin: 20px;
