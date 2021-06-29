@@ -210,7 +210,7 @@ button {
     div.toogleBar{
         display: none;
     }
-  }
+}
 
 @media only screen and (max-width: 2000px) {
     div.logoOculto{
@@ -594,8 +594,6 @@ select{
 
 .recomendado{
     box-sizing: content-box;
-    display: grid;
-    grid-template-columns: auto auto auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -606,8 +604,6 @@ select{
 
 .destacados{
     box-sizing: content-box;
-    display: grid;
-    grid-template-columns: auto auto auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -616,43 +612,22 @@ select{
     max-height: 100%;
 }
 
-@media only screen and (max-width: 850px) {
-    section.recomendado{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    section.destacados{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
-    div.stars{
-        height: 200em;
-    }
-
-}
-
-@media only screen and (max-width: 560px) {
-    section.recomendado{
-        display: grid;
-        grid-template-columns: auto;
-    }
-    section.destacados{
-        display: grid;
-        grid-template-columns: auto;
-    }
-    div.stars{
-        height: 370em;
-    }
-}
 
 .productos{
-    margin: 20px;
+    margin: 10px;
+    position: relative;
+        z-index: 2;
 }
 
 .fotos{
     padding: 15px;
     background-color: #282380;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
+}
+
+.fotos img{
+    max-width: 100%;
+    width: 100%;
 }
 
 .contDesc{
@@ -663,4 +638,24 @@ select{
     text-align: left;
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
     
+}
+
+@media only screen and (max-width: 997px) {
+    div.row{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    div.row{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    div.col{
+        width: 40vw;
+        position: relative;
+            left: 10px;
+    }
 }
