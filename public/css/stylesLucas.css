@@ -19,15 +19,15 @@
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     background-color: transparent;
     width: 100vw;
-    height: 150em;
+    height: 100em;
     position: absolute;
        display: block;
          z-index: 1;
-         -moz-animation:move-background 10s linear infinite;
-         -ms-animation:move-background 10s linear infinite;
-         -o-animation:move-background 10s linear infinite;
-         -webkit-animation:move-background 10s linear infinite;
-         animation:move-background 10s linear infinite;
+         -moz-animation:move-background 7s linear infinite;
+         -ms-animation:move-background 7s linear infinite;
+         -o-animation:move-background 7s linear infinite;
+         -webkit-animation:move-background 7s linear infinite;
+         animation:move-background 7s linear infinite;
    }
 
 
@@ -39,11 +39,11 @@
     position: absolute;
        display: block;
          z-index: 1;
-         -moz-animation:move-background 10s linear infinite;
-         -ms-animation:move-background 10s linear infinite;
-         -o-animation:move-background 10s linear infinite;
-         -webkit-animation:move-background 10s linear infinite;
-         animation:move-background 10s linear infinite;
+         -moz-animation:move-background 7s linear infinite;
+         -ms-animation:move-background 7s linear infinite;
+         -o-animation:move-background 7s linear infinite;
+         -webkit-animation:move-background 7s linear infinite;
+         animation:move-background 7s linear infinite;
    }
 
 .navBar{
