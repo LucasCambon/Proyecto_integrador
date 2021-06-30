@@ -88,15 +88,15 @@
 
             <section class="container">
                 <div class="row">
-                <% for (let i=0; i<id.length ; i++){%>
+                <% for (let i=0; i<productos.length ; i++){%>
                     <div class="productos col colder">
                         <div class="fotos">
-                            <img src="<%=img[i]%>" alt="Coast">
+                            <img src="/public/img/<%= productos[i].image %>" alt="Coast">
                         </div>
                         <div class="contDesc">
                             <div class="precioDesc">
-                                <p class="nombre"><%=nombre[i]%></p>
-                                <p class="precio"><%=precio[i]%></p>
+                                <p class="nombre"><%= productos[i].name %></p>
+                                <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
                             </div>
                         </div>
                     </div>
@@ -110,21 +110,21 @@
             </div>
 
             <section class="container">
-                <div class="row productosP">
-                <% for (let i=0; i<id.length ; i++){%>
-                    <div class="productos col colder">
-                        <div class="fotos">
-                            <img src="<%=img[i]%>" alt="Coast">
-                        </div>
-                        <div class="contDesc">
-                            <div class="precioDesc">
-                                <p class="nombre"><%=nombre[i]%></p>
-                                <p class="precio"><%=precio[i]%></p>
+                <div class="row">
+                    <% for (let i=0; i<productos.length ; i++){%>
+                        <div class="productos col colder">
+                            <div class="fotos">
+                                <img src="/public/img/<%= productos[i].image %>" alt="Coast">
+                            </div>
+                            <div class="contDesc">
+                                <div class="precioDesc">
+                                    <p class="nombre"><%= productos[i].name %></p>
+                                    <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                </div>
                             </div>
                         </div>
+                    <%}%>
                     </div>
-                <%}%>
-                </div>
             </section>
         </main>
 
