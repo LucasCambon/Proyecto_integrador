@@ -1,18 +1,13 @@
-const productsObj = {
-    nombre: ["Nombre 1", "Nombre 2", "Nombre 3", "Nombre 4", "Nombre 5", "Nombre 6"],
-    precio: ["$ 1", "$ 2", "$ 3", "$ 4", "$ 5", "$ 6"],
-    img: ["../public/img/imagen de producto prueba.png","../public/img/imagen de producto prueba.png","../public/img/imagen de producto prueba.png","../public/img/imagen de producto prueba.png","../public/img/imagen de producto prueba.png","../public/img/imagen de producto prueba.png"],
-    id: [0,1,2,3,4,5]
-}
+const fs = require('fs');
+const path = require('path');
+const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 const controlador =
 {
     index: (req, res) => {
-        res.render("index",{nombre:productsObj.nombre,
-            precio:productsObj.precio,
-            img:productsObj.img,
-            id:productsObj.id
-            });
+        res.render("index",{productos:products})
     }
 }
 
