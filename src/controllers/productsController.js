@@ -3,7 +3,7 @@ const controladorProducts =
     carrito: (req, res) =>{
         res.render("./products/carrito");
     },
-    creacion_productos: (req, res) =>{
+    creacion_producto: (req, res) =>{
         res.render("./products/creacion_producto");
     },
     detalleDeProducto: (req, res) =>{

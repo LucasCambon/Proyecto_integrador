@@ -157,17 +157,6 @@ button {
 }
 
 
-.btn-outline-secondary{
-    background-color: #282380!important;
-    color: #b5179e!important;
-    box-shadow: #480ca8 0px 0px 0px 3px!important;
-    border: none!important;
-}
-
-.btn-outline-secondary:hover {
-    background-color: #90137E!important;
-    color:#480ca8!important;
-}
 
 /* CAROUSEL */        
  #carousel {
