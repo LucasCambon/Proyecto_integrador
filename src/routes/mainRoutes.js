@@ -1,5 +1,4 @@
 const express = require("express")
-const controlador = require("./../controllers/mainController")
 const router = express()
 
 const mainController = require("./../controllers/mainController")
