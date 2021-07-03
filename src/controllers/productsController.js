@@ -48,7 +48,7 @@ const controladorProducts =
 			if (products[i].id == req.params.id)
 			var algo = products[i].id
 		}
-		res.render("products/edicion_producto", {producto:algo})
+		res.render("./products/edicion_producto", {producto:algo})
 	},
 	update: (req, res) => {
 		let obj = []
