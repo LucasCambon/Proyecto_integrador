@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "Prueba 1",
-    "price": 10,
-    "discount": 2,
+    "price": 20,
+    "discount": 4,
     "category": "Oferta",
     "description": "producto de prueba",
     "image": "imagen de producto prueba.png"
@@ -52,5 +52,13 @@
     "category": "Oferta",
     "description": "producto de prueba",
     "image": "imagen de producto prueba.png"
+  },
+  {
+    "id": 7,
+    "name": "zapatillas",
+    "price": "10",
+    "category": "items",
+    "description": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "image": "1625266510686.jpg"
   }
 ]
