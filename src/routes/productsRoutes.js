@@ -18,13 +18,24 @@ const router = express.Router()
 
 const productsController = require("../controllers/productsController")
 
+/*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
+
+/*** CREAR PRODUCTO ***/
 router.get("/creacion_producto",productsController.creacion_producto)
 router.post("/creacion_producto",uploadFile.single("image"),productsController.store)
+
+
 router.get("/detalleDeProducto/:id",productsController.detalleDeProducto)
-router.get('/edicion_producto/:id', productsController.edicion_productos); 
-router.put('/edicion_producto/:id', productsController.update); 
+
+/*** EDITAR PRODUCTO ***/
+router.get('/edicion_producto/:id',productsController.edicion_productos); 
+router.put('/edicion_producto/:id',productsController.update); 
+
+/*** LISTADO DE PRODUCTOS ***/
 router.get("/listado_productos",productsController.listado_productos);
+
+/*** ELIMINAR PRODUCTO ***/
 router.delete('/delete/:id', productsController.destroy); 
 
 module.exports = router;
