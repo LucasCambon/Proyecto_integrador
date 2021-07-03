@@ -21,4 +21,3 @@ app.set('view engine', 'ejs');
 app.use("/", mainRoutes)
 app.use("/products", productsRoutes)
 app.use("/users", usersRoutes)
-

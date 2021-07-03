@@ -70,7 +70,7 @@ const controladorProducts =
 			}
 			})
 		fs.writeFileSync(productsFilePath, JSON.stringify(obj, null, 2));
-		res.redirect("/")
+		res.redirect("/mensaje-edicion")
 	
 	},
 
@@ -82,8 +82,8 @@ const controladorProducts =
 			return producto.id != req.params.id;
 		})
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosN, null, 2));
-		res.redirect("/")
-	},
+		res.redirect("/mensaje-borrado")
+	}
 }
 
 module.exports = controladorProducts;

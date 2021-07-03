@@ -25,6 +25,6 @@ router.get("/detalleDeProducto/:id",productsController.detalleDeProducto)
 router.get('/edicion_producto/:id', productsController.edicion_productos); 
 router.put('/edicion_producto/:id', productsController.update); 
 router.get("/listado_productos",productsController.listado_productos);
-router.delete('/delete/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy);
 
 module.exports = router;
