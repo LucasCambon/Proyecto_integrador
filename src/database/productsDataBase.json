@@ -52,13 +52,5 @@
     "category": "Oferta",
     "description": "producto de prueba",
     "image": "imagen de producto prueba.png"
-  },
-  {
-    "id": 7,
-    "name": "zapatillas",
-    "price": "10",
-    "category": "items",
-    "description": "aaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "image": "1625266510686.jpg"
   }
 ]
