@@ -34,9 +34,6 @@
                 }
             }
         </SCRIPT>
-        <script>
-            const productosObj = require("./src/routes/mainRoutes")
-        </script>
 
 
         <%- include("./partials/header") %>
@@ -89,10 +86,12 @@
             <section class="container">
                 <div class="row">
                 <% for (let i=0; i<productos.length ; i++){%>
-                    <div class="productos col colder">
-                        <div class="fotos">
-                            <img src="/img/<%= productos[i].image %>" alt="Coast">
-                        </div>
+                    <div class="productos col">
+                        <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                            <div class="fotos">
+                                <img src="/img/<%= productos[i].image %>" alt="Coast">
+                            </div>
+                        </a>
                         <div class="contDesc">
                             <div class="precioDesc">
                                 <p class="nombre"><%= productos[i].name %></p>
@@ -113,9 +112,11 @@
                 <div class="row">
                     <% for (let i=0; i<productos.length ; i++){%>
                         <div class="productos col colder">
-                            <div class="fotos">
-                                <img src="/img/<%= productos[i].image %>" alt="Coast">
-                            </div>
+                            <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                                <div class="fotos">
+                                    <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                </div>
+                            </a>
                             <div class="contDesc">
                                 <div class="precioDesc">
                                     <p class="nombre"><%= productos[i].name %></p>
