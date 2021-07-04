@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/css/stylesAlan.css">
         <link rel="stylesheet" href="/css/stylesLucas.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Todos los productos</title>
+        <title>Confirmacion de edición</title>
     </head>
     <body>
 
@@ -39,19 +39,22 @@
 
 
         <%- include("../partials/header") %>
+     <main class="cuerpo">
         
-        <section >
-
+       
+        <section class="form-creaProd" style="margin-top: 250px;margin-bottom: 180px;">
+            <h1>Producto editado correctamente</h1>
+            <div >
+                <a href="../../"class="btn btn-primary">Volver al Home</a>
+                <a href="/products/listado_productos" class="btn btn-primary">Volver a editar producto</a>
+            </div>
 
         </section>
-        
-        <br>
-
-        <%- include("../partials/footer") %>
-        <br>
-        <br>
-
-        
+        <div class="footer-msj">
+        </div>
+     </main>
     </body>
+    
+    <%- include("../partials/footer") %>
 
 </html>

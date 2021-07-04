@@ -5,10 +5,10 @@
  <head>
     <meta charset="utf-8">
     <title>Detalle de Producto</title>
-    <link rel="stylesheet" href="../public/css/stylesLucas.css"></link> 
-    <link rel="stylesheet" href="../public/css/stylesDetalleDeProducto.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/stylesLucas.css"></link> 
+    <link rel="stylesheet" href="/css/stylesDetalleDeProducto.css"/>
  </head>
  <body>
 	
@@ -51,7 +51,7 @@
             </div>
             <div class="col">
                 <section class="botones">
-                    <a class="btn btn-outline-success btn-lg" href="/views/index.html"><i class="far fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="/views/products/carrito.ejs"><i class="far fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
                     <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
                     <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
                 </section>
@@ -70,6 +70,13 @@
                         </div>
                     </div>
                 </section>
+
+                <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-button delete">ELIMINAR</button>
+                </form>
+
+                <a href="/products/edicion_producto/<%= producto.id%>" class="action-button edit">EDITAR PRODUCTO</a>
+
             </div>
         </div>
     </section>
