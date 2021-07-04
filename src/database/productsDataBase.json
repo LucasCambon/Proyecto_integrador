@@ -52,13 +52,5 @@
     "category": "Oferta",
     "description": "producto de prueba",
     "image": "imagen de producto prueba.png"
-  },
-  {
-    "id": 7,
-    "name": "Prueba 2",
-    "price": "1234",
-    "category": "juegos",
-    "description": "asdfasdfas",
-    "image": "1625273520315.jpg"
   }
 ]

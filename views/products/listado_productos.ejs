@@ -39,17 +39,60 @@
 
 
         <%- include("../partials/header") %>
-        
-        <section >
+        <img src="/img/banner.jpg" alt="Coast" class="banner">
+        <main class="cuerpo">
+            <div class="stars"></div>
+            
+            <div class="seccionesImg">
+                <h1 class="btnDesc" id="listadoTitulos">Categorías</h4>
+            </div>
+            
+            <section class="container">
+                <div class="row" id="listadoCategorias">
+                <% for (let i=0; i<productos.length ; i++){%>
+                    <div class="productos col" id="listadoProductosPRUEBA">
+                        <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                            <div class="fotos">
+                                <img src="/img/<%= productos[i].image %>" alt="Coast">
+                            </div>
+                        </a>
+                        <div class="contDesc" id="listadoDescripcion">
+                            <div class="precioDesc">
+                                <p class="nombre" id="listadoCategoriasNombre"><%= productos[i].name %></p>
+                            </div>
+                        </div>
+                    </div>
+                <%}%>
+                </div>
+              
+            </section>
 
+            <div  class="seccionesImg">
+                <h1 class="btnDesc" id="listadoTitulos">Productos</h4>
+            </div>
 
-        </section>
-        
-        <br>
+            <section class="container">
+                <div class="row" id="listadoProductos">
+                    <% for (let i=0; i<productos.length ; i++){%>
+                        <div class="productos col">
+                            <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                                <div class="fotos">
+                                    <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                </div>
+                            </a>
+                            <div class="contDesc">
+                                <div class="precioDesc">
+                                    <p class="nombre"><%= productos[i].name %></p>
+                                    <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                </div>
+                            </div>
+                        </div>
+                    <%}%>
+                    </div>
+            </section>
+        </main>
 
         <%- include("../partials/footer") %>
-        <br>
-        <br>
 
         
     </body>

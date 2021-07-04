@@ -75,7 +75,7 @@ const controladorProducts =
 	},
 
     listado_productos: (req, res) =>{
-        res.render("./products/listado_productos",{producto:products});
+        res.render("./products/listado_productos",{productos:products});
     },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {
