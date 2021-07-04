@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/css/stylesAlan.css">
         <link rel="stylesheet" href="/css/stylesLucas.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Todos los productos</title>
+        <title>Mensaje confirmacion de borrado</title>
     </head>
     <body>
 
@@ -39,19 +39,21 @@
 
 
         <%- include("../partials/header") %>
-        
-        <section >
+    <main class="cuerpo">
+     <div class="stars"></div>
 
-
+        <section class="form-creaProd2" style="margin-top: 250px;margin-bottom: 180px;">
+            <h1>Producto borrado correctamente</h1>
+            <div >
+                <a href="../../"class="btn btn-primary">Volver al Home</a>
+            </div>
+    
         </section>
         
-        <br>
-
-        <%- include("../partials/footer") %>
-        <br>
-        <br>
 
         
-    </body>
+    </main> 
+    <%- include("../partials/footer") %>
+</body>
 
 </html>

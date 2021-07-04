@@ -2,9 +2,9 @@
 <html>
 
     <head>
-        <link rel="stylesheet" href="../public/css/stylesLucas.css"></link> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stylesLucas.css"></link> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta charset="utf-8">
         <title>Home</title>
@@ -51,21 +51,21 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="../public/img/imagen de prueba.png" class="d-block w-100">
+                    <img src="/img/imagen de prueba.png" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Primer slide</h5>
                         <p>Placeholder representativo 1era imagen.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="../public/img/imagen de prueba.png" class="d-block w-100">
+                    <img src="/img/imagen de prueba.png" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Segundo slide</h5>
                         <p>Placeholder representativo 2da imagen.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="../public/img/imagen de prueba.png" class="d-block w-100">
+                    <img src="/img/imagen de prueba.png" class="d-block w-100">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Tercer slide</h5>
                         <p>Placeholder representativo 3era imagen.</p>
@@ -86,50 +86,46 @@
                 <h4 class="btnDesc">Recomendado</h4>
             </div>
 
-            <section class="recomendado">
-
-                <% for (let i=0; i<id.length ; i++){%>
-                    <div class="productos">
+            <section class="container">
+                <div class="row">
+                <% for (let i=0; i<productos.length ; i++){%>
+                    <div class="productos col colder">
                         <div class="fotos">
-                            <img src="<%=img[i]%>" alt="Coast">
+                            <img src="/img/<%= productos[i].image %>" alt="Coast">
                         </div>
                         <div class="contDesc">
                             <div class="precioDesc">
-                                <p class="nombre"><%=nombre[i]%></p>
-                                <p class="precio"><%=precio[i]%></p>
+                                <p class="nombre"><%= productos[i].name %></p>
+                                <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
                             </div>
                         </div>
                     </div>
                 <%}%>
-                
-                
-
+                </div>
+              
             </section>
 
             <div  class="seccionesImg">
                 <h4 class="btnDesc">Productos destacados</h4>
             </div>
 
-            <section class="destacados">
-
-                <% for (let i=0; i<id.length ; i++){%>
-                    <div class="productos">
-                        <div class="fotos">
-                            <img src="<%=img[i]%>" alt="Coast">
-                        </div>
-                        <div class="contDesc">
-                            <div class="precioDesc">
-                                <p class="nombre"><%=nombre[i]%></p>
-                                <p class="precio"><%=precio[i]%></p>
+            <section class="container">
+                <div class="row">
+                    <% for (let i=0; i<productos.length ; i++){%>
+                        <div class="productos col colder">
+                            <div class="fotos">
+                                <img src="/img/<%= productos[i].image %>" alt="Coast">
+                            </div>
+                            <div class="contDesc">
+                                <div class="precioDesc">
+                                    <p class="nombre"><%= productos[i].name %></p>
+                                    <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                </div>
                             </div>
                         </div>
+                    <%}%>
                     </div>
-                <%}%>
-                
-                
-
             </section>
-            
         </main>
 
         <%- include("./partials/footer") %> 
