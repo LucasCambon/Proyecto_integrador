@@ -48,7 +48,7 @@ const controladorProducts =
 			if (products[i].id == req.params.id)
 			var algo = products[i].id
 		}
-		res.render("products/edicion_producto", {producto:algo})
+		res.render("./products/edicion_producto", {producto:algo})
 	},
 	update: (req, res) => {
 		let obj = []
@@ -70,19 +70,19 @@ const controladorProducts =
 			}
 			})
 		fs.writeFileSync(productsFilePath, JSON.stringify(obj, null, 2));
-		res.redirect("/mensaje-edicion")
+		res.render("./products/mensaje-edicion")
 	
 	},
 
     listado_productos: (req, res) =>{
-        res.send({producto:products});
+        res.render("./products/listado_productos",{producto:products});
     },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {
 			return producto.id != req.params.id;
 		})
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosN, null, 2));
-		res.redirect("/mensaje-borrado")
+		res.render("./products/mensaje-borrado")
 	}
 }
 

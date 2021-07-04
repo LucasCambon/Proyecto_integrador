@@ -75,9 +75,7 @@
                     <button type="submit" class="action-button delete">ELIMINAR</button>
                 </form>
 
-                <form action="/products/delete/<%= producto.id%>?_method=PUT" method="POST" style="display: inline-flex">
-                    <button type="submit" class="action-button delete">Editar</button>
-                </form>
+                <a href="/products/edicion_producto/<%= producto.id%>" class="action-button edit">EDITAR PRODUCTO</a>
 
             </div>
         </div>

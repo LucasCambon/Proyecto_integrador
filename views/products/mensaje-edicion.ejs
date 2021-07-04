@@ -39,26 +39,22 @@
 
 
         <%- include("../partials/header") %>
+     <main class="cuerpo">
         
-        <section class="form-creaProd">
+       
+        <section class="form-creaProd" style="margin-top: 250px;margin-bottom: 180px;">
             <h1>Producto editado correctamente</h1>
             <div >
-                <a href="/views/index.ejs"class="btn btn-primary">Volver al Home</a>
-                <a href="/views/products/edicion_producto.ejs" class="btn btn-primary">Volver a editar producto</a>
+                <a href="../../"class="btn btn-primary">Volver al Home</a>
+                <a href="/products/listado_productos" class="btn btn-primary">Volver a editar producto</a>
             </div>
 
-
-
-
         </section>
-        
-        <br>
-
-        <%- include("../partials/footer") %>
-        <br>
-        <br>
-
-        
+        <div class="footer-msj">
+        </div>
+     </main>
     </body>
+    
+    <%- include("../partials/footer") %>
 
 </html>

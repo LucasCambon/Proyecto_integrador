@@ -44,15 +44,15 @@
 
             <h4>Modificar producto</h4>
 
-            <form action="/products/edicion_producto/<%=producto.id%>?_method=PUT" method="POST">
+            <form action="<%= producto.id%>?_method=PUT" method="POST">
             
                 <label for="name"></label>
                 <input class="datos_a_ingresar" type="text" name="name" id="name" placeholder="Nombre de Producto" required>
                 <label for="description"></label>
                 <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto" required></textarea>
-                <h4>Seleccionar imagen de producto</h4>
-                <!-- Header <label for="image"></label>
-                <input class="datos_a_ingresar" type="file" name="image" id="imagenProducto" accept=".png, .img, .jpg, .jpeg" required>-->
+                <!--<<h4>Seleccionar imagen de producto</h4>
+                label for="image"></label>
+                <input class="datos_a_ingresar" type="file" name="image" id="imagenProducto" accept=".png, .img, .jpg, .jpeg" required> -->
                 <label for="price"></label>
                 <input class="datos_a_ingresar" type="text" name="price" id="price" placeholder="Precio del Producto" required>
                 <h4>Seleccionar categoría de producto</h4>
@@ -71,10 +71,10 @@
                 </div>
                 <label for="boton"></label>
                 <div class="d-grid gap-2">
-                    <input class="btn btn-primary" type="submit">Registrar Producto</input>              
+                    <button class="btn btn-primary" type="submit">Guardar</button>              
                 </div>
                 <div class="d-grid gap-2">
-                    <input class="btn btn-primary" type="reset">Limpiar</input>             
+                    <button class="btn btn-primary" type="reset">Limpiar</button>           
                 </div>
         </form>
 
