@@ -86,32 +86,8 @@
             <section class="container">
                 <div class="row">
                 <% for (let i=0; i<productos.length ; i++){%>
-                    <div class="productos col">
-                        <a href="/products/detalleDeProducto/<%= productos[i].id%>">
-                            <div class="fotos">
-                                <img src="/img/<%= productos[i].image %>" alt="Coast">
-                            </div>
-                        </a>
-                        <div class="contDesc">
-                            <div class="precioDesc">
-                                <p class="nombre"><%= productos[i].name %></p>
-                                <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
-                            </div>
-                        </div>
-                    </div>
-                <%}%>
-                </div>
-              
-            </section>
-
-            <div  class="seccionesImg">
-                <h4 class="btnDesc">Productos destacados</h4>
-            </div>
-
-            <section class="container">
-                <div class="row">
-                    <% for (let i=0; i<productos.length ; i++){%>
-                        <div class="productos col colder">
+                    <% if (productos[i].category === "Recomendado"){%>
+                        <div class="productos col">
                             <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                 <div class="fotos">
                                     <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -124,6 +100,34 @@
                                 </div>
                             </div>
                         </div>
+                    <%}%>
+                <%}%>
+                </div>
+              
+            </section>
+
+            <div  class="seccionesImg">
+                <h4 class="btnDesc">Productos destacados</h4>
+            </div>
+
+            <section class="container">
+                <div class="row">
+                    <% for (let i=0; i<productos.length ; i++){%>
+                        <% if (productos[i].category === "Destacado"){%>
+                            <div class="productos col">
+                                <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                                    <div class="fotos">
+                                        <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                    </div>
+                                </a>
+                                <div class="contDesc">
+                                    <div class="precioDesc">
+                                        <p class="nombre"><%= productos[i].name %></p>
+                                        <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <%}%>
                     <%}%>
                     </div>
             </section>
