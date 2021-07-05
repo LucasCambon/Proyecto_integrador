@@ -49,16 +49,16 @@
             
             <section class="container">
                 <div class="row" id="listadoCategorias">
-                <% for (let i=0; i<productos.length ; i++){%>
+                <% for (let i=0; i<categorias.length ; i++){%>
                     <div class="productos col" id="listadoProductosPRUEBA">
-                        <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                        <a href="/products/categoria/<%= categorias[i].id%>">
                             <div class="fotos">
-                                <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                <img src="/img/<%= categorias[i].image %>" alt="Coast">
                             </div>
                         </a>
                         <div class="contDesc" id="listadoDescripcion">
                             <div class="precioDesc">
-                                <p class="nombre" id="listadoCategoriasNombre"><%= productos[i].name %></p>
+                                <p class="nombre" id="listadoCategoriasNombre"><%= categorias[i].name %></p>
                             </div>
                         </div>
                     </div>

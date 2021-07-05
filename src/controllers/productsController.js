@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
+const categoriasFilePath = path.join(__dirname, '../database/categoriasProdDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
 
 const controladorProducts =
 {
@@ -75,7 +77,8 @@ const controladorProducts =
 	},
 
     listado_productos: (req, res) =>{
-        res.render("./products/listado_productos",{productos:products});
+        res.render("./products/listado_productos",{productos:products,categorias:categorias
+		});
     },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {
