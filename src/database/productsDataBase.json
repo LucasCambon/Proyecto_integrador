@@ -55,10 +55,10 @@
   },
   {
     "id": 7,
-    "name": "Prueba 2",
-    "price": "1234",
+    "name": "ALAN",
+    "price": "$999.99",
     "category": "juegos",
-    "description": "asdfasdfas",
+    "description": "PRUEBA",
     "image": "1625273520315.jpg"
   }
 ]
