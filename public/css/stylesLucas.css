@@ -22,7 +22,7 @@
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     background-color: transparent;
     width: 100vw;
-    height: 100em;
+    height: 90em;
     position: absolute;
        display: block;
          z-index: 1;
@@ -527,6 +527,10 @@ select{
         display: grid;
         grid-template-columns: auto auto auto;
     }
+    div.stars{
+        height: 190em;
+    }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -540,9 +544,24 @@ select{
         position: relative;
             left: 10px;
     }
+    div.stars{
+        height: 230em;
+    }
 }
 
+@media only screen and (max-width: 543px) {
+    
+    div.stars{
+        height: 200em;
+    }
+}
 
+@media only screen and (max-width: 400px) {
+    
+    div.stars{
+        height: 190em;
+    }
+}
 
 @media only screen and (min-width: 1040px) {
     div.menuOculto{
