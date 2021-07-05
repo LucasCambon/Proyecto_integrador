@@ -217,6 +217,9 @@ button {
     color: goldenrod;
 }
 
+.precioDesc{
+    text-align: center
+}
 
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
@@ -530,6 +533,20 @@ select{
     div.stars{
         height: 190em;
     }
+    div#listadoProductos{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    div#bgListado{
+        height: 125em;
+    }
+
+}
+@media only screen and (max-width: 769px) {
+    
+    div#bgListado{
+        height: 100em;
+    }
 
 }
 
@@ -547,6 +564,13 @@ select{
     div.stars{
         height: 230em;
     }
+    div#listadoProductos{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    div#bgListado{
+        height: 145em;
+    }
 }
 
 @media only screen and (max-width: 543px) {
@@ -560,6 +584,13 @@ select{
     
     div.stars{
         height: 190em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    
+    div#bgListado{
+        height: 140em;
     }
 }
 
@@ -667,7 +698,7 @@ select{
 
 #listadoProductos {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
         
 }
 #listadoCategorias {
