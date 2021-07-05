@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="/css/estilos_registro.css">
         <link rel="stylesheet" href="/css/stylesAlan.css">
         <link rel="stylesheet" href="/css/stylesLucas.css">
+        <link rel="stylesheet" href="/css/listadoProductos.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Todos los productos</title>
     </head>
@@ -38,34 +39,9 @@
             </SCRIPT>
 
 
-        <%- include("../partials/header") %>
+        <%- include("../partials/headerCategorias") %>
         <img src="/img/banner.jpg" alt="Coast" class="banner">
-        <main class="cuerpo">
-            <div class="stars"></div>
-            
-            <div class="seccionesImg">
-                <h1 class="btnDesc" id="listadoTitulos">Categorías</h4>
-            </div>
-            
-            <section class="container">
-                <div class="row" id="listadoCategorias">
-                <% for (let i=0; i<categorias.length ; i++){%>
-                    <div class="productos col" id="listadoProductosPRUEBA">
-                        <a href="/products/categoria/<%= categorias[i].id%>">
-                            <div class="fotos">
-                                <img src="/img/<%= categorias[i].image %>" alt="Coast">
-                            </div>
-                        </a>
-                        <div class="contDesc" id="listadoDescripcion">
-                            <div class="precioDesc">
-                                <p class="nombre" id="listadoCategoriasNombre"><%= categorias[i].name %></p>
-                            </div>
-                        </div>
-                    </div>
-                <%}%>
-                </div>
-              
-            </section>
+        <div class="stars" id="bgListado"></div>
 
             <div  class="seccionesImg">
                 <h1 class="btnDesc" id="listadoTitulos">Productos</h4>
@@ -74,7 +50,7 @@
             <section class="container">
                 <div class="row" id="listadoProductos">
                     <% for (let i=0; i<productos.length ; i++){%>
-                        <div class="productos col">
+                        <div class="productos col" id="productosListados">
                             <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                 <div class="fotos">
                                     <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -83,7 +59,7 @@
                             <div class="contDesc">
                                 <div class="precioDesc">
                                     <p class="nombre"><%= productos[i].name %></p>
-                                    <p class="precio">Precio: $ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                    <p class="precio">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
                                 </div>
                             </div>
                         </div>
