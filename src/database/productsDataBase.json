@@ -106,5 +106,77 @@
     "category": "Destacado",
     "description": "producto de prueba",
     "image": "imagen de producto prueba.png"
+  },
+  {
+    "id": 13,
+    "name": "Producto Prueba con Foto 1",
+    "price": "450",
+    "discount": 0,
+    "category": "items",
+    "description": "Item Skin Arma 1000x563px foto ",
+    "image": "1625528996453.webp"
+  },
+  {
+    "id": 14,
+    "name": "Producto Prueba foto 2",
+    "price": "650",
+    "discount": 0,
+    "category": "items",
+    "description": "Skin Arma 2 1000x563",
+    "image": "1625529098729.webp"
+  },
+  {
+    "id": 15,
+    "name": "Producto Prueba 3 foto ",
+    "price": "850",
+    "discount": 0,
+    "category": "items",
+    "description": "Skin Arma 1000x563",
+    "image": "1625529138144.webp"
+  },
+  {
+    "id": 16,
+    "name": "Producto Prueba 4 foto",
+    "price": "320",
+    "discount": 0,
+    "category": "items",
+    "description": "Skin Arma 1000*563px",
+    "image": "1625529555581.webp"
+  },
+  {
+    "id": 17,
+    "name": "Producto Prueba 5 foto ",
+    "price": "650",
+    "discount": 0,
+    "category": "items",
+    "description": "Skin arma 2 1000x563",
+    "image": "1625529725563.webp"
+  },
+  {
+    "id": 18,
+    "name": "Skin Arma",
+    "price": "8450",
+    "discount": 0,
+    "category": "items",
+    "description": "960x380",
+    "image": "1625530099836.webp"
+  },
+  {
+    "id": 19,
+    "name": "Producto prueba 7",
+    "price": "10",
+    "discount": 0,
+    "category": "items",
+    "description": "1000x563",
+    "image": "1625530230317.webp"
+  },
+  {
+    "id": 20,
+    "name": "Prueba foto arma",
+    "price": "4500",
+    "discount": 0,
+    "category": "items",
+    "description": "1000x234",
+    "image": "1625530374398.webp"
   }
 ]
