@@ -50,19 +50,21 @@
             <section class="container">
                 <div class="row" id="listadoProductos">
                     <% for (let i=0; i<productos.length ; i++){%>
-                        <div class="productos col" id="productosListados">
-                            <a href="/products/detalleDeProducto/<%= productos[i].id%>">
-                                <div class="fotos">
-                                    <img src="/img/<%= productos[i].image %>" alt="Coast">
-                                </div>
-                            </a>
-                            <div class="contDesc">
-                                <div class="precioDesc">
-                                    <p class="nombre"><%= productos[i].name %></p>
-                                    <p class="precio">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                        <% if (productos[i].category === "Bundle"){%>
+                            <div class="productos col" id="productosListados">
+                                <a href="/products/detalleDeProducto/<%= productos[i].id%>">
+                                    <div class="fotos">
+                                        <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                    </div>
+                                </a>
+                                <div class="contDesc">
+                                    <div class="precioDesc">
+                                        <p class="nombre"><%= productos[i].name %></p>
+                                        <p class="precio">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        <%}%>
                     <%}%>
                     </div>
             </section>

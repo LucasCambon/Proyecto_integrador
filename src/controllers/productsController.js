@@ -80,6 +80,27 @@ const controladorProducts =
         res.render("./products/listado_productos",{productos:products,categorias:categorias
 		});
     },
+
+	listado_bundles: (req, res) =>{
+        res.render("./products/listado_bundles",{productos:products,categorias:categorias
+		});
+    },
+	listado_coins: (req, res) =>{
+        res.render("./products/listado_coins",{productos:products,categorias:categorias
+		});
+    },
+	listado_items: (req, res) =>{
+        res.render("./products/listado_items",{productos:products,categorias:categorias
+		});
+    },
+	listado_juegos: (req, res) =>{
+        res.render("./products/listado_juegos",{productos:products,categorias:categorias
+		});
+    },
+	listado_merchandising: (req, res) =>{
+        res.render("./products/listado_merchandising",{productos:products,categorias:categorias
+		});
+    },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {
 			return producto.id != req.params.id;
