@@ -48,7 +48,7 @@ const controladorProducts =
     edicion_productos: (req, res) => {
 		for (let i=0; i<products.length;i++){
 			if (products[i].id == req.params.id)
-			var algo = products[i].id
+			var algo = products[i]
 		}
 		res.render("./products/edicion_producto", {producto:algo})
 	},
