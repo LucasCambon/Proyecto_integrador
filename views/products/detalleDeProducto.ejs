@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/css/stylesLucas.css"></link> 
     <link rel="stylesheet" href="/css/stylesDetalleDeProducto.css"/>
  </head>
- <body>
+ <body id="bodyEntero">
 	
     <%- include("../partials/header") %>
 
@@ -48,10 +48,17 @@
                     <hr id="hrPrecio">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit officiis illo necessitatibus ad iste fugit doloremque, ex, quae porro facilis saepe ipsum? Consectetur, vitae eos. Labore quisquam amet illo vero?</p>
                 </div>
+                <div class="container" id="botones-edicion">
+                    <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
+                        <button type="submit" class="btn btn-outline-success btn-lg" id="boton-eliminar">ELIMINAR</button>
+                    </form>
+    
+                    <a href="/products/edicion_producto/<%= producto.id%>" class="btn btn-outline-success btn-lg" id="boton-eliminar" >EDITAR PRODUCTO</a>
+                </div>
             </div>
             <div class="col">
                 <section class="botones">
-                    <a class="btn btn-outline-success btn-lg" href="/views/products/carrito.ejs"><i class="far fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="/views/products/carrito.ejs"><i class="fas fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
                     <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
                     <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
                 </section>
@@ -70,14 +77,8 @@
                         </div>
                     </div>
                 </section>
-
-                <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST" style="display: inline-flex">
-                    <button type="submit" class="action-button delete">ELIMINAR</button>
-                </form>
-
-                <a href="/products/edicion_producto/<%= producto.id%>" class="action-button edit">EDITAR PRODUCTO</a>
-
             </div>
+
         </div>
     </section>
     <br>

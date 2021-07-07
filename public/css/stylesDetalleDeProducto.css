@@ -214,17 +214,47 @@ button {
     font-size: 2rem!important;
 }
 .btn-outline-success {
-    color: gold!important;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    color: goldenrod!important;
     border-color: darkorchid!important;
+    background-color: rgba(78, 79, 165, 0.219)!important;
+    z-index: 2;
+    padding: 5px 5px 5px 5px; 
 }
 .btn-outline-success:hover {
-    background-color: rgba(78, 79, 165, 0.219)!important;
+    background-color: rgba(140, 85, 202, 0.315)!important;
 }
 .btn-success {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
     color: goldenrod!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
-    border-color: goldenrod!important;   
+    border-color: goldenrod!important;  
+    z-index: 2;
+    padding: 5px 5px 5px 5px; 
 }
+.btn-success:hover{
+    background-color: rgba(140, 85, 202, 0.315)!important;
+}
+#botones-edicion {
+    margin: 0px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+#boton-eliminar {
+    margin-right: 15px;
+    margin-top: 15px;
+    z-index: 2;
+}
+
 /* ICONOS */
 .iconos-heart {
     display: flex;
