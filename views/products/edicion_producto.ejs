@@ -47,14 +47,14 @@
             <form action="<%= producto.id%>?_method=PUT" method="POST">
             
                 <label for="name"></label>
-                <input class="datos_a_ingresar" type="text" name="name" id="name" placeholder="Nombre de Producto" required>
+                <input class="datos_a_ingresar" type="text" name="name" value="<%= producto.name %>" id="name" placeholder="Nombre de Producto" required>
                 <label for="description"></label>
-                <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto" required></textarea>
+                <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto" required><%= producto.description %></textarea>
                 <!--<<h4>Seleccionar imagen de producto</h4>
                 label for="image"></label>
                 <input class="datos_a_ingresar" type="file" name="image" id="imagenProducto" accept=".png, .img, .jpg, .jpeg" required> -->
                 <label for="price"></label>
-                <input class="datos_a_ingresar" type="text" name="price" id="price" placeholder="Precio del Producto" required>
+                <input class="datos_a_ingresar" type="text" name="price" value="<%= producto.price %>" id="price" placeholder="Precio del Producto" required>
                 <h4>Seleccionar categoría de producto</h4>
                 <label for="categoriaProducto"></label>
                 <div class="tipoProd">
