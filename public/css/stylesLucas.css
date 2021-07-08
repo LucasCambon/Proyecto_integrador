@@ -603,17 +603,16 @@ select{
     }
 }
 
-@media only screen and (max-width: 2000px) {
-    div.logoOculto{
-        display: none;
-    }
-  }
 
 @media only screen and (max-width: 1040px){
     form.busqueda{
         display: none;
     }
     div.botones{
+        display: none;
+    }
+
+    div.logo{
         display: none;
     }
 
@@ -721,3 +720,7 @@ select{
     display: block
 }
  
+#logoArriba{
+    background-image: url(../img/spartan.png);
+    background-size: 100px 36px;
+}
