@@ -12,3 +12,7 @@ Tuvimos 2 reuniones, una inicial para dividir nuestras tareas y en un principio 
 ## Sprint 3
 
 Para este sprint nos alcanzó con una sola reunion ya que no había mucho por definir. Fijamos los objetivos, principalmente todo el modelo MVC y el útilizado de EJS. También colocamos como objetivos adicionales las correcciones del sprint 2 para el mejorado del sitio.
+
+## Sprint 4
+
+Para este sprint tuvimos varias reuniones ya que habían numerosos puntos por definir. En ésta etapa fué la que más trabajamos en equipo, compartiendo pantalla, siendo participativos en la actividad del compañero y aplicando las funcionalidades y lógicas necesarias para cumplir con las exigencias del sprint. 
