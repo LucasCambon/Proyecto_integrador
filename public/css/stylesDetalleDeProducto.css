@@ -160,7 +160,7 @@ button {
 
 /* CAROUSEL */        
  #carousel {
-       padding: 2% 15% 1% 15%;
+    margin-bottom: 3%;
 }
 .carousel-item {
     border: 5px solid black;
@@ -169,13 +169,13 @@ button {
 /* CUADRO PRECIO */
 .cuadroPrecio {
     display: flex;
-    margin: 0 0 0 70%;
     display: inline-block;
     top: 70%;
     border: 2px solid darkorchid ;
     padding: 0 2rem 0 2rem;
     background-color: rgba(78, 79, 165, 0.219);
     box-shadow: 10px 5px 5px rgb(54, 7, 134);
+    margin: 10% auto auto 23%;
 
 }
 .display-2 {
@@ -185,9 +185,9 @@ button {
 }
 /* CONTAINER (DESCRIPCION DE PRECIO Y BOTONES + RECOMENDADOS) */
 /* CONTAINER */
+
 .container {
-    padding: 0rem auto 5rem auto;
-    margin: 0 auto 0 auto;
+    z-index: 2;
 }
 #hrPrecio {
     border: 1px solid darkorchid;
@@ -205,14 +205,23 @@ button {
     font-size: 1.5rem!important;
 }
 /* CONTAINER - COLUMNAS */
+#rowTop {
+    margin-top: 10%;
+}
+.col {
+    height: 100%;
+    z-index: 2;
+}
 /* CONTAINER - BOTONES */
 .botones {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    z-index: 2;
 }
 .btn-lg {
     font-size: 2rem!important;
+    z-index: 2;
 }
 .btn-outline-success {
     display: flex;
@@ -345,10 +354,7 @@ button {
         width: 75%;
         height: auto;
     }
-  
-    
 }
-
 @media (max-width: 768px) {
     .cuadroPrecio {
         display: flex;

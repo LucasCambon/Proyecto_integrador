@@ -10,18 +10,12 @@
     <link rel="stylesheet" href="/css/stylesLucas.css"></link> 
     <link rel="stylesheet" href="/css/stylesDetalleDeProducto.css"/>
  </head>
- <body id="bodyEntero">
-	
+ <body id="bodyEntero">	
     <%- include("../partials/header") %>
-
  <main> 
-     <section class="container">        
-                        
-            <hr id="hrPrecio">
-            <div class="row">
-                <div class="col">    
-                    
-                    
+     <section class="container">             
+        <div class="row" id="rowTop">
+            <div class="col">    
                 <div class="h-100 p-5 text-white bg-dark rounded-3" id="cuadroProd">
                     <h2 id="nomProd">Nombre del Producto</h2>
                     <hr id="hrPrecio">
@@ -41,23 +35,23 @@
             <div class="col">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" data-bs-pause="hover">
                     <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/public/img/y9DpT.jpg"  class="d-block w-100" alt="...">
+                        <div class="carousel-item active">
+                            <img src="/public/img/y9DpT.jpg"  class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/public/img/y9DpT.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev" style="display: none">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next" style="display:none">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
                     </button>
                 </div>
                 <section class="botones">
@@ -65,28 +59,26 @@
                     <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
                     <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
                 </section>
-                <section class="productosRelacionados"> 
-                    <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
-                    <hr class="productosRelacionados-hr">
-                    <div class="productosRelacionados Imagenes">
-                        <div class="rounded float-start">
-                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
-                        </div>
-                        <div class="rounded mx-auto d-block">
-                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
-                        </div>
-                        <div class="rounded float-end">
-                            <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
-                        </div>
-                    </div>
-                </section>
             </div>
-
+        </div>
+        <div class="row">
+        <section class="productosRelacionados"> 
+            <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
+            <hr class="productosRelacionados-hr">
+            <div class="productosRelacionados Imagenes">
+                <div class="rounded float-start">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
+                </div>
+                <div class="rounded mx-auto d-block">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
+                </div>
+                <div class="rounded float-end">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
+                </div>
+            </div>
+        </section>
         </div>
     </section>
-    <br>
-    <br>
-    <br>
  </main>
     
  <%- include("../partials/footer") %>
