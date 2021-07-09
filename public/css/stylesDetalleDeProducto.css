@@ -175,7 +175,8 @@ button {
     border: 2px solid darkorchid ;
     padding: 0 2rem 0 2rem;
     background-color: rgba(78, 79, 165, 0.219);
-    box-shadow: 10px 5px 5px rgb(54, 7, 134); 
+    box-shadow: 10px 5px 5px rgb(54, 7, 134);
+
 }
 .display-2 {
     color: gold;
