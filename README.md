@@ -28,3 +28,7 @@ Se apunta al público de gamers, aficionados al gaming/videojuegos y coleccionis
 * [Tablero de Trello](https://trello.com/b/9yGaanli/proyecto-integrador-grupo-5)
 
 * [Wireframes](https://marvelapp.com/prototype/14h8c0ie/screen/79213596)
+
+## Link proyecto Heroku
+
+* [Heroku](https://integrador-grupo-5.herokuapp.com/)
