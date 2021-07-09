@@ -4,7 +4,7 @@
   "description": "Proyecto de E-Commerce relacionado a la compra de videojuegos, merchandising, features ingame, bundles, y contenido exclusivo.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./src/bin/www"
+    "start": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
