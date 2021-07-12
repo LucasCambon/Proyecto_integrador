@@ -37,26 +37,34 @@
                     <img src="/img/<%= producto.image%>" class="img-prod"   alt="..." >  
                 </div>
                 <section class="botones">
-                    <a class="btn btn-outline-success btn-lg" href="/views/products/carrito.ejs"><i class="fas fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
-                    <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
-                    <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
+                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
+                    <a class="btn btn-success btn-lg" href="/products/carrito"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
                 </section>  
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="rowBottom">
         <section class="productosRelacionados"> 
             <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
             <hr class="productosRelacionados-hr">
-            <div class="productosRelacionados Imagenes">
-                <div class="rounded float-start">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoA"></a>
+            <div class="row">
+                
+                
+                <div class="col" id="col-img-prod-rel">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoA"></a>
+                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
-                <div class="rounded mx-auto d-block">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoB"></a>
+                <div class="col" id="col-img-prod-rel">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoB"></a>
+                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
-                <div class="rounded float-end">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/public/img/generic-image-placeholder.png" alt="ImagenProductoC"></a>
+                <div class="col" id="col-img-prod-rel">
+                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoC"></a>
+                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
+                
+
+      
             </div>
         </section>
         </div>

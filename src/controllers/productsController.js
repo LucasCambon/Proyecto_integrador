@@ -41,9 +41,8 @@ const controladorProducts =
     detalleDeProducto: (req, res) =>{
 		for (let i=0; i<products.length;i++){
 			if (products[i].id == req.params.id)
-			res.render("./products/detalleDeProducto", {producto:products[i]});
+			res.render("./products/detalleDeProducto", {producto:products[i],categorias:categorias});
 		}
-        
     },
     edicion_productos: (req, res) => {
 		for (let i=0; i<products.length;i++){

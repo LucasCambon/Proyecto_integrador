@@ -228,7 +228,7 @@ button {
     border-radius: 4.8px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    padding: 48px;  
+    padding: 48px;
 }
 
 .col {
@@ -260,7 +260,7 @@ button {
     border-color: darkorchid!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
     z-index: 2;
-    padding: 5px 5px 5px 5px; 
+    padding: 5px;
 }
 .btn-outline-success:hover {
     background-color: rgba(140, 85, 202, 0.315)!important;
@@ -300,7 +300,8 @@ button {
     justify-self: flex-start;
     border: none;
     background-color: transparent;
-    padding-right: 1rem;
+    padding-right: 5px;
+    padding-left: 2px;
     color: darkred;    
 }
 .iconos-cart {
@@ -309,7 +310,8 @@ button {
     justify-self: flex-start;
     border: none;
     background-color: transparent;
-    padding-right: 1rem;
+    padding-right: 5px;
+    padding-left: 2px;
     color: darkcyan;    
 }
 .iconos-coins {
@@ -318,11 +320,14 @@ button {
     justify-self: flex-start;
     border: none;
     background-color: transparent;
-    padding-right: 1rem;
+    padding-right: 5px;
+    padding-left: 2px;
     color: rgb(206, 185, 2);
 }
 /* RELACIONADOS */
-.productosRelacionados {
+#rowBottom {
+    display: flex;
+    flex-direction: column;
     background-color: #000000ce;
     border-left: 1px solid darkorchid;
     border-right: 1px solid darkorchid;
@@ -332,22 +337,29 @@ button {
     padding-right: 48px;  
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding-top: 100px;
+}
+#col-img-prod-rel {
+    padding-top: 25px;
+    margin-bottom: 25px;
 }
 .t-h2 {
     display: flex;
+    text-align: center;
     color:rgb(255, 181, 111);
     justify-content: center;
     font-size: 2em;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     background-color: #00000000;
     border: none;
 }
 .Imagenes {
     display: flex;
     flex-direction: row;
-    align-content: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    align-self: center;
     border: none;
-    width: 100%;
     
 }
 .productosRelacionados-hr {
@@ -355,8 +367,20 @@ button {
     border: 1px solid darkorchid;
 }
 .img-prod-rel {
-    border: 2px solid #6e42c118;
+    border: 1px solid darkorchid;
+    padding: 0;
+    width: 100%;
+    border-radius: 4.8px;
+    background-color: black;
+    box-shadow: 10px 5px 5px rgb(54, 7, 134);
 }
+.prod-rel-subtitle{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: goldenrod;
+}
+
 
 
 /* FOOOTER */
@@ -371,36 +395,13 @@ button {
 
 /* RESPONSIVE DESIGN */
 
-@media (max-width: 1200px) {
-    .botones {
-        padding-top: 2rem;
-    }
-    .img-prod-rel {
-        width: 100%;
-        height: auto;
-    }
-}
+@media only screen and (max-width: 1400px) {
 
-@media (max-width: 992px) and (min-width: 769) {
-    .img-prod-rel {
-        width: 100%;
-        height: auto;
+    .main {
+        margin: 0;
+        padding:0;
     }
     .container {
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-    }
-    .col {
-        width: 75%;
-        height: auto;
-    }
-}
-@media (max-width: 768px) {
-    .cuadroPrecio {
-        display: flex;
-        justify-content:center;
-        width: 25%;
         
-    }
+    }    
 }
