@@ -1,11 +1,9 @@
 [
-    {
-        "id": 1,
-        "nombre": "Lucas",
-        "apellido": "Cambon",
-        "email": "lucambon08@gmail.com",
-        "contraseña": "probando123",
-        "categoria": "vendedor",
-        "imagen": "imagen de producto prueba"
-    }
+  {
+    "id": 1,
+    "nombre": "Lucas",
+    "apellido": "Cambon",
+    "email": "lucambon08@gmail.com",
+    "contraseña": "probando123"
+  }
 ]
