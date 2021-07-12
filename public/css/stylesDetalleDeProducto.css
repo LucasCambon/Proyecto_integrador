@@ -166,18 +166,19 @@ button {
 }
 
 /* CAROUSEL */        
- #carousel {
-    padding-top: 15px;
-    margin-bottom: 3%;
-
-}
-.carousel-item {
-    display: flex;
-    align-self: center;
-    border: 1px solid darkorchid;
-    background-color: black;
-    height: 25rem;
+.img-prod {
+    height: auto;
     width: 100%;
+    padding: 0;
+    border: 1px solid darkorchid;
+    margin-bottom: 25px;
+    box-shadow: 10px 5px 5px rgb(54, 7, 134);
+    background-color: black;
+}
+#col-img-prod {
+    display: flex;
+    flex-direction: column;
+    align-self: center;    
 }
 
 /* CUADRO PRECIO */
@@ -190,7 +191,6 @@ button {
     background-color: rgba(78, 79, 165, 0.219);
     box-shadow: 10px 5px 5px rgb(54, 7, 134);
     margin: 10% auto auto 23%;
-
 }
 .display-2 {
     color: gold;
