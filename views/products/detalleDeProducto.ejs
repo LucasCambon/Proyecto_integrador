@@ -12,7 +12,8 @@
  </head>
  <body id="bodyEntero">	
     <%- include("../partials/header") %>
- <main> 
+ <main>
+     <div class="starsDos" id="starsDetalleProd"></div> 
      <section class="container">             
         <div class="row" id="rowTop">
             <div class="col">    
@@ -23,16 +24,15 @@
                     <div class="cuadroPrecio">
                         <p class="display-2">Precio</p>
                     </div>
-                </div>
+                </div>               
                 <div class="container" id="botones-edicion">
                     <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
                         <button type="submit" class="btn btn-outline-success btn-lg" id="boton-eliminar">ELIMINAR</button>
-                    </form>
-    
+                    </form>    
                     <a href="/products/edicion_producto/<%= producto.id%>" class="btn btn-outline-success btn-lg" id="boton-eliminar" >EDITAR PRODUCTO</a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" >
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500" data-bs-pause="hover">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -58,7 +58,7 @@
                     <a class="btn btn-outline-success btn-lg" href="/views/products/carrito.ejs"><i class="fas fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
                     <a class="btn btn-outline-success btn-lg" href="../views/carrito.html"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
                     <a class="btn btn-success btn-lg" href="../views/carrito.html"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
-                </section>
+                </section>  
             </div>
         </div>
         <div class="row">

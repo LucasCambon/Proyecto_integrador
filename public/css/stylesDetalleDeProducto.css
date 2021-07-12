@@ -156,14 +156,28 @@ button {
     }
 }
 
+.starsDos {
+    z-index: -1;
+    margin:0;
+}
 
+#starsDetalleProd {
+    margin-top: 550px;
+}
 
 /* CAROUSEL */        
  #carousel {
+    padding-top: 15px;
     margin-bottom: 3%;
+
 }
 .carousel-item {
-    border: 5px solid black;
+    display: flex;
+    align-self: center;
+    border: 1px solid darkorchid;
+    background-color: black;
+    height: 25rem;
+    width: 100%;
 }
 
 /* CUADRO PRECIO */
@@ -196,6 +210,7 @@ button {
 #cuadroProd {
     background-color: rgb(22, 22, 22)!important;
     border: 1px solid darkorchid;
+    margin-bottom: 15px;
 }
 #nomProd {
     color: rgb(255, 181, 111)!important;
@@ -207,17 +222,29 @@ button {
 /* CONTAINER - COLUMNAS */
 #rowTop {
     margin-top: 10%;
+    background-color: #000000ce;
+    border: 1px solid darkorchid;
+    border-bottom: none;
+    border-radius: 4.8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 48px;  
 }
+
 .col {
     height: 100%;
     z-index: 2;
+}
+/* CONTAINER - FILA */
+.row {
+    margin: 0;
 }
 /* CONTAINER - BOTONES */
 .botones {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     z-index: 2;
+    padding: 0;
 }
 .btn-lg {
     font-size: 2rem!important;
@@ -254,10 +281,11 @@ button {
     background-color: rgba(140, 85, 202, 0.315)!important;
 }
 #botones-edicion {
-    margin: 0px auto 0 auto;
     display: flex;
     justify-content: center;
     z-index: 2;
+    /* display: none */
+
 }
 #boton-eliminar {
     margin-right: 15px;
@@ -295,7 +323,15 @@ button {
 }
 /* RELACIONADOS */
 .productosRelacionados {
-    margin-top: 5%;
+    background-color: #000000ce;
+    border-left: 1px solid darkorchid;
+    border-right: 1px solid darkorchid;
+    border-bottom: 1px solid darkorchid;
+    border-radius: 4.8px;
+    padding-left: 48px;
+    padding-right: 48px;  
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .t-h2 {
     display: flex;
@@ -303,11 +339,16 @@ button {
     justify-content: center;
     font-size: 2em;
     margin-bottom: 5%;
+    background-color: #00000000;
+    border: none;
 }
 .Imagenes {
     display: flex;
     flex-direction: row;
     align-content: center;
+    border: none;
+    width: 100%;
+    
 }
 .productosRelacionados-hr {
     margin-top: -1em;
