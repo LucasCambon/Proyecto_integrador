@@ -16,30 +16,30 @@
      <div class="starsDos" id="starsDetalleProd"></div> 
      <section class="container">             
         <div class="row" id="rowTop">
-            <div class="col">    
+            <div class="col" id="col-left">    
                 <div class="h-100 p-5 text-white bg-dark rounded-3" id="cuadroProd">
-                    <h2 id="nomProd"><%= producto.name%></h2>
+                    <h2 id="nomProd"><%=producto.name%></h2>
                     <hr id="hrPrecio">
-                    <p class="lead"><%= producto.description%></p>
+                    <p class="lead"><%=producto.description%></p>
                     <div class="cuadroPrecio">
-                        <p class="display-2">$<%= producto.price%></p>
+                        <p class="display-2">$<%=producto.price%></p>
                     </div>
                 </div>               
                 <div class="container" id="botones-edicion">
                     <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
                         <button type="submit" class="btn btn-outline-success btn-lg" id="boton-eliminar">ELIMINAR</button>
                     </form>    
-                    <a href="/products/edicion_producto/<%= producto.id%>" class="btn btn-outline-success btn-lg" id="boton-eliminar" >EDITAR PRODUCTO</a>
+                    <a href="/products/edicion_producto/<%=producto.id%>" class="btn btn-outline-success btn-lg" id="boton-eliminar" >EDITAR PRODUCTO</a>
                 </div>
             </div>
             <div class="col" id="col-img-prod" >
                 <div id="carousel" >
-                    <img src="/img/<%= producto.image%>" class="img-prod"   alt="..." >  
+                    <img src="/img/<%=producto.image%>" class="img-prod"   alt="..." >  
                 </div>
                 <section class="botones">
-                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-heart fa-1.5x iconos-heart"></i>Wishlist</a>
-                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-shopping-cart fa-1.5x iconos-cart"></i>Al Carrito</a> 
-                    <a class="btn btn-success btn-lg" href="/products/carrito"><i class="fas fa-coins fa-1.5x iconos-coins"></i>Comprar</a> 
+                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-heart fa-1.5x iconos-heart iconresponsive"></i>Wishlist</a>
+                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-shopping-cart fa-1.5x iconos-cart iconresponsive"></i>Al Carrito</a> 
+                    <a class="btn btn-success btn-lg" href="/products/carrito"><i class="fas fa-coins fa-1.5x iconos-coins iconresponsive"></i>Comprar</a> 
                 </section>  
             </div>
         </div>
@@ -51,15 +51,15 @@
                 
                 
                 <div class="col" id="col-img-prod-rel">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoA"></a>
+                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%=producto.image%>" alt="ImagenProductoA"></a>
                     <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
                 <div class="col" id="col-img-prod-rel">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoB"></a>
+                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%=producto.image%>" alt="ImagenProductoB"></a>
                     <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
                 <div class="col" id="col-img-prod-rel">
-                    <a href="../views/index.html"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoC"></a>
+                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoC"></a>
                     <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
                 </div>
                 
