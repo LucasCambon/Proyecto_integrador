@@ -21,26 +21,37 @@ const controladorUsers  =
 				oldData: req.body
 			});
 		}
-		else{
-			let obj = {
-				id: users.length + 1,
-				nombre: req.body.nombres,
-				apellido: req.body.apellidos,
-				email: req.body.correo,
-				contraseña: bcryptjs.hashSync(req.body.contraseña,10),
-			}
-			
-			users.push(obj)
-			fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
-				if (err) {
-					console.log('Error writing file', err)
-				} 
-				else {
-					console.log('Successfully wrote file')
-				}
+		for (let i=0; i<users.length;i++){
+			if (users[i].email === req.body.correo)
+			return res.render("./users/registro",{
+				errors: {
+					correo: {
+						msg: "Email ya registrado"
+					}
+				},
+				oldData: req.body
 			})
-			console.log(obj)
-			res.redirect("/")
+			else{
+				let obj = {
+					id: users.length + 1,
+					nombre: req.body.nombres,
+					apellido: req.body.apellidos,
+					email: req.body.correo,
+					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
+				}
+				
+				users.push(obj)
+				fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
+					if (err) {
+						console.log('Error writing file', err)
+					} 
+					else {
+						console.log('Successfully wrote file')
+					}
+				})
+				console.log(obj)
+				res.redirect("/")
+			}
 		}
 	},
     ingreso: (req, res) =>{
