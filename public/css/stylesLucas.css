@@ -724,3 +724,8 @@ select{
     background-image: url(../img/spartan.png);
     background-size: 100px 36px;
 }
+
+
+.textErrorForm{
+    color: red;
+}
