@@ -1,22 +1,12 @@
 const express = require("express")
-const path = require('path');
-const multer = require("multer")
-const multerDiskStorage = multer.diskStorage({
-    destination: function(req, file, cb) {       // request, archivo y callback que almacena archivo en destino
-     cb(null, path.join(__dirname,"../../public/img"));    // Ruta donde almacenamos el archivo
-    },
-    filename: function(req, file, cb) {          // request, archivo y callback que almacena archivo en destino
-     let imageName = Date.now() + path.extname(file.originalname);   // milisegundos y extensión de archivo original
-     cb(null, imageName);         
-    }
-});
 
-const uploadFile = multer({ storage: multerDiskStorage });
 
 
 const router = express.Router()
 
 const productsController = require("../controllers/productsController")
+
+const uploadFile = require("../middlewares/multerMiddleware")
 
 /*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
