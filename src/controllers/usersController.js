@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
+const { validationResult } = require("express-validator")
 
 const controladorUsers  =
 {
@@ -13,6 +13,14 @@ const controladorUsers  =
         res.render("./users/registro");
     },
     store: (req, res) => {
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length>0) {
+			res.render("./users/registro",{
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 		let obj = {
 			id: users.length + 1,
 			nombre: req.body.nombres,

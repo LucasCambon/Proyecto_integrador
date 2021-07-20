@@ -112,6 +112,10 @@
     margin-bottom: 10px;
 }
 
+.textErrorForm{
+    color: red;
+}
+
 @media only screen and (max-width: 700px){
     section.form-creaProd{
         width: 80vw;
