@@ -21,25 +21,27 @@ const controladorUsers  =
 				oldData: req.body
 			});
 		}
-		let obj = {
-			id: users.length + 1,
-			nombre: req.body.nombres,
-			apellido: req.body.apellidos,
-			email: req.body.correo,
-			contraseña: req.body.contraseña,
-		   }
-           
-		users.push(obj)
-		fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
-			if (err) {
-				console.log('Error writing file', err)
-			} 
-			else {
-				console.log('Successfully wrote file')
+		else{
+			let obj = {
+				id: users.length + 1,
+				nombre: req.body.nombres,
+				apellido: req.body.apellidos,
+				email: req.body.correo,
+				contraseña: req.body.contraseña,
 			}
-		})
-		console.log(obj)
-		res.redirect("/")
+			
+			users.push(obj)
+			fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
+				if (err) {
+					console.log('Error writing file', err)
+				} 
+				else {
+					console.log('Successfully wrote file')
+				}
+			})
+			console.log(obj)
+			res.redirect("/")
+		}
 	},
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
