@@ -27,7 +27,7 @@ const controladorUsers  =
 				nombre: req.body.nombres,
 				apellido: req.body.apellidos,
 				email: req.body.correo,
-				contraseña: req.body.contraseña,
+				contraseña: bcryptjs.hashSync(req.body.contraseña,10),
 			}
 			
 			users.push(obj)
