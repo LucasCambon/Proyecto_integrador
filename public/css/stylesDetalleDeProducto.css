@@ -11,6 +11,10 @@ body {
 #starsDetalleProd {
     margin-top: 550px;
 }
+.navbar {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 
 /* CAROUSEL */        
 .img-prod {

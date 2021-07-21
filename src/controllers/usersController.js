@@ -57,25 +57,7 @@ const controladorUsers  =
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
-	login: (req, res) => {
-		for (let i=0; i<users.length; i++){
-			let passOk = bcryptjs.compareSync(req.body.contraseña, users[i].contraseña)
-			if (users[i].email === req.body.correo && passOk == true){
-				res.send(users[i])
-			}
-			else{
-				return res.render("./users/ingreso", 
-				{
-					errors:{
-						correo:{
-							msg:"Datos invalidos"
-						}
-					}
-				})
-
-			}
-		}
-	}
 }
+
 
 module.exports = controladorUsers;
