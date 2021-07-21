@@ -2,159 +2,6 @@
 body {
     background-color: #090013!important;
 }
-/* HEADER */
-
-.navBar{
-    display: flex;
-    width: 100%;
-}
-
-.parteIzq{
-    display: flex;
-    align-items: stretch;
-
-}
-
-.parteDer{
-    display: flex;
-    align-items: stretch;
-}
-
-.logo{
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
-    margin-left: 3%;
-}
-
-.botones{
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
-}
-
-.botonNavBar{
-    width: 100px;
-}
-
-.busqueda{
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
-}
-
-.logeo{
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
-}
-
-.wrapper {
-    border:1px solid #000;
-    display:inline-block;
-}
-
-input,
-button {
-    background-color:transparent;
-    border:0;
-    
-}
-
-.barra{
-    width: 250px;
-    height: 40px;
-}
-
-.logoOculto{
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    padding: 0 15px;
-}
-
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-  }
-  
-  .sidebar a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidebar a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: #111;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-  }
-  
-  .openbtn:hover {
-    background-color: #444;
-  }
-
-
-@media only screen and (min-width: 977px) {
-    div.menuOculto{
-        display: none;
-    }
-    div.toogleBar{
-        display: none;
-    }
-  }
-
-@media only screen and (max-width: 2000px) {
-    div.logoOculto{
-        display: none;
-    }
-  }
-@media only screen and (max-width: 977px){
-    form.busqueda{
-        display: none;
-    }
-    div.botones{
-        display: none;
-    }
-}
-@media only screen and (max-width: 596px){
-    div.logeo{
-        display: none;
-    }
-    div.logo{
-        display: none;
-    }
-}
 
 .starsDos {
     z-index: -1;
@@ -233,7 +80,7 @@ button {
 
 .col {
     height: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 /* CONTAINER - FILA */
 .row {
@@ -243,12 +90,12 @@ button {
 .botones {
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    z-index: 1;
     padding: 0;
 }
 .btn-lg {
     font-size: 2rem!important;
-    z-index: 2;
+    z-index: 1;
 }
 .btn-outline-success {
     display: flex;
@@ -259,7 +106,7 @@ button {
     color: goldenrod!important;
     border-color: darkorchid!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
-    z-index: 2;
+    z-index: 1;
     padding: 5px;
 }
 .btn-outline-success:hover {
@@ -274,7 +121,7 @@ button {
     color: goldenrod!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
     border-color: goldenrod!important;  
-    z-index: 2;
+    z-index: 1;
     padding: 5px 5px 5px 5px; 
 }
 .btn-success:hover{
@@ -283,14 +130,14 @@ button {
 #botones-edicion {
     display: flex;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
     /* display: none */
 
 }
 #boton-eliminar {
     margin-right: 15px;
     margin-top: 15px;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* ICONOS */
@@ -387,11 +234,13 @@ button {
 
 .footer {
     text-align: center;
+    z-index: 1;
 }
 
 .derechosReservados {
     color: darkgoldenrod;
 }
+
 
 /* RESPONSIVE DESIGN */
 
@@ -450,10 +299,6 @@ button {
         flex-direction: column;
         align-self: flex-start;
     }
-    .botones {
-        width: 100%;
-        
-    }
     .iconresponsive {
         font-size: 20px;
     }
@@ -487,9 +332,6 @@ button {
         flex-direction: column;
         align-self: flex-start;
     }
-    .botones {
-        width: 100%;  
-    }
     .iconresponsive {
         font-size: 20px;
     }
@@ -522,10 +364,6 @@ button {
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-    }
-    .botones {
-        width: 100%;
-        
     }
     .iconresponsive {
         font-size: 20px;
