@@ -594,6 +594,15 @@ select{
     }
 }
 
+@media only screen and (max-width: 1040px) {
+    div.menuOculto{
+        display: block;
+    }
+    div.toogleBar{
+        display: block;
+    }
+}
+
 @media only screen and (min-width: 1040px) {
     div.menuOculto{
         display: none;
@@ -602,7 +611,6 @@ select{
         display: none;
     }
 }
-
 
 @media only screen and (max-width: 1040px){
     form.busqueda{
