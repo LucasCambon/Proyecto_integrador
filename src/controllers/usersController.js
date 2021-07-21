@@ -57,6 +57,24 @@ const controladorUsers  =
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
+	login: (req, res) => {
+		for (let i=0; i<users.length; i++){
+			if (users[i].email === req.body.correo && users[i].contraseña == req.body.contraseña){
+				res.send(users[i])
+			}
+			else{
+				return res.render("./users/ingreso", 
+				{
+					errors:{
+						correo:{
+							msg:"Datos invalidos"
+						}
+					}
+				})
+
+			}
+		}
+	}
 }
 
 module.exports = controladorUsers;
