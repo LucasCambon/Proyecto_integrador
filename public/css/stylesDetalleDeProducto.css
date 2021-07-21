@@ -3,38 +3,6 @@ body {
     background-color: #090013!important;
 }
 
-
-@media only screen and (min-width: 977px) {
-    div.menuOculto{
-        display: none;
-    }
-    div.toogleBar{
-        display: none;
-    }
-  }
-
-@media only screen and (max-width: 2000px) {
-    div.logoOculto{
-        display: none;
-    }
-  }
-@media only screen and (max-width: 977px){
-    form.busqueda{
-        display: none;
-    }
-    div.botones{
-        display: none;
-    }
-}
-@media only screen and (max-width: 596px){
-    div.logeo{
-        display: none;
-    }
-    div.logo{
-        display: none;
-    }
-}
-
 .starsDos {
     z-index: -1;
     margin:0;
@@ -112,7 +80,7 @@ body {
 
 .col {
     height: 100%;
-    z-index: 2;
+    z-index: 1;
 }
 /* CONTAINER - FILA */
 .row {
@@ -122,12 +90,12 @@ body {
 .botones {
     display: flex;
     flex-direction: row;
-    z-index: 2;
+    z-index: 1;
     padding: 0;
 }
 .btn-lg {
     font-size: 2rem!important;
-    z-index: 2;
+    z-index: 1;
 }
 .btn-outline-success {
     display: flex;
@@ -138,7 +106,7 @@ body {
     color: goldenrod!important;
     border-color: darkorchid!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
-    z-index: 2;
+    z-index: 1;
     padding: 5px;
 }
 .btn-outline-success:hover {
@@ -153,7 +121,7 @@ body {
     color: goldenrod!important;
     background-color: rgba(78, 79, 165, 0.219)!important;
     border-color: goldenrod!important;  
-    z-index: 2;
+    z-index: 1;
     padding: 5px 5px 5px 5px; 
 }
 .btn-success:hover{
@@ -162,14 +130,14 @@ body {
 #botones-edicion {
     display: flex;
     justify-content: center;
-    z-index: 2;
+    z-index: 1;
     /* display: none */
 
 }
 #boton-eliminar {
     margin-right: 15px;
     margin-top: 15px;
-    z-index: 2;
+    z-index: 1;
 }
 
 /* ICONOS */
@@ -266,11 +234,13 @@ body {
 
 .footer {
     text-align: center;
+    z-index: 1;
 }
 
 .derechosReservados {
     color: darkgoldenrod;
 }
+
 
 /* RESPONSIVE DESIGN */
 
@@ -329,10 +299,6 @@ body {
         flex-direction: column;
         align-self: flex-start;
     }
-    .botones {
-        width: 100%;
-        
-    }
     .iconresponsive {
         font-size: 20px;
     }
@@ -366,9 +332,6 @@ body {
         flex-direction: column;
         align-self: flex-start;
     }
-    .botones {
-        width: 100%;  
-    }
     .iconresponsive {
         font-size: 20px;
     }
@@ -401,10 +364,6 @@ body {
         display: flex;
         flex-direction: column;
         align-self: flex-start;
-    }
-    .botones {
-        width: 100%;
-        
     }
     .iconresponsive {
         font-size: 20px;
