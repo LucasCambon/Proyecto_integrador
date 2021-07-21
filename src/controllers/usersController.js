@@ -59,7 +59,8 @@ const controladorUsers  =
     },
 	login: (req, res) => {
 		for (let i=0; i<users.length; i++){
-			if (users[i].email === req.body.correo && users[i].contraseña == req.body.contraseña){
+			let passOk = bcryptjs.compareSync(req.body.contraseña, users[i].contraseña)
+			if (users[i].email === req.body.correo && passOk == true){
 				res.send(users[i])
 			}
 			else{
