@@ -119,8 +119,7 @@
   {
     "id": 14,
     "name": "Producto Prueba foto 2",
-    "price": "650",
-    "discount": 0,
+    "price": "750",
     "category": "items",
     "description": "Skin Arma 2 1000x563",
     "image": "1625529098729.webp"
