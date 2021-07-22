@@ -47,9 +47,6 @@
 
             <label for="correo"></label>
             <input class="datos_a_ingresar" type="email" name="correo" id="correo" placeholder="Ingrese su Correo" required>
-            <% if (locals.errors && errors.correo) { %>
-                <p class="textErrorForm"><%= errors.correo.msg %></p>
-            <% } %>
             
             <label for="contraseña"></label>
             <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
@@ -57,6 +54,11 @@
             <label for="cod-acceso"></label>
             <input class="datos_a_ingresar" type="password" name="cod-acceso" id="cod-acceso" placeholder="Código de acceso" required>
             
+            <% if (locals.errors && errors.datosMal) { %>
+                <p class="textErrorForm"><%= errors.datosMal.msg %></p>
+            <% } %>
+
+
             <label for="boton"></label>
             <div class="d-grid gap-2">
                 <input class="btn btn-primary" type="submit" value="Ingresar">              

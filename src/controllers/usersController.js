@@ -7,9 +7,6 @@ const bcryptjs = require('bcryptjs');
 
 const controladorUsers  =
 {
-    perfil: (req, res) => {
-        res.render("./users/perfil", {usuarios:users});
-    },
     registro: (req, res) =>{
         res.render("./users/registro");
     },
@@ -62,23 +59,30 @@ const controladorUsers  =
 
 		users.forEach(function(usuario){
 			if (usuario.email == req.body.correo){
-				let passOk = usuario.contraseña
+				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
 				if (passOk){
-					res.send(passOk)
+					delete usuario.contraseña;
+					req.session.userLogged = usuario;
+					res.redirect("/users/perfil")
 				}
-
-				}
-			else{
-				return res.render("./users/ingreso", 
-				{
-					errors:{
-						correo:{
-							msg:"Datos invalidos"
+				else{
+					return res.render("./users/ingreso", 
+					{
+						errors:{
+							datosMal:{
+								msg:"Las credenciales son invalidas."
+							}
 						}
-					}
-				})
+					})
+				}
 			}
-			})
+			
+		})
+	},
+	profile: (req, res) => {
+		res.render("./users/perfil",{
+			user: req.session.userLogged
+		})
 	}
 }
 
