@@ -3,6 +3,7 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
+const bcryptjs = require('bcryptjs');
 
 const controladorUsers  =
 {
@@ -58,10 +59,15 @@ const controladorUsers  =
         res.render("./users/ingreso");
     },
 	login: (req, res) => {
-		for (let i=0; i<users.length; i++){
-			if (users[i].email === req.body.correo && users[i].contraseña == req.body.contraseña){
-				res.send(users[i])
-			}
+
+		users.forEach(function(usuario){
+			if (usuario.email == req.body.correo){
+				let passOk = usuario.contraseña
+				if (passOk){
+					res.send(passOk)
+				}
+
+				}
 			else{
 				return res.render("./users/ingreso", 
 				{
@@ -71,9 +77,8 @@ const controladorUsers  =
 						}
 					}
 				})
-
 			}
-		}
+			})
 	}
 }
 

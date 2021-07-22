@@ -1,9 +1,16 @@
 [
   {
     "id": 1,
+    "nombre": "aaa",
+    "apellido": "aaa",
+    "email": "alo@gmail.com",
+    "contraseña": "probando123"
+  },
+  {
+    "id": 2,
     "nombre": "Lucas",
     "apellido": "Cambon",
     "email": "lucambon08@gmail.com",
-    "contraseña": "probando123"
+    "contraseña": "$2a$10$BnN9blD.3o8cDsS5rEGXDu5iuWVvIIsHdZgsIsUQnCdppj1QGpTny"
   }
 ]
