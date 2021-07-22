@@ -58,8 +58,6 @@ const controladorUsers  =
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
-<<<<<<< HEAD
-=======
 	login: (req, res) => {
 
 		users.forEach(function(usuario){
@@ -82,7 +80,6 @@ const controladorUsers  =
 			}
 			})
 	}
->>>>>>> Lucas
 }
 
 
