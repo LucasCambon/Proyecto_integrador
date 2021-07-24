@@ -14,10 +14,11 @@ const controladorUsers  =
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length>0) {
-			res.render("./users/registro",{
+			return res.render("./users/registro",{
 				errors: resultValidation.mapped(),
 				oldData: req.body
-			});
+				
+			});		
 		}
 		for (let i=0; i<users.length;i++){
 			if (users[i].email === req.body.correo)
