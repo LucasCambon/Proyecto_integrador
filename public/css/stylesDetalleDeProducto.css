@@ -246,7 +246,45 @@ body {
 }
 
 
-/* RESPONSIVE DESIGN */
+
+/* --------------------------------- USERS ------------------------------*/
+
+#rowTop-User{
+    margin-top: 10%;
+    background-color: #000000ce;
+    border: 1px solid darkorchid;
+    padding: 48px;
+    border-radius: 4.8px;
+}
+#col-img-perfil {
+    display: flex;
+    flex-direction: column;
+    align-self: center;    
+}
+
+#img-prod-user {
+    border-radius: 50%;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+#botones-edicion-perfil {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10%;
+    z-index: 1;
+}
+
+#boton-cerrarsesion {
+    
+    margin: 4rem auto auto auto;
+    z-index: 1;
+    width: 35%;
+}
+
+/* RESPONSIVE DESIGN-------------------DETALLE DE PRODUCTO--------- */
 
 @media only screen and (max-width: 1400px) {
 
@@ -776,3 +814,52 @@ body {
     }
 
 }
+
+/* RESPONSIVE DESIGN-------------------DETALLE DE PERFIL--------- */
+
+
+
+@media only screen and (max-width: 997px) {
+    
+    #rowTop-User {
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    
+    #rowTop-User {
+        display: flex;
+        flex-direction: column;
+    }
+    #col-img-perfil {
+        order: -1;
+        
+    }
+    #col-left-perfil {
+        width: 100%!important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    
+    #rowTop-User {
+        display: flex;
+        flex-direction: column;
+    }
+    #col-img-perfil {
+        order: -1;
+        width: 100%!important;
+        
+    }
+    .btn-lg {
+        font-size: 1.5rem!important;
+    }
+
+    #botones-edicion-perfil {
+        gap: 0%;
+    }
+}
+
+ 
+

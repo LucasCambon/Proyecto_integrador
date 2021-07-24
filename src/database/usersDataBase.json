@@ -5,6 +5,14 @@
     "apellido": "Cambon",
     "email": "lucambon08@gmail.com",
     "contraseña": "$2a$10$BnN9blD.3o8cDsS5rEGXDu5iuWVvIIsHdZgsIsUQnCdppj1QGpTny",
-    "image": "1626903469014978948918.jpg"
+    "imagen": "1626903469014978948918.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Esteban",
+    "apellido": "Gonzalez",
+    "email": "c215701@gmail.com",
+    "contraseña": "$2a$10$qgkyZf.n1F4ErBjBURfMlerIhhoZEOw/T0EOfAnnhK8kcx2b9isCq",
+    "image": "1627157306625.png"
   }
 ]
