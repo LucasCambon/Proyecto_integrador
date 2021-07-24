@@ -36,6 +36,7 @@ const controladorUsers  =
 					apellido: req.body.apellidos,
 					email: req.body.correo,
 					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
+					imagen: req.file.filename
 				}
 				
 				users.push(obj)
@@ -56,13 +57,17 @@ const controladorUsers  =
         res.render("./users/ingreso");
     },
 	login: (req, res) => {
-
 		users.forEach(function(usuario){
 			if (usuario.email == req.body.correo){
 				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
 				if (passOk){
 					delete usuario.contraseña;
 					req.session.userLogged = usuario;
+
+					if (req.body.recordarUsuario) {
+						res.cookie("userEmail", req.body.correo, { maxAge: (1000 * 60) * 60})
+					}
+
 					res.redirect("/users/perfil")
 				}
 				else{
@@ -83,6 +88,11 @@ const controladorUsers  =
 		res.render("./users/perfil",{
 			user: req.session.userLogged
 		})
+	},
+	logout: (req, res) => {
+		res.clearCookie("userEmail")
+		req.session.destroy();
+		return res.redirect("/")
 	}
 }
 

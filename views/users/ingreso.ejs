@@ -50,10 +50,14 @@
             
             <label for="contraseña"></label>
             <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
-            
-            <label for="cod-acceso"></label>
-            <input class="datos_a_ingresar" type="password" name="cod-acceso" id="cod-acceso" placeholder="Código de acceso" required>
-            
+
+            <div>
+                <label for="recordarUsuario">
+                    <input class="form-check-input" type="checkbox" name="recordarUsuario"> Recordarme
+                </label>
+            </div>
+
+
             <% if (locals.errors && errors.datosMal) { %>
                 <p class="textErrorForm"><%= errors.datosMal.msg %></p>
             <% } %>

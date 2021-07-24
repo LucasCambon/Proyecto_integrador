@@ -7,7 +7,8 @@ const usersRoutes = require("./src/routes/usersRoutes")
 const methodOverride =  require('method-override');
 var path = require('path');
 const session = require("express-session");
-
+const cookies = require("cookie-parser");
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
 
 /*** MIDDLEWARES ***/
@@ -20,6 +21,9 @@ app.use(express.static(path.join(__dirname, './public')));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cookies())
+app.use(userLoggedMiddleware);
+
 
 
 /*** PUERTO***/
