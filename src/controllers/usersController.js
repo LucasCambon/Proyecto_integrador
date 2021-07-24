@@ -3,12 +3,10 @@ const path = require('path');
 const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
+const bcryptjs = require('bcryptjs');
 
 const controladorUsers  =
 {
-    perfil: (req, res) => {
-        res.render("./users/perfil", {usuarios:users});
-    },
     registro: (req, res) =>{
         res.render("./users/registro");
     },
@@ -38,6 +36,7 @@ const controladorUsers  =
 					apellido: req.body.apellidos,
 					email: req.body.correo,
 					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
+					imagen: req.file.filename
 				}
 				
 				users.push(obj)
@@ -57,6 +56,44 @@ const controladorUsers  =
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
+	login: (req, res) => {
+		users.forEach(function(usuario){
+			if (usuario.email == req.body.correo){
+				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
+				if (passOk){
+					delete usuario.contraseña;
+					req.session.userLogged = usuario;
+
+					if (req.body.recordarUsuario) {
+						res.cookie("userEmail", req.body.correo, { maxAge: (1000 * 60) * 60})
+					}
+
+					res.redirect("/users/perfil")
+				}
+				else{
+					return res.render("./users/ingreso", 
+					{
+						errors:{
+							datosMal:{
+								msg:"Las credenciales son invalidas."
+							}
+						}
+					})
+				}
+			}
+			
+		})
+	},
+	profile: (req, res) => {
+		res.render("./users/perfil",{
+			user: req.session.userLogged
+		})
+	},
+	logout: (req, res) => {
+		res.clearCookie("userEmail")
+		req.session.destroy();
+		return res.redirect("/")
+	}
 }
 
 
