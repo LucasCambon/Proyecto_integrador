@@ -36,7 +36,7 @@ const controladorUsers  =
 					apellido: req.body.apellidos,
 					email: req.body.correo,
 					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
-					imagen: req.file.filename
+					image: req.file.filename
 				}
 				
 				users.push(obj)
