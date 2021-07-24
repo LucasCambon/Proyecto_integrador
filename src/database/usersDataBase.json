@@ -13,5 +13,13 @@
     "email": "lucambon08@gmail.com",
     "contraseña": "$2a$10$BnN9blD.3o8cDsS5rEGXDu5iuWVvIIsHdZgsIsUQnCdppj1QGpTny",
     "imagen": "1626903469014978948918.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Esteban",
+    "apellido": "Gonzalez",
+    "email": "c215701@gmail.com",
+    "contraseña": "$2a$04$GkKuPpBwUg1f489qEzcqAesJ0H9RaXf4RIwZo.5JUZHqVw/HZeeDe",
+    "imagen": "1626903469014978948918.jpg"
   }
 ]
