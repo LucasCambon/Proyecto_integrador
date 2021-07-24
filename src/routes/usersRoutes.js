@@ -8,7 +8,7 @@ const authMiddleware = require("../middlewares/authMiddlewares")
 
 /*** REGISTRO ***/
 router.get("/registro", guestMiddleware,usersController.registro)
-router.post("/registro",uploadFile.single("image"),validations,usersController.store)
+router.post("/registro", uploadFile.single("image"), validations,usersController.store)
 
 /*** INGRESO ***/
 router.get("/ingreso", guestMiddleware,usersController.ingreso)
