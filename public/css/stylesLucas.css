@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600;700;800&family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
 /* -------------------------------------------------------- */
 /* Background Fondo */
 
@@ -31,6 +34,7 @@
          -o-animation:move-background 7s linear infinite;
          -webkit-animation:move-background 7s linear infinite;
          animation:move-background 7s linear infinite;
+    z-index: -3;
    }
 
 
@@ -41,7 +45,7 @@
     height: 100%;
     position: absolute;
        display: block;
-         z-index: 1;
+         z-index: -3;
          -moz-animation:move-background 7s linear infinite;
          -ms-animation:move-background 7s linear infinite;
          -o-animation:move-background 7s linear infinite;
@@ -222,12 +226,11 @@ button {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 body {
     font-family: 'Manrope', sans-serif;
-    background: #eee
 }
+
 
 .size span {
     font-size: 11px
@@ -302,14 +305,9 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    
 }
 
-.btnDesc{
-    color: grey;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
 
 .d-block{
     height: 500px;
@@ -444,7 +442,7 @@ select{
 
 .footer2 a {
     text-decoration: none;
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
 }
 
 
@@ -452,7 +450,7 @@ select{
     font-size: 16px;
     color: goldenrod;
     text-decoration: none;
-    font-family: sans-serif;
+    /*font-family: sans-serif;*/
     font-weight: bold;
     word-spacing: 5pt;
 }
@@ -462,7 +460,7 @@ select{
     color: goldenrod;
     text-decoration: none;
     font-weight: bold;
-    font-family: sans-serif;
+   /* font-family: sans-serif; */
     word-spacing: 5pt;
 }
 
@@ -502,8 +500,6 @@ select{
 
 .fotos{
     padding: 15px;
-    background-color: #282380;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
 }
 
 .fotos img{
@@ -512,13 +508,9 @@ select{
 }
 
 .contDesc{
-    background-color: #282380;
-    border-top: solid 1px #b5179e;
     padding: 15px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px; 
-    
+    text-align: left; 
 }
 
 /* -------------------------------------------------------- */
@@ -736,4 +728,44 @@ select{
 
 .textErrorForm{
     color: red;
+}
+
+/* ------------------ Background Box --------------------------*/
+
+
+.bg-box {
+    margin-top: 10%;
+    background-color: #000000b4;
+    border: 1px solid darkorchid;
+    border-radius: 4.8px;
+    padding: 48px;
+    margin: auto;
+    width: 80%; /* PONER RESPONSIVE EN 100% */
+    z-index: auto;
+    font-weight: 400;
+    /* font-family: 'Noto Sans', sans-serif; */
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    
+}
+#h4-prod-destacados {
+    margin-top: 48px;
+}
+.fs-1 {
+    color: darkgoldenrod;
+}
+.productosRelacionados-hr {
+    margin-top: -1em;
+    border: 1px solid darkorchid;
+}
+#box-productos {
+    border: 1px solid darkorchid; 
+    border-radius: 4.8px;
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.1),rgba(91, 14, 214, 0.125) 100%);
+    transition: 0.3s;
+}
+
+#box-productos:hover {
+    
+    box-shadow: 10px 5px 5px rgb(54, 7, 134);
 }

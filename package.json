@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/LucasCambon/Proyecto_integrador#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "JSON": "^1.0.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.5",
