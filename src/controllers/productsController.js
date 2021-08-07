@@ -1,13 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
-const categoriasFilePath = path.join(__dirname, '../database/categoriasProdDB.json');
+const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
+const categoriasFilePath = path.join(__dirname, '../data/categoriasProdDB.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
 
+const db = require("../database/models")
+
 const controladorProducts =
 {
-    carrito: (req, res) =>{
+    carrito: (req, res) => {
         res.render("./products/carrito");
     },
     creacion_producto: (req, res) =>{
@@ -15,7 +17,19 @@ const controladorProducts =
     },
 
     store: (req, res) => {
-		let obj = {
+
+		db.Producto.create({
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file.filename,
+		})
+		.catch((e) => {
+			console.log(e)
+		})
+		res.redirect("/")
+		/*let obj = {
 			id: products.length + 1,
 			name: req.body.name,
 			price: req.body.price,
@@ -35,7 +49,7 @@ const controladorProducts =
 			}
 		})
 		console.log(obj)
-		res.redirect("/")
+		res.redirect("/")*/
 	},
 
     detalleDeProducto: (req, res) =>{
@@ -76,8 +90,12 @@ const controladorProducts =
 	},
 
     listado_productos: (req, res) =>{
-        res.render("./products/listado_productos",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll()
+			.then(function(productos){
+				return res.send(productos)
+			})
+        /*res.render("./products/listado_productos",{productos:products,categorias:categorias
+		});*/
     },
 
 	listado_bundles: (req, res) =>{
