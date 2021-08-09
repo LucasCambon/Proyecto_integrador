@@ -5,12 +5,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
 const bcryptjs = require('bcryptjs');
 
+const db = require("../database/models")
+
 const controladorUsers  =
 {
+
     registro: (req, res) =>{
-        res.render("./users/registro");
+		res.render("./users/registro");
     },
     store: (req, res) => {
+
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length>0) {
@@ -20,7 +24,35 @@ const controladorUsers  =
 				
 			});		
 		}
-		for (let i=0; i<users.length;i++){
+
+		db.Usuario.findOne({ where: { email: req.body.correo } }).then((usuario) => {
+			if (usuario) {
+				return res.render("./users/registro",{
+					errors: {
+						correo: {
+							msg: "Email ya registrado"
+						}
+					},
+					oldData: req.body
+				})
+			}
+			else {
+				db.Usuario.create({
+					nombre: req.body.nombres,
+					apellido: req.body.apellidos,
+					email: req.body.correo,
+					contrasenia: bcryptjs.hashSync(req.body.contraseña,10),
+					image: req.file.filename
+				})
+				.catch((e) => {
+					console.log(e)
+				})
+				res.redirect("./ingreso");
+			}
+
+		})
+
+		/*for (let i=0; i<users.length;i++){
 			if (users[i].email === req.body.correo)
 			return res.render("./users/registro",{
 				errors: {
@@ -52,7 +84,7 @@ const controladorUsers  =
 				console.log(obj)
 				res.redirect("/")
 			}
-		}
+		}*/
 	},
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
