@@ -29,62 +29,49 @@ const controladorProducts =
 			console.log(e)
 		})
 		res.redirect("/")
-		/*let obj = {
-			id: products.length + 1,
-			name: req.body.name,
-			price: req.body.price,
-			discount: 0,
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file.filename
-		   }
-           
-		products.push(obj)
-		fs.writeFile(productsFilePath, JSON.stringify(products, null, 2), err => {
-			if (err) {
-				console.log('Error writing file', err)
-			} 
-			else {
-				console.log('Successfully wrote file')
-			}
-		})
-		console.log(obj)
-		res.redirect("/")*/
 	},
 
     detalleDeProducto: (req, res) =>{
-		for (let i=0; i<products.length;i++){
-			if (products[i].id == req.params.id)
-			res.render("./products/detalleDeProducto", {producto:products[i],categorias:categorias});
-		}
+
+		db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+			if (producto) {
+				return res.render("./products/detalleDeProducto",{
+					producto: producto
+				})
+			}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
     },
     edicion_productos: (req, res) => {
-		for (let i=0; i<products.length;i++){
-			if (products[i].id == req.params.id)
-			var algo = products[i]
-		}
-		res.render("./products/edicion_producto", {producto:algo})
+
+		db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+			if (producto) {
+				return res.render("./products/edicion_producto",{
+					producto: producto
+				})
+			}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
 	},
 	update: (req, res) => {
-		let obj = []
-		products.forEach(function(producto){
-			if (producto.id == req.params.id){
-				producto = {
-					id: producto.id,
-					name: req.body.name,
-					price: req.body.price,
-					discount: req.body.discount,
-					category: req.body.category,
-					description: req.body.description,
-					image : producto.image
-					}
-				obj.push(producto)
-				}
-			else{
-				obj.push(producto)
-			}
-			})
-		fs.writeFileSync(productsFilePath, JSON.stringify(obj, null, 2));
+
+		db.Producto.update({
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file.filename
+		},
+		{
+			where: {id: req.params.id}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
 		res.render("./products/mensaje-edicion")
 	
 	},
@@ -92,10 +79,9 @@ const controladorProducts =
     listado_productos: (req, res) =>{
 		db.Producto.findAll()
 			.then(function(productos){
-				return res.send(productos)
+				return res.render("./products/listado_productos",{productos:productos,categorias:categorias
+				});
 			})
-        /*res.render("./products/listado_productos",{productos:products,categorias:categorias
-		});*/
     },
 
 	listado_bundles: (req, res) =>{
