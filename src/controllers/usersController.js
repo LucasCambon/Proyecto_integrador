@@ -49,52 +49,19 @@ const controladorUsers  =
 				})
 				res.redirect("./ingreso");
 			}
-
 		})
-
-		/*for (let i=0; i<users.length;i++){
-			if (users[i].email === req.body.correo)
-			return res.render("./users/registro",{
-				errors: {
-					correo: {
-						msg: "Email ya registrado"
-					}
-				},
-				oldData: req.body
-			})
-			else{
-				let obj = {
-					id: users.length + 1,
-					nombre: req.body.nombres,
-					apellido: req.body.apellidos,
-					email: req.body.correo,
-					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
-					image: req.file.filename
-				}
-				
-				users.push(obj)
-				fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
-					if (err) {
-						console.log('Error writing file', err)
-					} 
-					else {
-						console.log('Successfully wrote file')
-					}
-				})
-				console.log(obj)
-				res.redirect("/")
-			}
-		}*/
 	},
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
 	login: (req, res) => {
-		users.forEach(function(usuario){
-			if (usuario.email == req.body.correo){
-				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
+
+		db.Usuario.findOne({ where: { email: req.body.correo } }).then((usuario) => {
+			if (usuario.email == req.body.correo) {
+
+				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contrasenia)
 				if (passOk){
-					delete usuario.contraseña;
+					delete usuario.contrasenia;
 					req.session.userLogged = usuario;
 
 					if (req.body.recordarUsuario) {
@@ -113,8 +80,12 @@ const controladorUsers  =
 						}
 					})
 				}
+				
 			}
-			
+			res.send(usuario)
+		})
+		.catch((e) => {
+			console.log(e)
 		})
 	},
 	profile: (req, res) => {
