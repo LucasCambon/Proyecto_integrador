@@ -41,17 +41,17 @@
 
         <%- include("../partials/headerCategorias") %>
         <img src="/img/banner.jpg" alt="Coast" class="banner">
-        <div class="stars" id="bgListado"></div>
-
+        <div class="stars" id="bgListado">
+        <div class="bg-box" id="bg-box-listado">
             <div  class="seccionesImg">
-                <h1 class="btnDesc" id="listadoTitulos">Ítems</h4>
+                <h1 class="fs-1"  id="h4-prod-destacados-listado">Ítems</h4>
             </div>
-
+            <hr class="productosRelacionados-hr">
             <section class="container">
                 <div class="row" id="listadoProductos">
                     <% for (let i=0; i<productos.length ; i++){%>
                         <% if (productos[i].category === "items"){%>
-                            <div class="productos col" id="productosListados">
+                            <div class="productos col" id="box-productos-listado">
                                 <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                     <div class="fotos">
                                         <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -68,6 +68,7 @@
                     <%}%>
                     </div>
             </section>
+        </div>
         </main>
 
         <%- include("../partials/footer") %>

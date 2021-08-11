@@ -528,6 +528,7 @@ select{
     div#listadoProductos{
         display: grid;
         grid-template-columns: auto auto auto;
+        
     }
     div#bgListado{
         height: 125em;
@@ -698,6 +699,7 @@ select{
 #listadoProductos {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    column-gap: 1rem;
         
 }
 #listadoCategorias {
@@ -752,20 +754,25 @@ select{
     margin-top: 48px;
 }
 .fs-1 {
-    color: darkgoldenrod;
+    color: rgb(255, 181, 111);
+}
+.fs-2 {
+    color: rgb(255, 181, 111);
 }
 .productosRelacionados-hr {
     margin-top: -1em;
     border: 1px solid darkorchid;
 }
 #box-productos {
-    border: 1px solid darkorchid; 
+    border: 1px solid rgba(153, 50, 204, 0.288); 
     border-radius: 4.8px;
     background: linear-gradient(0deg,rgba(29, 236, 197, 0.1),rgba(91, 14, 214, 0.125) 100%);
     transition: 0.3s;
+    
 }
 
 #box-productos:hover {
-    
+    border: 1px solid darkorchid;
     box-shadow: 10px 5px 5px rgb(54, 7, 134);
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.25),rgba(91, 14, 214, 0.125) 100%);
 }
