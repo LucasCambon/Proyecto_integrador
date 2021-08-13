@@ -45,7 +45,10 @@
     outline: 5px solid darkslateblue;
     
 }
-
+.registro-hr{
+    color: rgb(255, 207, 162);
+    
+}
 #titulo-img-perfil {
     margin-top: 2rem;
     margin-bottom: 0;
@@ -92,6 +95,13 @@
 .lead {
     color: rgb(170, 170, 170);
     text-decoration: none!important;
+
+}
+#lead {
+    
+    color: rgb(170, 170, 170)!important;
+    text-decoration: none!important;
+    
 }
 
 a {

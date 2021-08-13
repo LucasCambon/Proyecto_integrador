@@ -41,8 +41,9 @@
     
     <section class="bg-box" style="margin-top: 100px;">
 
-        <h4 class="fs-1"  id="h4-prod-destacados-listado">Ingreso</h4>
-
+        <h4 class="fs-1" id="h4-prod-destacados-listado">Ingreso</h4>
+        <hr class="registro-hr">
+        <br>
         <form action="/users/ingreso" method="POST">  
 
             <label for="correo"></label>
@@ -50,14 +51,14 @@
             
             <label for="contraseña"></label>
             <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña" required>
-
+            
             <div>
-                <label for="recordarUsuario">
+                <label id="lead" for="recordarUsuario">
                     <input class="form-check-input" type="checkbox" name="recordarUsuario"> Recordarme
                 </label>
             </div>
 
-
+            <br>
             <% if (locals.errors && errors.datosMal) { %>
                 <p class="textErrorForm"><%= errors.datosMal.msg %></p>
             <% } %>
@@ -65,14 +66,18 @@
 
             <label for="boton"></label>
             <div class="d-grid gap-2">
-                <input class="btn btn-primary" type="submit" value="Ingresar">              
+                <input id="btn-registrarme" class="btn btn-primary" type="submit" value="Ingresar">              
             </div>
 
         </form>
-
+        <div class="p-text">
+        <br>
         <p class="lead">Estoy de acuerdo con <a href="#">Términos y condiciones</a></p>
         <p class="lead"><a href="registro.html">No tengo una cuenta</a></p>
+        <br>
+        <br>
         <p class="lead">Podés iniciar sesión con:</p>
+        </div>
         <div class="IconosRedes">
         <i class="fab fa-google Redes Google"></i>
         <i class="fab fa-facebook-square Redes Facebook"></i>
