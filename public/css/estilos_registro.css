@@ -154,13 +154,6 @@ a {
 .Redes {
     color: white;
 }
-.tipoProd{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .gap-2{
     margin-bottom: 10px;
@@ -169,6 +162,37 @@ a {
 .textErrorForm{
     color: red;
 }
+
+/*---------------------- Creacion Nuevo Producto ------------------------------*/
+#description {
+    background: none;
+}
+.tipoLabel {
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+}
+.tipoProd{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tipoProdBox {
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#category {
+    height: 2rem;
+    width: 2rem;
+    transition: 0.3s;
+    margin-right: 0.5rem;
+}
+
+
 
 @media only screen and (max-width: 700px){
     section.form-creaProd{

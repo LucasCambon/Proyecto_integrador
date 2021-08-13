@@ -758,6 +758,7 @@ select{
 }
 .fs-2 {
     color: rgb(255, 181, 111);
+    margin-top: 0.5rem;
 }
 .productosRelacionados-hr {
     margin-top: -1em;
