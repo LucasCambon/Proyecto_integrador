@@ -1,6 +1,3 @@
-const Factura = require("./Factura");
-
- 
 module.exports = (sequelize, dataTypes) => {
     const alias = "Usuario"
     const cols = {
