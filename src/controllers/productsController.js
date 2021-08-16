@@ -1,10 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
-const categoriasFilePath = path.join(__dirname, '../data/categoriasProdDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
-
 const db = require("../database/models")
 
 const controladorProducts =
@@ -79,30 +72,65 @@ const controladorProducts =
     listado_productos: (req, res) =>{
 		db.Producto.findAll()
 			.then(function(productos){
-				return res.render("./products/listado_productos",{productos:productos,categorias:categorias
+				return res.render("./products/listado_productos",{productos:productos
 				});
 			})
     },
 
 	listado_bundles: (req, res) =>{
-        res.render("./products/listado_bundles",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Bundle"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_bundles",{productos:productos
+				});
+			})
     },
 	listado_coins: (req, res) =>{
-        res.render("./products/listado_coins",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Coins"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_coins",{productos:productos
+				});
+			})
     },
 	listado_items: (req, res) =>{
-        res.render("./products/listado_items",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Items"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_items",{productos:productos
+				});
+			})
     },
 	listado_juegos: (req, res) =>{
-        res.render("./products/listado_juegos",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Juegos"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_juegos",{productos:productos
+				});
+			})
     },
 	listado_merchandising: (req, res) =>{
-        res.render("./products/listado_merchandising",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Merchandising"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_merchandising",{productos:productos
+				});
+			})
     },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {

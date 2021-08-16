@@ -7,7 +7,7 @@ module.exports = [
     body("correo").notEmpty().withMessage("Tienes que ingresar un email"),
     body("image").custom((value, {req}) => {
         let file = req.file;
-        let acceptedExtensions = [".jpg", ".png", ".gif"]
+        let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
         
         if (!file){
             throw new Error("Tiene que adjuntar una imagen")

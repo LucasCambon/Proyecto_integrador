@@ -1,7 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
 const bcryptjs = require('bcryptjs');
 
@@ -57,7 +53,7 @@ const controladorUsers  =
 	login: (req, res) => {
 
 		db.Usuario.findOne({ where: { email: req.body.correo } }).then((usuario) => {
-			if (usuario.email == req.body.correo) {
+			if (usuario) {
 
 				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contrasenia)
 				if (passOk){
@@ -82,7 +78,16 @@ const controladorUsers  =
 				}
 				
 			}
-			res.send(usuario)
+			else {
+				return res.render("./users/ingreso", 
+					{
+						errors:{
+							datosMal:{
+								msg:"Las credenciales son invalidas."
+							}
+						}
+					})
+			}
 		})
 		.catch((e) => {
 			console.log(e)
@@ -97,7 +102,7 @@ const controladorUsers  =
 		res.clearCookie("userEmail")
 		req.session.destroy();
 		return res.redirect("/")
-	}
+	},
 }
 
 

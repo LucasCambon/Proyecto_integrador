@@ -2,7 +2,7 @@ const path = require('path');
 const multer = require("multer")
 const { validationResult } = require("express-validator")
 
-let acceptedExtensions = [".jpg", ".png", ".gif"]
+let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
 
 const fileFilter = function (req, file, cb){
     let fileExtension = path.extname(file.originalname);

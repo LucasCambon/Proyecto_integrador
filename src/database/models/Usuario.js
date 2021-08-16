@@ -1,3 +1,5 @@
+const Factura = require("./Factura");
+
  
 module.exports = (sequelize, dataTypes) => {
     const alias = "Usuario"
@@ -5,7 +7,8 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            allowNull: false
         },
         nombre: {
             type: dataTypes.STRING(255),
@@ -37,5 +40,19 @@ module.exports = (sequelize, dataTypes) => {
     };
     const Usuario = sequelize.define(alias, cols, config)
     
+    Usuario.associate = function (modelo) {
+
+        Usuario.hasMany(modelo.Tarjeta, {
+            as: "tarjetas",
+            foreignKey: "id_tarjeta"
+        })
+
+        Usuario.hasMany(modelo.Factura, {
+            as: "facturas",
+            foreignKey: "id_cliente"
+        })
+
+    }
+
     return Usuario
 }
