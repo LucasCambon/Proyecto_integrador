@@ -6,7 +6,7 @@ module.exports = {
     "host": "mysql-integradorgrupo5.alwaysdata.net",
     "port": 3306,
     "dialect": "mysql",
-    "use_env_variable": "mysql-integradorgrupo5.alwaysdata.net"
+    "use_env_variable": "DATABASE_URL"
   },
   "test": {
     "username": "root",
