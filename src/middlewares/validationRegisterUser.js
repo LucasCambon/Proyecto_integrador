@@ -5,9 +5,9 @@ module.exports = [
     body("apellidos").notEmpty().withMessage("Tienes que ingresar un apellido"),
     body("contraseña").notEmpty().withMessage("Tienes que ingresar una contraseña"),
     body("correo").notEmpty().withMessage("Tienes que ingresar un email"),
-    body("imagen").custom((value, {req}) => {
+    body("image").custom((value, {req}) => {
         let file = req.file;
-        let acceptedExtensions = [".jpg", ".png", ".gif"]
+        let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
         
         if (!file){
             throw new Error("Tiene que adjuntar una imagen")

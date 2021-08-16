@@ -1,67 +1,63 @@
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../database/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require("express-validator")
 const bcryptjs = require('bcryptjs');
 
+const db = require("../database/models")
+
 const controladorUsers  =
 {
+
     registro: (req, res) =>{
-        res.render("./users/registro");
+		res.render("./users/registro");
     },
     store: (req, res) => {
+
 		const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length>0) {
-			res.render("./users/registro",{
+			return res.render("./users/registro",{
 				errors: resultValidation.mapped(),
 				oldData: req.body
-			});
+				
+			});		
 		}
-		for (let i=0; i<users.length;i++){
-			if (users[i].email === req.body.correo)
-			return res.render("./users/registro",{
-				errors: {
-					correo: {
-						msg: "Email ya registrado"
-					}
-				},
-				oldData: req.body
-			})
-			else{
-				let obj = {
-					id: users.length + 1,
+
+		db.Usuario.findOne({ where: { email: req.body.correo } }).then((usuario) => {
+			if (usuario) {
+				return res.render("./users/registro",{
+					errors: {
+						correo: {
+							msg: "Email ya registrado"
+						}
+					},
+					oldData: req.body
+				})
+			}
+			else {
+				db.Usuario.create({
 					nombre: req.body.nombres,
 					apellido: req.body.apellidos,
 					email: req.body.correo,
-					contraseña: bcryptjs.hashSync(req.body.contraseña,10),
+					contrasenia: bcryptjs.hashSync(req.body.contraseña,10),
 					image: req.file.filename
-				}
-				
-				users.push(obj)
-				fs.writeFile(usersFilePath, JSON.stringify(users, null, 2), err => {
-					if (err) {
-						console.log('Error writing file', err)
-					} 
-					else {
-						console.log('Successfully wrote file')
-					}
 				})
-				console.log(obj)
-				res.redirect("/")
+				.catch((e) => {
+					console.log(e)
+				})
+				res.redirect("./ingreso");
 			}
-		}
+		})
 	},
     ingreso: (req, res) =>{
         res.render("./users/ingreso");
     },
 	login: (req, res) => {
-		users.forEach(function(usuario){
-			if (usuario.email == req.body.correo){
-				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contraseña)
+
+		db.Usuario.findOne({ where: { email: req.body.correo } }).then((usuario) => {
+			if (usuario) {
+
+				let passOk = bcryptjs.compareSync(req.body.contraseña, usuario.contrasenia)
 				if (passOk){
-					delete usuario.contraseña;
+					delete usuario.contrasenia;
 					req.session.userLogged = usuario;
 
 					if (req.body.recordarUsuario) {
@@ -80,8 +76,21 @@ const controladorUsers  =
 						}
 					})
 				}
+				
 			}
-			
+			else {
+				return res.render("./users/ingreso", 
+					{
+						errors:{
+							datosMal:{
+								msg:"Las credenciales son invalidas."
+							}
+						}
+					})
+			}
+		})
+		.catch((e) => {
+			console.log(e)
 		})
 	},
 	profile: (req, res) => {
@@ -93,7 +102,7 @@ const controladorUsers  =
 		res.clearCookie("userEmail")
 		req.session.destroy();
 		return res.redirect("/")
-	}
+	},
 }
 
 

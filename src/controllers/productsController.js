@@ -1,13 +1,8 @@
-const fs = require('fs');
-const path = require('path');
-const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
-const categoriasFilePath = path.join(__dirname, '../database/categoriasProdDB.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const categorias = JSON.parse(fs.readFileSync(categoriasFilePath, 'utf-8'));
+const db = require("../database/models")
 
 const controladorProducts =
 {
-    carrito: (req, res) =>{
+    carrito: (req, res) => {
         res.render("./products/carrito");
     },
     creacion_producto: (req, res) =>{
@@ -15,90 +10,127 @@ const controladorProducts =
     },
 
     store: (req, res) => {
-		let obj = {
-			id: products.length + 1,
+
+		db.Producto.create({
 			name: req.body.name,
 			price: req.body.price,
-			discount: 0,
 			category: req.body.category,
 			description: req.body.description,
-			image: req.file.filename
-		   }
-           
-		products.push(obj)
-		fs.writeFile(productsFilePath, JSON.stringify(products, null, 2), err => {
-			if (err) {
-				console.log('Error writing file', err)
-			} 
-			else {
-				console.log('Successfully wrote file')
-			}
+			image: req.file.filename,
 		})
-		console.log(obj)
+		.catch((e) => {
+			console.log(e)
+		})
 		res.redirect("/")
 	},
 
     detalleDeProducto: (req, res) =>{
-		for (let i=0; i<products.length;i++){
-			if (products[i].id == req.params.id)
-			res.render("./products/detalleDeProducto", {producto:products[i],categorias:categorias});
-		}
+
+		db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+			if (producto) {
+				return res.render("./products/detalleDeProducto",{
+					producto: producto
+				})
+			}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
     },
     edicion_productos: (req, res) => {
-		for (let i=0; i<products.length;i++){
-			if (products[i].id == req.params.id)
-			var algo = products[i]
-		}
-		res.render("./products/edicion_producto", {producto:algo})
+
+		db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+			if (producto) {
+				return res.render("./products/edicion_producto",{
+					producto: producto
+				})
+			}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
 	},
 	update: (req, res) => {
-		let obj = []
-		products.forEach(function(producto){
-			if (producto.id == req.params.id){
-				producto = {
-					id: producto.id,
-					name: req.body.name,
-					price: req.body.price,
-					discount: req.body.discount,
-					category: req.body.category,
-					description: req.body.description,
-					image : producto.image
-					}
-				obj.push(producto)
-				}
-			else{
-				obj.push(producto)
-			}
-			})
-		fs.writeFileSync(productsFilePath, JSON.stringify(obj, null, 2));
+
+		db.Producto.update({
+			name: req.body.name,
+			price: req.body.price,
+			category: req.body.category,
+			description: req.body.description,
+			image: req.file.filename
+		},
+		{
+			where: {id: req.params.id}
+		})
+		.catch((e) => {
+			console.log(e)
+		})
 		res.render("./products/mensaje-edicion")
 	
 	},
 
     listado_productos: (req, res) =>{
-        res.render("./products/listado_productos",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll()
+			.then(function(productos){
+				return res.render("./products/listado_productos",{productos:productos
+				});
+			})
     },
 
 	listado_bundles: (req, res) =>{
-        res.render("./products/listado_bundles",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Bundle"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_bundles",{productos:productos
+				});
+			})
     },
 	listado_coins: (req, res) =>{
-        res.render("./products/listado_coins",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Coins"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_coins",{productos:productos
+				});
+			})
     },
 	listado_items: (req, res) =>{
-        res.render("./products/listado_items",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Items"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_items",{productos:productos
+				});
+			})
     },
 	listado_juegos: (req, res) =>{
-        res.render("./products/listado_juegos",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Juegos"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_juegos",{productos:productos
+				});
+			})
     },
 	listado_merchandising: (req, res) =>{
-        res.render("./products/listado_merchandising",{productos:products,categorias:categorias
-		});
+		db.Producto.findAll({
+			where: {
+				category: "Merchandising"
+			}
+		})
+			.then(function(productos){
+				return res.render("./products/listado_merchandising",{productos:productos
+				});
+			})
     },
 	destroy : (req, res) => {
 		let productosN = products.filter(producto => {
