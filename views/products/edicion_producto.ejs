@@ -40,41 +40,51 @@
         </script>
         <%- include("../partials/header") %>
         
-        <section class="form-creaProd">
+        <section class="bg-box" style="margin-top: 100px;">
 
-            <h4>Modificar producto</h4>
-
+            <h4 class="fs-1">Modificar producto</h4>
+            <hr class="registro-hr">
             <form action="<%= producto.id%>?_method=PUT" method="POST">
             
                 <label for="name"></label>
                 <input class="datos_a_ingresar" type="text" name="name" value="<%= producto.name %>" id="name" placeholder="Nombre de Producto" required>
                 <label for="description"></label>
                 <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto" required><%= producto.description %></textarea>
-                <!--<<h4>Seleccionar imagen de producto</h4>
+                <!--<<h4 class="fs-2">Seleccionar imagen de producto</h4>
                 label for="image"></label>
                 <input class="datos_a_ingresar" type="file" name="image" id="imagenProducto" accept=".png, .img, .jpg, .jpeg" required> -->
                 <label for="price"></label>
                 <input class="datos_a_ingresar" type="text" name="price" value="<%= producto.price %>" id="price" placeholder="Precio del Producto" required>
-                <h4>Seleccionar categoría de producto</h4>
+                <h4 class="fs-2">Seleccionar categoría de producto</h4>
                 <label for="categoriaProducto"></label>
                 <div class="tipoProd">
+                    <div class="tipoProdBox">    
                         <input type="radio" name="category" id="category"value="juegos">
                         <label class="tipoLabel" for="juegos">Juegos</label>
+                    </div>    
+                    <div class="tipoProdBox">    
                         <input type="radio" name="category" id="category" value="items">
                         <label class="tipoLabel" for="items">Items</label>
+                    </div>
+                    <div class="tipoProdBox">
                         <input type="radio" name="category" id="category" value="bundle">
                         <label class="tipoLabel" for="bundle">Bundle</label>
+                    </div>
+                    <div class="tipoProdBox">
                         <input type="radio" name="category" id="category" value="coins">
-                        <label class="tipoLabel" for="coins">Coins</label>
+                        <label class="tipoLabel" for="coins">Spartan Coins</label>
+                    </div>
+                    <div class="tipoProdBox">
                         <input type="radio" name="category" id="category" value="merchandising">
                         <label class="tipoLabel" for="merchandising">Merchandising</label>
+                    </div>
                 </div>
                 <label for="boton"></label>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="submit">Guardar</button>              
+                    <button id="btn-registrarme" class="btn btn-primary" type="submit">Guardar</button>              
                 </div>
                 <div class="d-grid gap-2">
-                    <button class="btn btn-primary" type="reset">Limpiar</button>           
+                    <button id="btn-registrarme" class="btn btn-primary" type="reset">Reiniciar</button>           
                 </div>
         </form>
 

@@ -25,31 +25,29 @@
 
 .datos_a_ingresar {
     width: 100%;
-    background-color: #24303c;
+    text-align: center;
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: 'calibri';
+    border: 1px solid rgba(153, 50, 204, 0.288);
+    font-family: 'Manrope';
     font-size: 18px;
     color: white;
+    transition: 0.3s;
+}
+.datos_a_ingresar:hover {
+    border: 1px solid darkorchid;
+    box-shadow: 10px 5px 5px rgb(54, 7, 134);
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.1),rgba(91, 14, 214, 0.125) 100%);
 }
 
-.form-registro p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
+.datos_a_ingresar:focus {
+    outline: 5px solid darkslateblue;
+    
 }
-
-.form-registro a {
-    color: #1f53c5;
-    text-decoration: underline;
-}
-
-.form-registro a:hover {
-    color:white;
-    text-decoration: underline;
+.registro-hr{
+    color: rgb(255, 207, 162);
+    
 }
 #titulo-img-perfil {
     margin-top: 2rem;
@@ -74,20 +72,62 @@
     margin-right: 30px;
     margin-left: 20px;
     margin-top: 20px;
+    transition: 0.3s;
 }
-
+.Google:hover {
+    color: green;
+}
+.Facebook:hover {
+    color: blue;
+}
+.Apple:hover {
+    color: grey;
+}
+.Steam:hover {
+    color: darkslateblue
+}
 .IconosRedes {
     display: flex;
     justify-content: center;
 }
 
-.Facebook {
-    color: rgb(39, 118, 192);
+
+.lead {
+    color: rgb(170, 170, 170);
+    text-decoration: none!important;
+
+}
+#lead {
+    
+    color: rgb(170, 170, 170)!important;
+    text-decoration: none!important;
+    
 }
 
+a {
+    text-decoration: none;
+    color: teal;
+}
 
-
-
+#btn-registrarme {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    background-color: rgba(128, 128, 128, 0.164);
+    transition: 0.3s!important;
+    height: 3.5rem;
+    font-size: xx-large;
+    font-weight: 200;
+    border: 1px solid rgba(153, 50, 204, 0.288);
+    color: grey;
+}
+#btn-registrarme:hover {
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.125) 100%);
+    border: 1px solid darkorchid;
+    color: white;
+}
 .form-creaProd{
     width: 600px;
     background-color: #24303c;
@@ -102,16 +142,17 @@
         z-index: 2;
 }
 
-.datos_a_ingresar{
+
+.p-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
-
-.tipoProd{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+#bigger {
+    font-size: 2.0rem;
+}
+.Redes {
+    color: white;
 }
 
 .gap-2{
@@ -121,6 +162,37 @@
 .textErrorForm{
     color: red;
 }
+
+/*---------------------- Creacion Nuevo Producto ------------------------------*/
+#description {
+    background: none;
+}
+.tipoLabel {
+    color: rgb(179, 179, 179);
+    font-size: 1.7rem;
+}
+.tipoProd{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tipoProdBox {
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#category {
+    height: 2rem;
+    width: 2rem;
+    transition: 0.3s;
+    margin-right: 0.5rem;
+}
+
+
 
 @media only screen and (max-width: 700px){
     section.form-creaProd{

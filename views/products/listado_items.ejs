@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="/css/estilos_registro.css">
+        <!-- <link rel="stylesheet" href="/css/estilos_registro.css">
         <link rel="stylesheet" href="/css/stylesAlan.css">
         <link rel="stylesheet" href="/css/stylesLucas.css">
-        <link rel="stylesheet" href="/css/listadoProductos.css">
+        <link rel="stylesheet" href="/css/listadoProductos.css"> -->
+        <link rel="stylesheet" href="/css/styles.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
         <title>Todos los productos</title>
     </head>
@@ -41,17 +42,17 @@
 
         <%- include("../partials/headerCategorias") %>
         <img src="/img/banner.jpg" alt="Coast" class="banner">
-        <div class="stars" id="bgListado"></div>
-
+        <div class="stars" id="bgListado">
+        <div class="bg-box" id="bg-box-listado">
             <div  class="seccionesImg">
-                <h1 class="btnDesc" id="listadoTitulos">Ítems</h4>
+                <h1 class="fs-1"  id="h4-prod-destacados-listado">Ítems</h4>
             </div>
-
+            <hr class="productosRelacionados-hr">
             <section class="container">
                 <div class="row" id="listadoProductos">
                     <% for (let i=0; i<productos.length ; i++){%>
                         <% if (productos[i].category === "items"){%>
-                            <div class="productos col" id="productosListados">
+                            <div class="productos col" id="box-productos-listado">
                                 <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                     <div class="fotos">
                                         <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -68,6 +69,7 @@
                     <%}%>
                     </div>
             </section>
+        </div>
         </main>
 
         <%- include("../partials/footer") %>

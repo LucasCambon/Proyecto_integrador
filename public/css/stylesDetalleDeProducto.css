@@ -1,4 +1,5 @@
 /* BODY */
+
 body {
     background-color: #090013!important;
 }
@@ -80,6 +81,9 @@ body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     padding: 48px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+
 }
 
 .col {
@@ -189,6 +193,9 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding-top: 100px;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+
 }
 #col-img-prod-rel {
     padding-top: 25px;
