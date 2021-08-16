@@ -5,7 +5,8 @@ module.exports = {
     "database": "integradorgrupo5_spartangames",
     "host": "mysql-integradorgrupo5.alwaysdata.net",
     "port": 3306,
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "use_env_variable": "mysql-integradorgrupo5.alwaysdata.net"
   },
   "test": {
     "username": "root",
