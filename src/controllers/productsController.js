@@ -56,8 +56,7 @@ const controladorProducts =
 			name: req.body.name,
 			price: req.body.price,
 			category: req.body.category,
-			description: req.body.description,
-			image: req.file.filename
+			description: req.body.description
 		},
 		{
 			where: {id: req.params.id}
@@ -133,11 +132,13 @@ const controladorProducts =
 			})
     },
 	destroy : (req, res) => {
-		let productosN = products.filter(producto => {
-			return producto.id != req.params.id;
-		})
-		fs.writeFileSync(productsFilePath, JSON.stringify(productosN, null, 2));
-		res.render("./products/mensaje-borrado")
+
+			db.Producto.destroy({
+				where: {id: req.params.id}
+			}).then(() => {
+				return res.render("./products/mensaje-borrado")
+			})
+			
 	}
 }
 
