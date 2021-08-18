@@ -11,14 +11,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE,
             allowNull: false
         },
-        sub_total: {
-            type: dataTypes.DECIMAL(8,2),
-            allowNull: false
-        },
-        descuento: {
-            type: dataTypes.INTEGER(10),
-            allowNull: false
-        },
         total:{
             type: dataTypes.DECIMAL(8,2),
             allowNull: false

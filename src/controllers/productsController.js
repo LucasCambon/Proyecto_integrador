@@ -17,6 +17,7 @@ const controladorProducts =
 			category: req.body.category,
 			description: req.body.description,
 			image: req.file.filename,
+			eliminado: 0
 		})
 		.catch((e) => {
 			console.log(e)
@@ -69,7 +70,9 @@ const controladorProducts =
 	},
 
     listado_productos: (req, res) =>{
-		db.Producto.findAll()
+		db.Producto.findAll({
+			where: {eliminado: 0}
+		})
 			.then(function(productos){
 				return res.render("./products/listado_productos",{productos:productos
 				});
@@ -79,7 +82,8 @@ const controladorProducts =
 	listado_bundles: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Bundle"
+				category: "Bundle",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -90,7 +94,8 @@ const controladorProducts =
 	listado_coins: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Coins"
+				category: "Coins",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -101,7 +106,8 @@ const controladorProducts =
 	listado_items: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Items"
+				category: "Items",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -112,7 +118,8 @@ const controladorProducts =
 	listado_juegos: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Juegos"
+				category: "Juegos",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -123,7 +130,8 @@ const controladorProducts =
 	listado_merchandising: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Merchandising"
+				category: "Merchandising",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -133,7 +141,10 @@ const controladorProducts =
     },
 	destroy : (req, res) => {
 
-			db.Producto.destroy({
+			db.Producto.update({
+				eliminado: 1
+			},
+			{
 				where: {id: req.params.id}
 			}).then(() => {
 				return res.render("./products/mensaje-borrado")
