@@ -50,17 +50,17 @@
             <form action="/users/registro" method="POST" enctype="multipart/form-data">
             
                 <label for="nombres"></label>
-                <input class="datos_a_ingresar" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+                <input class="datos_a_ingresar" type="text" name="nombres" id="nombres" value="<%= locals.oldData ? oldData.nombres : null %>" placeholder="Ingrese su Nombre">
                 <% if (locals.errors && errors.nombres) { %>
                     <p class="textErrorForm"><%= errors.nombres.msg %></p>
                 <% } %>
                 <label for="apellidos"></label>
-                <input class="datos_a_ingresar" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+                <input class="datos_a_ingresar" type="text" name="apellidos" id="apellidos" value="<%= locals.oldData ? oldData.apellidos : null %>" placeholder="Ingrese su Apellido">
                 <% if (locals.errors && errors.apellidos) { %>
                     <p class="textErrorForm"><%= errors.apellidos.msg %></p>
                 <% } %>
                 <label for="correo"></label>
-                <input class="datos_a_ingresar" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+                <input class="datos_a_ingresar" type="email" name="correo" id="correo" value="<%= locals.oldData ? oldData.correo : null %>" placeholder="Ingrese su Correo">
                 <% if (locals.errors && errors.correo) { %>
                     <p class="textErrorForm"><%= errors.correo.msg %></p>
                 <% } %>
