@@ -62,20 +62,33 @@ const controladorProducts =
 		})
 	},
 	update: (req, res) => {
-
-		db.Producto.update({
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description
-		},
-		{
-			where: {id: req.params.id}
-		})
-		.catch((e) => {
-			console.log(e)
-		})
-		res.render("./products/mensaje-edicion")
+		const resultValidation = validationResult(req);
+		if (resultValidation.errors.length>0) {
+			res.render("./products/edicion_producto",{producto: db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+				return producto
+				
+			}),
+			errors: resultValidation.mapped(),
+			oldData: req.body
+				
+			})
+		}
+		else {
+			db.Producto.update({
+				name: req.body.name,
+				price: req.body.price,
+				category: req.body.category,
+				description: req.body.description
+			},
+			{
+				where: {id: req.params.id}
+			})
+			.catch((e) => {
+				console.log(e)
+			})
+			res.render("./products/mensaje-edicion")
+		}
+		
 	
 	},
 
