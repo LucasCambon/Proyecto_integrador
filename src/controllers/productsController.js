@@ -1,4 +1,5 @@
 const db = require("../database/models")
+const { validationResult } = require("express-validator")
 
 const controladorProducts =
 {
@@ -10,19 +11,28 @@ const controladorProducts =
     },
 
     store: (req, res) => {
-
-		db.Producto.create({
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file.filename,
-			eliminado: 0
-		})
-		.catch((e) => {
-			console.log(e)
-		})
-		res.redirect("/")
+		const resultValidation = validationResult(req);
+		if (resultValidation.errors.length>0) {
+			res.render("./products/creacion_producto",{
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			})
+		}
+		else {
+			db.Producto.create({
+				name: req.body.name,
+				price: req.body.price,
+				category: req.body.category,
+				description: req.body.description,
+				image: req.file.filename,
+				eliminado: 0
+			})
+			.catch((e) => {
+				console.log(e)
+			})
+			res.redirect("/")
+		}
+		
 	},
 
     detalleDeProducto: (req, res) =>{

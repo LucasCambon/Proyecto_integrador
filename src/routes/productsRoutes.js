@@ -5,13 +5,14 @@ const router = express.Router()
 const productsController = require("../controllers/productsController")
 
 const uploadFile = require("../middlewares/multerMiddleware")
+const validations = require("../middlewares/validationProductRegister")
 
 /*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
 
 /*** CREAR PRODUCTO ***/
 router.get("/creacion_producto",productsController.creacion_producto)
-router.post("/creacion_producto",uploadFile.single("image"),productsController.store)
+router.post("/creacion_producto",uploadFile.single("image"), validations,productsController.store)
 
 
 router.get("/detalleDeProducto/:id",productsController.detalleDeProducto)
