@@ -36,6 +36,7 @@
             }
         </script>
 
+        <script src="/js/carrito.js" async></script>
 
         <%- include("../partials/header") %>
         
@@ -58,8 +59,8 @@
                         </div>
                     </div>
                     <div class="carritoCompleto">
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
+                                <div class="mr-1"><img class="rounded" src="/img/Doge png.png" width="70"></div>
                                 <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 1</span>
                                     <div class="d-flex flex-row product-desc">
                                         <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;01</span></div>
@@ -67,16 +68,16 @@
                                 </div>
                                 <div>
                                     <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
+                                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" min="1" max="99">
                                     </form>
                                 </div>
                                 <div>
-                                    <h5 class="text-grey">$20.00</h5>
+                                    <h5 class="text-grey precioCarrito">$20.00</h5>
                                 </div>
                                 <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
                             </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
+                                <div class="mr-1"><img class="rounded" src="/img/Doge png.png" width="70"></div>
                                 <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 2</span>
                                     <div class="d-flex flex-row product-desc">
                                         <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;02</span></div>
@@ -84,16 +85,16 @@
                                 </div>
                                 <div>
                                     <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
+                                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" min="1" max="99">
                                     </form>
                                 </div>
                                 <div>
-                                    <h5 class="text-grey">$20.00</h5>
+                                    <h5 class="text-grey precioCarrito">$20.00</h5>
                                 </div>
                                 <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
                             </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
+                                <div class="mr-1"><img class="rounded" src="/img/Doge png.png" width="70"></div>
                                 <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 4</span>
                                     <div class="d-flex flex-row product-desc">
                                         <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;03</span></div>
@@ -101,16 +102,16 @@
                                 </div>
                                 <div>
                                     <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
+                                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" min="1" max="99">
                                     </form>
                                 </div>
                                 <div>
-                                    <h5 class="text-grey">$20.00</h5>
+                                    <h5 class="text-grey precioCarrito">$20.00</h5>
                                 </div>
                                 <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
                             </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
+                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
+                                <div class="mr-1"><img class="rounded" src="/img/Doge png.png" width="70"></div>
                                 <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 5</span>
                                     <div class="d-flex flex-row product-desc">
                                         <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;04</span></div>
@@ -118,11 +119,11 @@
                                 </div>
                                 <div>
                                     <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
+                                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" min="1" max="99">
                                     </form>
                                 </div>
                                 <div>
-                                    <h5 class="text-grey">$45.00</h5>
+                                    <h5 class="text-grey precioCarrito">$45.00</h5>
                                 </div>
                                 <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
                             </div>
@@ -137,7 +138,7 @@
                                     <h5 class="des">Impuestos:</h5> <h5 class="text-grey dinero">$22.05</h5>
                                 </li>
                                 <li class="d-flex flex-row align-items-center tot">
-                                    <h5 class="des">Total:</h5> <h5 class="text-grey dinero">$127.05</h5>
+                                    <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ 0</h5>
                                 </li>
                             </ul>
                         </div>
