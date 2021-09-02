@@ -46,6 +46,7 @@ function updateCantidad(event){
         }
     }
     localStorage.setItem("productosEnCarrito", JSON.stringify(itemsCarrito))
+    updateTotal()
 }
 
 
@@ -93,4 +94,24 @@ function vaciarCarrito () {
     localStorage.clear()
     location.reload()
     displayCarrito ()
+}
+
+function updateTotal () {
+    carrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
+    totalActual = 0
+    for (let producto in carrito){
+        totalActual += carrito[producto].subTotal
+    }
+    totalActual = Math.round(totalActual * 100) / 100
+    console.log("$ " +totalActual)
+    localStorage.setItem("totalCarrito", JSON.stringify(totalActual))
+
+    let totalAPagar = document.querySelector(".contPago"); // vista del total en el carrito
+    totalAPagar.innerHTML = `
+        <ul class="pago">
+            <li class="d-flex flex-row align-items-center tot">
+                <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${totalActual}</h5>
+            </li>
+        </ul>
+    `
 }
