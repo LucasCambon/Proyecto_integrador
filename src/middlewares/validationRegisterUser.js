@@ -4,7 +4,7 @@ module.exports = [
     body("nombres").notEmpty().withMessage("Tienes que ingresar un nombre"),
     body("apellidos").notEmpty().withMessage("Tienes que ingresar un apellido"),
     body("contraseña").notEmpty().withMessage("Tienes que ingresar una contraseña"),
-    body("correo").notEmpty().withMessage("Tienes que ingresar un email"),
+    body("correo").notEmpty().withMessage("Tienes que ingresar un email").isEmail().withMessage("Tienes que ingresar un email valido"),
     body("image").custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
