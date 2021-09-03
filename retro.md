@@ -16,3 +16,7 @@ Para este sprint nos alcanzó con una sola reunión ya que no había mucho por d
 ## Sprint 4
 
 Para este sprint tuvimos varias reuniones ya que habían numerosos puntos por definir. En ésta etapa fué la que más trabajamos en equipo, compartiendo pantalla, siendo participativos en la actividad del compañero y aplicando las funcionalidades y lógicas necesarias para cumplir con las exigencias del sprint. 
+
+## Sprint 5
+
+Para este sprint tuvimos varias reuniones al día siguiente de cada clase para trabajar sobre los puntos correspondientes a Middlewares aplicandolos en rutas y de forma local, conjuntamente con Express Validator. En ésta etapa continuamos trabajando en equipo, de forma muy fluída y participativa y perfeccionando las funcionalidades y lógicas necesarias para el sprint.
