@@ -5,8 +5,13 @@ if(document.readyState == "loading") {
 }
 
 function ready () {
-
-    displayCarrito ()
+    console.log(JSON.parse(localStorage.getItem("productosEnCarrito")))
+    if (JSON.parse(localStorage.getItem("productosEnCarrito")) == null){
+        displayCarritoVacio()
+    }
+    else{
+        displayCarrito ()
+    }
 
     let botonVaciar = document.getElementById("botonVaciarCarrito")
     botonVaciar.addEventListener("click", vaciarCarrito)
@@ -22,6 +27,7 @@ function ready () {
         let boton = botonRemover[i]
         boton.addEventListener("click", eliminarProd)
     }
+
     
 }
 
@@ -114,9 +120,9 @@ function displayCarrito () {
 }
 
 function vaciarCarrito () {
-    localStorage.clear()
+    localStorage.removeItem("productosEnCarrito")
+    updateTotal()
     location.reload()
-    displayCarrito ()
 }
 
 function updateTotal () {
@@ -134,6 +140,18 @@ function updateTotal () {
         <ul class="pago">
             <li class="d-flex flex-row align-items-center tot">
                 <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${totalActual}</h5>
+            </li>
+        </ul>
+    `
+}
+
+function displayCarritoVacio () {
+    let montoTotal = JSON.parse(localStorage.getItem("totalCarrito")); // valor total en memoria
+    let totalAPagar = document.querySelector(".contPago"); // vista del total en el carrito
+        totalAPagar.innerHTML = `
+        <ul class="pago">
+            <li class="d-flex flex-row align-items-center tot">
+                <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${montoTotal}</h5>
             </li>
         </ul>
     `
