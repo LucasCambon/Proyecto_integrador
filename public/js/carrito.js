@@ -16,7 +16,30 @@ function ready () {
         let input = inputCantidad[i]
         input.addEventListener("change", updateCantidad)
     }
+
+    let botonRemover = document.getElementsByClassName("botonTrash")
+    for (let i = 0; i<botonRemover.length; i++) {
+        let boton = botonRemover[i]
+        boton.addEventListener("click", eliminarProd)
+    }
     
+}
+
+function eliminarProd(event) {
+    let boton = event.target
+    let idProdCarrito = parseInt(boton.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Codigo:",""))
+    console.log("El ID del producto es: " + idProdCarrito)
+    let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
+    console.log(itemsCarrito)
+    for (let producto in itemsCarrito) {
+        console.log(itemsCarrito[producto].id)
+        if (itemsCarrito[producto].id == idProdCarrito) {
+            delete itemsCarrito[producto]
+        }
+    }
+    localStorage.setItem("productosEnCarrito", JSON.stringify(itemsCarrito))
+    boton.parentElement.remove()
+    updateTotal()
 }
 
 
