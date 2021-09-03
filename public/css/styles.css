@@ -1056,7 +1056,8 @@ body {
 #img-prod-user {
     border-radius: 50%;
     height: auto;
-    width: 80%;
+    width: 60%;
+    max-width: 60%;
     margin: auto;
     margin-bottom: 2rem;
 }
