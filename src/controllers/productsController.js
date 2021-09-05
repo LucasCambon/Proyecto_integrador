@@ -6,6 +6,9 @@ const controladorProducts =
     carrito: (req, res) => {
         res.render("./products/carrito");
     },
+	pagar: (req, res) => {
+		res.send("Pago completado")
+	},
     creacion_producto: (req, res) =>{
         res.render("./products/creacion_producto");
     },

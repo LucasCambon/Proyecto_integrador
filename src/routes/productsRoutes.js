@@ -3,12 +3,13 @@ const express = require("express")
 const router = express.Router()
 
 const productsController = require("../controllers/productsController")
-
+const logeadoPpagar = require("../middlewares/authLogeadoPagoMiddleware")
 const uploadFile = require("../middlewares/multerMiddleware")
 const validations = require("../middlewares/validationProductRegister")
 
 /*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
+router.get("/pago", logeadoPpagar, productsController.pagar)
 
 /*** CREAR PRODUCTO ***/
 router.get("/creacion_producto",productsController.creacion_producto)
