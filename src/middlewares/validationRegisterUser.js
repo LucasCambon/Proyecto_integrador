@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports = [
     body("nombres").notEmpty().withMessage("Tienes que ingresar un nombre"),
     body("apellidos").notEmpty().withMessage("Tienes que ingresar un apellido"),
-    body("contraseña").notEmpty().withMessage("Tienes que ingresar una contraseña"),
+    body("contraseña").notEmpty().withMessage("La contraseña debe tener mínimo 8 caracteres y contener una mayúscula, una minúscula y un caracter especial").isLength(min=8).withMessage("La contraseña debe tener mínimo 8 caracteres y contener una mayúscula, una minúscula y un caracter especial").matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,).withMessage("La contraseña debe tener mínimo 8 caracteres y contener una mayúscula, una minúscula y un caracter especial"),
     body("correo").notEmpty().withMessage("Tienes que ingresar un email").isEmail().withMessage("Tienes que ingresar un email valido"),
     body("image").custom((value, {req}) => {
         let file = req.file;
