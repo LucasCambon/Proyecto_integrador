@@ -1,5 +1,6 @@
 const db = require("../database/models")
-const { validationResult } = require("express-validator")
+const { validationResult } = require("express-validator");
+const multer = require("multer");
 
 const controladorProducts =
 {

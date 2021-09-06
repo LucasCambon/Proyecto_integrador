@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require("fs");
 const { body } = require("express-validator");
 module.exports = [
     body("name").notEmpty().withMessage("Tienes que ingresar el nombre del producto"),
@@ -7,17 +8,20 @@ module.exports = [
     body("category").notEmpty().withMessage("Tienes que elegir la categoría del producto"),
     body("image").custom((value, {req}) => {
         let file = req.file;
-        let acceptedExtensions = [".jpg", ".png", ".gif"]
+        let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
         
-        if (!file){
-            throw new Error("Tiene que adjuntar una imagen")
+        if (file == undefined){
+            throw new Error("Adjunte una imagen con formato: " + acceptedExtensions + " y peso máximo 10mb.")
         }
-        else{
-            let fileExtension = path.extname(file.originalname);
-            if (!acceptedExtensions.includes(fileExtension)){
-                throw new Error("Extensión de imagen no valida")
-            }
-        }
+        else if (file.size > 1024) {
+            fs.unlink(file.path, (err) => {
+                if (err) {
+                    console.log(err);
+                }
+            })   
+            throw new Error("Adjunte una imagen con formato: " + acceptedExtensions + " y peso máximo 10mb.")
+
+        }  
         
         return true;
     })
