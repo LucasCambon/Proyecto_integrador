@@ -13,7 +13,7 @@ module.exports = [
         if (file == undefined){
             throw new Error("Adjunte una imagen con formato: " + acceptedExtensions + " y peso máximo 10mb.")
         }
-        else if (file.size > 1024) {
+        else if (file.size > (1024 * 1024 * 10)) {
             fs.unlink(file.path, (err) => {
                 if (err) {
                     console.log(err);
