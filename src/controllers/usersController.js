@@ -40,10 +40,13 @@ const controladorUsers  =
 					contrasenia: bcryptjs.hashSync(req.body.contraseña,10),
 					image: req.file.filename
 				})
+				.then(() => {
+					res.redirect("./ingreso");
+				})
 				.catch((e) => {
 					console.log(e)
 				})
-				res.redirect("./ingreso");
+				
 			}
 		})
 	},
@@ -103,6 +106,14 @@ const controladorUsers  =
 		req.session.destroy();
 		return res.redirect("/")
 	},
+
+	borrarUsuario: (req, res) => {
+		db.Usuario.destroy({ 
+			where: { 
+				id: req.params.id
+			}
+		})
+	}
 }
 
 

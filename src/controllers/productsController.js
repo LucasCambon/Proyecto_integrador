@@ -1,27 +1,42 @@
 const db = require("../database/models")
+const { validationResult } = require("express-validator");
+const multer = require("multer");
 
 const controladorProducts =
 {
     carrito: (req, res) => {
         res.render("./products/carrito");
     },
+	pagar: (req, res) => {
+		res.send("Pago completado")
+	},
     creacion_producto: (req, res) =>{
         res.render("./products/creacion_producto");
     },
 
     store: (req, res) => {
-
-		db.Producto.create({
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description,
-			image: req.file.filename,
-		})
-		.catch((e) => {
-			console.log(e)
-		})
-		res.redirect("/")
+		const resultValidation = validationResult(req);
+		if (resultValidation.errors.length>0) {
+			res.render("./products/creacion_producto",{
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			})
+		}
+		else {
+			db.Producto.create({
+				name: req.body.name,
+				price: req.body.price,
+				category: req.body.category,
+				description: req.body.description,
+				image: req.file.filename,
+				eliminado: 0
+			})
+			.catch((e) => {
+				console.log(e)
+			})
+			res.redirect("/")
+		}
+		
 	},
 
     detalleDeProducto: (req, res) =>{
@@ -51,25 +66,40 @@ const controladorProducts =
 		})
 	},
 	update: (req, res) => {
-
-		db.Producto.update({
-			name: req.body.name,
-			price: req.body.price,
-			category: req.body.category,
-			description: req.body.description
-		},
-		{
-			where: {id: req.params.id}
-		})
-		.catch((e) => {
-			console.log(e)
-		})
-		res.render("./products/mensaje-edicion")
+		const resultValidation = validationResult(req);
+		if (resultValidation.errors.length>0) {
+			res.render("./products/edicion_producto",{producto: db.Producto.findOne({ where: { id: req.params.id } }).then((producto) => {
+				return producto
+				
+			}),
+			errors: resultValidation.mapped(),
+			oldData: req.body
+				
+			})
+		}
+		else {
+			db.Producto.update({
+				name: req.body.name,
+				price: req.body.price,
+				category: req.body.category,
+				description: req.body.description
+			},
+			{
+				where: {id: req.params.id}
+			})
+			.catch((e) => {
+				console.log(e)
+			})
+			res.render("./products/mensaje-edicion")
+		}
+		
 	
 	},
 
     listado_productos: (req, res) =>{
-		db.Producto.findAll()
+		db.Producto.findAll({
+			where: {eliminado: 0}
+		})
 			.then(function(productos){
 				return res.render("./products/listado_productos",{productos:productos
 				});
@@ -79,7 +109,8 @@ const controladorProducts =
 	listado_bundles: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Bundle"
+				category: "Bundle",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -90,7 +121,8 @@ const controladorProducts =
 	listado_coins: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Coins"
+				category: "Coins",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -101,7 +133,8 @@ const controladorProducts =
 	listado_items: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Items"
+				category: "Items",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -112,7 +145,8 @@ const controladorProducts =
 	listado_juegos: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Juegos"
+				category: "Juegos",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -123,7 +157,8 @@ const controladorProducts =
 	listado_merchandising: (req, res) =>{
 		db.Producto.findAll({
 			where: {
-				category: "Merchandising"
+				category: "Merchandising",
+				eliminado: 0
 			}
 		})
 			.then(function(productos){
@@ -133,7 +168,10 @@ const controladorProducts =
     },
 	destroy : (req, res) => {
 
-			db.Producto.destroy({
+			db.Producto.update({
+				eliminado: 1
+			},
+			{
 				where: {id: req.params.id}
 			}).then(() => {
 				return res.render("./products/mensaje-borrado")

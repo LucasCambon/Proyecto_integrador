@@ -1,7 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require("../database/models")
 
 function userLoggedMiddleware ( req, res, next) {
     res.locals.isLogged = false;
@@ -10,15 +7,18 @@ function userLoggedMiddleware ( req, res, next) {
 
     if (req.session.userLogged){
         if (emailInCookie) {
-            users.forEach(function(usuario){
+            db.Usuario.findOne({ where: {email: emailInCookie} }).then((usuario) => {
                 if (usuario.email == emailInCookie){
-                        delete usuario.contraseña;
-                        req.session.userLogged = usuario;
-                        res.locals.isLogged = true;
-                        res.locals.userLogged = req.session.userLogged;
-                    }
-                })
-            }
+                    delete usuario.contraseña;
+                    req.session.userLogged = usuario;
+                    res.locals.isLogged = true;
+                    res.locals.userLogged = req.session.userLogged;
+                }
+            })
+            .catch((e) => {
+                console.log(e)
+            })
+        }
         res.locals.isLogged = true;
         res.locals.userLogged = req.session.userLogged;
     }
