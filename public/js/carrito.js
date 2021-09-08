@@ -92,7 +92,7 @@ function displayCarrito () {
         }
         else{
             carritoCompleto.innerHTML += `
-                <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
+                <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 itemCarrito bg-box">
                     <div class="mr-1"><img class="rounded" src="/img/${item.image}" width="70" alt="${item.image}"></div>
                     <div class="d-flex flex-column align-items-center product-details">
                         <span class="font-weight-bold">${item.name}</span>

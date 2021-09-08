@@ -18,10 +18,11 @@
         
         <main class="cuerpo">
             <div class="container mt-5 mb-5">
-                <div class="resumen d-flex justify-content-center row">
+                <div class="resumen d-flex mx-auto justify-content-center row bg-box" >
                     <div class="col-md-8">
                         <div class="p-2">
-                            <h4 class="tit">Carrito de compras</h4>
+                            <h4 class="tit fs-1 text-center">Carrito de compras</h4>
+                            
                             <div class="d-flex flex-row align-items-center pull-left">
                                
                             </div>
@@ -29,7 +30,8 @@
                         </div>
                     </div>
                     <div class="carritoCompleto">
-                        <div class="itemsCarrito">
+                        <hr class="productosRelacionados-hr">
+                        <div class="itemsCarrito p-0 mx-0">
 
                         </div>
 
@@ -38,8 +40,10 @@
                         <div class="contPago">
                             
                         </div>
-                        <div class="d-flex flex-row align-items-center mt-3 p-2 rounded"><button class="btn btn-warning btn-block btn-lg ml-2 pay-button" id="botonVaciarCarrito" type="button">Vaciar carrito</button></div>
-                        <div class="d-flex flex-row align-items-center mt-3 p-2 rounded"><a href="/products/pago" class="btn btn-warning btn-block btn-lg ml-2 pay-button" type="button">Continuar con el pago</a></div>
+                        <div class="d-flex flex-row justify-content-evenly gap-4 mt-3 p-2 ">
+                            <button class="btn-registrarme fs-2 text-wrap " id="botonVaciarCarrito" type="button">Vaciar carrito</button>
+                            <a href="/products/pago" class="btn-registrarme fs-2 text-wrap " type="button">Continuar con el pago</a>
+                        </div>
                 </div>
             </div>
 

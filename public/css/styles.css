@@ -2170,6 +2170,31 @@ a {
     border: 1px solid darkorchid;
     color: white;
 }
+.btn-registrarme {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    background-color: rgba(128, 128, 128, 0.164);
+    transition: 0.3s!important;
+    height: 3.5rem;
+    font-size: xx-large;
+    font-weight: 200;
+    border: 1px solid rgba(153, 50, 204, 0.288);
+    color: grey;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: .150rem .75rem;
+    border-radius: .25rem;
+}
+.btn-registrarme:hover {
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.125) 100%);
+    border: 1px solid darkorchid;
+    color: white;
+}
+
+
 .form-creaProd{
     width: 600px;
     background-color: #24303c;
