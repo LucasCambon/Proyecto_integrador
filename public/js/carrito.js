@@ -61,7 +61,7 @@ function updateCantidad(event){
         input.value = 99
 
     }
-    let idProdCarrito = parseInt(input.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Codigo:",""))
+    let idProdCarrito = parseInt(document.getElementsByClassName("idProdCarrito")[0].innerText.replace("Cod:",""))
     console.log("El ID del producto es: " + idProdCarrito)
     let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
     console.log(itemsCarrito)
@@ -92,20 +92,35 @@ function displayCarrito () {
         }
         else{
             carritoCompleto.innerHTML += `
-                <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 itemCarrito bg-box">
-                    <div class="mr-1"><img class="rounded" src="/img/${item.image}" width="70" alt="${item.image}"></div>
-                    <div class="d-flex flex-column align-items-center product-details">
-                        <span class="font-weight-bold">${item.name}</span>
+                <div class="container-xl">
+                    <div class="row">   
+                        <div class="col">
+                            <div class="mr-1 mx-0">
+                                <img class="rounded w-50" src="/img/${item.image}" width="70" alt="${item.image}">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column align-items-center product-details">
+                                <span class="amarillo">${item.name}</span>
+                                <span class="text-grey idProdCarrito small">Cod:${item.id}</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column align-items-center product-details">
+                                <input class="cantidadCarrito" type="number" id="quantity" name="quantity" value="${item.cantidad}" min="1" max="99">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div>
+                                <h5 class="amarillo precioCarrito">$ ${item.price}</h5>
+                            </div>
+                        </div>
+                        <div class="col">    
+                            <div>
+                                <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex flex-column align-items-center product-details">
-                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" value="${item.cantidad}" min="1" max="99">
-                        <span class="text-grey idProdCarrito">Codigo: ${item.id}</span>
-                    </div>
-                    <div>
-                        <span class="text-grey">Precio:</span>
-                        <h5 class="text-grey precioCarrito">$ ${item.price}</h5>
-                    </div>
-                    <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
                 </div>
             `
         }
@@ -113,7 +128,7 @@ function displayCarrito () {
     totalAPagar.innerHTML = `
         <ul class="pago">
             <li class="d-flex flex-row align-items-center tot">
-                <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${montoTotal}</h5>
+                <h5 class="des">Total:</h5> <h5 class="text-white dinero totalCarrito">$ ${montoTotal}</h5>
             </li>
         </ul>
     `
@@ -139,7 +154,7 @@ function updateTotal () {
     totalAPagar.innerHTML = `
         <ul class="pago">
             <li class="d-flex flex-row align-items-center tot">
-                <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${totalActual}</h5>
+                <h5 class="des">Total:</h5><h5 class="dinero totalCarrito">$ ${totalActual}</h5>
             </li>
         </ul>
     `

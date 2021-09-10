@@ -20,7 +20,9 @@
     background: rgb(9,0,19);
     background-image: radial-gradient(circle, rgba(42,0,90,1)30%, rgba(12,0,12,1), rgba(9,0,19,1));
 }
-
+.amarillo {
+    color: rgb(255, 181, 111);
+}
 .stars {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     background-color: transparent;
@@ -394,28 +396,29 @@ select{
 }
 
 #quantity{
-    background-color: #282380!important;
-    color: grey!important;
+    text-align: center;
+    color: rgb(255, 181, 111);
     font-weight: bold;
-    box-shadow: #480ca8 0px 0px 0px 3px!important;
+    border: 1px solid rgba(153, 50, 204, 0.288);
     border: none!important;
+    width: auto;
+    max-width: 55%;
+    transition: 0.3s;
+    box-shadow: darkorchid 0px 0px 0px 1px;
 }
 
-#quantity:hover{
-    background-color: #430EBE!important;
-    color: grey!important;
-    font-weight: bold;
-    box-shadow: #b5179e 0px 0px 0px 3px!important;
-    border:none!important;
-}
 
 #quantity:focus{
-    background-color: #430EBE!important;
-    color: grey!important;
+    
+    color: white;
     font-weight: bold;
-    box-shadow: #b5179e 0px 0px 0px 3px!important;
+    box-shadow: darkorchid 0px 0px 0px 3px!important;
     border:none!important;
     outline: none;
+}
+
+.totalCarrito {
+    color: white!important;
 }
 
 .botonTrash{
@@ -652,24 +655,6 @@ select{
     div.logo{
         display: none;
     }
-    div.carritoCompleto{
-        display: flex;
-        flex-direction: column;
-
-    }
-    div.producto{
-        background: #282380;
-        display: flex;
-        height: 300px;
-        width: 80vw;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-around!important;
-    }
-    div.rounded{
-        flex-direction: column!important;
-    }
-
     div#carouselExampleCaptions{
         height: 500px;
         width: 95vw;
@@ -2284,7 +2269,3 @@ a {
 /*-------------------------------Merge End (e_r.css)---------------------------------*/
 
 
-
-.cantidadCarrito{
-    margin-bottom: 5px;
-}
