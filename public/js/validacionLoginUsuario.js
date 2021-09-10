@@ -3,11 +3,11 @@ if(document.readyState == "loading") {
 } 
 else{
     ready()
-    
 }
 
 
 function ready(){
+    
     
 
 }
