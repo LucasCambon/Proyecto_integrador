@@ -58,10 +58,11 @@
                 <div class="formControl">
                     <h4 class="fs-2" id="titulo-img-perfil">Seleccionar imagen de perfil</h4>
                     <label for="image"></label>
-                    <input class="datos_a_ingresar" type="file" name="image" id="imagenPerfil" accept=".png, .img, .jpg, .jpeg">
+                    <input class="datos_a_ingresar" type="file" name="image" id="imagenPerfil">
                     <% if (locals.errors && errors.image) { %>
                         <p class="textErrorForm"><%= errors.image.msg %></p>
                     <% } %>
+                    <p class="textErrorForm"></p>
                 </div>
                 <label for="boton"></label>
                 <div class="d-grid gap-2">
