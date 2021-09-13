@@ -45,7 +45,7 @@
         <section class="parteDer">   
             <form class="busqueda">
                 <label class=".wrapper">
-                    <input class="barra" type="search" name="barraDeBusqueda" placeholder="Buscar en la tienda"></input type="submit" value="buscar">
+                    <input class="barra" type="search" name="barraDeBusqueda" placeholder="  Buscar en la tienda"></input type="submit" value="buscar">
                 </label>
             </form>
             <% if (locals.isLogged) {%>
@@ -55,7 +55,7 @@
             <% } else { %>
                 <div class="botones">
                     <button class="btn btn-outline-secondary dropdown-toggle botonNavBar botonCuenta" type="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="/users/ingreso" type="button">Log In</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/users/registro" type="button">Registrate</a></li>
