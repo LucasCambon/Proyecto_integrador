@@ -321,12 +321,7 @@ body {
 }
 
 .producto{
-    background: #282380;
-    display: flex;
-    width: 80ew;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around!important;
+    border: 1px solid rgba(153, 50, 204, 0.288);
 }
 
 .mb-5{
@@ -367,8 +362,8 @@ body {
 }
 
 .font-weight-bold{
-    color: yellow;
-    margin-right: 5px;
+    color: rgb(255, 181, 111);;
+
 }
 
 .tit{
@@ -424,6 +419,7 @@ select{
 .botonTrash{
     color: #910000!important;
     box-shadow: #910000 0px 0px 0px 3px!important;
+
 }
 
 /* -------------------------------------------------------- */
@@ -521,10 +517,7 @@ select{
 /* Media Querys */
 
 @media only screen and (max-width: 997px) {
-    div.row{
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
+
     div.stars{
         height: 190em;
     }
@@ -547,10 +540,7 @@ select{
 }
 
 @media only screen and (max-width: 640px) {
-    div.row{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
+
 
     div.col{
         width: 40vw;
@@ -668,6 +658,9 @@ select{
         box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
         border-radius: 3px/6px;         
         
+    }
+    .padding-0-responsive {
+        padding: 0!important;
     }
 }
 
@@ -860,9 +853,7 @@ body {
     z-index: 1;
 }
 /* CONTAINER - FILA */
-.row {
-    margin: 0;
-}
+
 /* CONTAINER - BOTONES */
 .botones {
     display: flex;
