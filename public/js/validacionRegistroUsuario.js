@@ -43,8 +43,8 @@ function checkInputs() {
     /// NOMBRE
     let nombreValue = nombre.value
     
-    if (nombreValue == "" || nombreValue.match(noPermitido) || /^\d+$/.test(nombreValue) || nombreValue.length > 50) {
-        setError(nombre, "Tiene que ingresar su nombre, no puede contener números o caracteres especiales")
+    if (nombreValue == "" || nombreValue.match(noPermitido) || /^\d+$/.test(nombreValue) || nombreValue.length > 50 || nombreValue.length < 2) {
+        setError(nombre, "El nombre debe tener entre 2 y 50 caracteres. No puede contener caracteres especiales o números.")
     }
     else{
         setSucces(nombre)
@@ -53,8 +53,8 @@ function checkInputs() {
 
     /// APELLIDO
     let apellidoValue = apellido.value.trim()
-    if (apellidoValue === "" || apellidoValue.match(noPermitido) || /^\d+$/.test(apellidoValue) || apellidoValue.length > 50) {
-        setError(apellido, "Tiene que ingresar su apellido, no puede contener números o caracteres especiales")
+    if (apellidoValue === "" || apellidoValue.match(noPermitido) || /^\d+$/.test(apellidoValue) || apellidoValue.length > 50 || nombreValue.length < 2) {
+        setError(apellido, "El apellido debe tener entre 2 y 50 caracteres. No puede contener caracteres especiales o números.")
     }
     else{
         setSucces(apellido)
