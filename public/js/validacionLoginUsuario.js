@@ -17,6 +17,13 @@ function ready () {
         formularioRegistro.addEventListener("submit", (e) => {
             e.preventDefault();
             checkInputs();
+            if (checkErrores() == 0) {
+                alert("Sesión iniciada con éxito")
+                e.submit()
+            }
+            else{
+                alert("Revise los campos!")
+            }
     
         })
     }
@@ -71,4 +78,21 @@ function setSucces(input) {
     let errorRegis = formControl.getElementsByClassName("textErrorForm")[0]
     errorRegis.innerText = ""
     input.classList.remove("errorInput")
+}
+
+
+function checkErrores() {
+    let errores = 0
+    let errorRegis = document.getElementsByClassName("textErrorForm")
+    for (i = 0; i<errorRegis.length; i++) {
+        
+        if (errorRegis[i].value != "") {
+            errores += 1
+        }
+        else{
+            errores = errores
+        }
+        console.log(errorRegis[i])
+    }
+    return errores
 }
