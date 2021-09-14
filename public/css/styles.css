@@ -2262,3 +2262,7 @@ a {
 .cantidadCarrito{
     margin-bottom: 5px;
 }
+
+.errorInput{
+    border-color: red;
+}

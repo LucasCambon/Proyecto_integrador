@@ -95,10 +95,12 @@ function setError(input, mensaje) {
     let formControl = input.parentElement;
     let errorRegis = formControl.querySelector(".textErrorForm")
     errorRegis.innerText = mensaje
+    input.classList.add("errorInput")
 }
 
 function setSucces(input) {
     let formControl = input.parentElement;
     let errorRegis = formControl.getElementsByClassName("textErrorForm")[0]
     errorRegis.innerText = ""
+    input.classList.remove("errorInput")
 }

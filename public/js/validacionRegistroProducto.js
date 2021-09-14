@@ -24,7 +24,6 @@ function ready () {
     
 
 
-
 }
 
 function checkInputs() {
@@ -76,7 +75,6 @@ function checkInputs() {
     let validExtensions = ['jpg','png','jpeg','gif'];
     let extImagen = imagenValue.split(".").pop()
 
-    console.log(extImagen)
     for (let i = 0; i <= validExtensions.length; i++){
         if (imagenValue !== "" && validExtensions.includes(extImagen) ) {
             setSucces(imagen)
@@ -88,7 +86,6 @@ function checkInputs() {
 
     /// CATEGORIA
     for (let i = 0; i < categoria.length; i++){
-        console.log(categoria[i].value)
         if (categoria[i].checked == true) {
             
             let formControl = categoria[i].parentElement.parentElement.parentElement;
@@ -104,6 +101,7 @@ function checkInputs() {
         }
     }
 
+
 }
 
 function setError(input, mensaje) {
@@ -111,10 +109,12 @@ function setError(input, mensaje) {
     let formControl = input.parentElement;
     let errorRegis = formControl.querySelector(".textErrorForm")
     errorRegis.innerText = mensaje
+    input.classList.add("errorInput")
 }
 
 function setSucces(input) {
     let formControl = input.parentElement;
     let errorRegis = formControl.getElementsByClassName("textErrorForm")[0]
     errorRegis.innerText = ""
+    input.classList.remove("errorInput")
 }
