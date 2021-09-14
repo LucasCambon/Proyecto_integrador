@@ -33,7 +33,7 @@ function ready () {
 
 function eliminarProd(event) {
     let boton = event.target
-    let idProdCarrito = parseInt(boton.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Codigo:",""))
+    let idProdCarrito = parseInt(boton.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Cod:",""))
     console.log("El ID del producto es: " + idProdCarrito)
     let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
     console.log(itemsCarrito)
@@ -61,7 +61,7 @@ function updateCantidad(event){
         input.value = 99
 
     }
-    let idProdCarrito = parseInt(input.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Codigo:",""))
+    let idProdCarrito = parseInt(input.parentElement.getElementsByClassName("idProdCarrito")[0].innerText.replace("Cod:",""))
     console.log("El ID del producto es: " + idProdCarrito)
     let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
     console.log(itemsCarrito)
@@ -92,20 +92,17 @@ function displayCarrito () {
         }
         else{
             carritoCompleto.innerHTML += `
-                <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded itemCarrito">
-                    <div class="mr-1"><img class="rounded" src="/img/${item.image}" width="70" alt="${item.image}"></div>
-                    <div class="d-flex flex-column align-items-center product-details">
-                        <span class="font-weight-bold">${item.name}</span>
+                <div class="d-flex justify-content-center align-items-center p-2 producto mt-4 px-3 rounded itemCarrito gap-2 ">
+                    <div class="mr-1" style="min-width: 100px; width: 200px" >
+                        <img class="rounded img-fluid img-thumbnail " src="/img/${item.image}" alt="${item.image}">
                     </div>
-                    <div class="d-flex flex-column align-items-center product-details">
-                        <input class="cantidadCarrito" type="number" id="quantity" name="quantity" value="${item.cantidad}" min="1" max="99">
-                        <span class="text-grey idProdCarrito">Codigo: ${item.id}</span>
+                    <div class="d-flex flex-column align-items-center product-details w-50">
+                        <span class="font-weight-bold mb-2 bd-highlight text-center">${item.name}</span>
+                        <span class="text-grey mb-1">Cantidad</span><input class="cantidadCarrito mb-2" type="number" id="quantity" name="quantity" value="${item.cantidad}" min="1" max="99">
+                        <span class="text-grey idProdCarrito bd-highlight">Cod: ${item.id}</span>
+                        <h5 class="amarillo precioCarrito bd-highlight">$ ${item.price}</h5>
                     </div>
-                    <div>
-                        <span class="text-grey">Precio:</span>
-                        <h5 class="text-grey precioCarrito">$ ${item.price}</h5>
-                    </div>
-                    <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
+                    <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> </button>
                 </div>
             `
         }
