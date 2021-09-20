@@ -20,7 +20,9 @@
     background: rgb(9,0,19);
     background-image: radial-gradient(circle, rgba(42,0,90,1)30%, rgba(12,0,12,1), rgba(9,0,19,1));
 }
-
+.amarillo {
+    color: rgb(255, 181, 111);
+}
 .stars {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
     background-color: transparent;
@@ -319,12 +321,7 @@ body {
 }
 
 .producto{
-    background: #282380;
-    display: flex;
-    width: 80ew;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-around!important;
+    border: 1px solid rgba(153, 50, 204, 0.288);
 }
 
 .mb-5{
@@ -365,8 +362,8 @@ body {
 }
 
 .font-weight-bold{
-    color: yellow;
-    margin-right: 5px;
+    color: rgb(255, 181, 111);;
+
 }
 
 .tit{
@@ -394,33 +391,35 @@ select{
 }
 
 #quantity{
-    background-color: #282380!important;
-    color: grey!important;
+    text-align: center;
+    color: rgb(255, 181, 111);
     font-weight: bold;
-    box-shadow: #480ca8 0px 0px 0px 3px!important;
+    border: 1px solid rgba(153, 50, 204, 0.288);
     border: none!important;
+    width: auto;
+    max-width: 55%;
+    transition: 0.3s;
+    box-shadow: darkorchid 0px 0px 0px 1px;
 }
 
-#quantity:hover{
-    background-color: #430EBE!important;
-    color: grey!important;
-    font-weight: bold;
-    box-shadow: #b5179e 0px 0px 0px 3px!important;
-    border:none!important;
-}
 
 #quantity:focus{
-    background-color: #430EBE!important;
-    color: grey!important;
+    
+    color: white;
     font-weight: bold;
-    box-shadow: #b5179e 0px 0px 0px 3px!important;
+    box-shadow: darkorchid 0px 0px 0px 3px!important;
     border:none!important;
     outline: none;
+}
+
+.totalCarrito {
+    color: white!important;
 }
 
 .botonTrash{
     color: #910000!important;
     box-shadow: #910000 0px 0px 0px 3px!important;
+
 }
 
 /* -------------------------------------------------------- */
@@ -518,10 +517,7 @@ select{
 /* Media Querys */
 
 @media only screen and (max-width: 997px) {
-    div.row{
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
+
     div.stars{
         height: 190em;
     }
@@ -544,10 +540,7 @@ select{
 }
 
 @media only screen and (max-width: 640px) {
-    div.row{
-        display: grid;
-        grid-template-columns: auto auto;
-    }
+
 
     div.col{
         width: 40vw;
@@ -652,24 +645,6 @@ select{
     div.logo{
         display: none;
     }
-    div.carritoCompleto{
-        display: flex;
-        flex-direction: column;
-
-    }
-    div.producto{
-        background: #282380;
-        display: flex;
-        height: 300px;
-        width: 80vw;
-        margin-left: auto;
-        margin-right: auto;
-        justify-content: space-around!important;
-    }
-    div.rounded{
-        flex-direction: column!important;
-    }
-
     div#carouselExampleCaptions{
         height: 500px;
         width: 95vw;
@@ -683,6 +658,9 @@ select{
         box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
         border-radius: 3px/6px;         
         
+    }
+    .padding-0-responsive {
+        padding: 0!important;
     }
 }
 
@@ -875,9 +853,7 @@ body {
     z-index: 1;
 }
 /* CONTAINER - FILA */
-.row {
-    margin: 0;
-}
+
 /* CONTAINER - BOTONES */
 .botones {
     display: flex;
@@ -1056,7 +1032,8 @@ body {
 #img-prod-user {
     border-radius: 50%;
     height: auto;
-    width: 80%;
+    width: 60%;
+    max-width: 60%;
     margin: auto;
     margin-bottom: 2rem;
 }
@@ -2169,6 +2146,31 @@ a {
     border: 1px solid darkorchid;
     color: white;
 }
+.btn-registrarme {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-content: center;
+    background-color: rgba(128, 128, 128, 0.164);
+    transition: 0.3s!important;
+    height: 3.5rem;
+    font-size: xx-large;
+    font-weight: 200;
+    border: 1px solid rgba(153, 50, 204, 0.288);
+    color: grey;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: .150rem .75rem;
+    border-radius: .25rem;
+}
+.btn-registrarme:hover {
+    background: linear-gradient(0deg,rgba(29, 236, 197, 0.5),rgba(91, 14, 214, 0.125) 100%);
+    border: 1px solid darkorchid;
+    color: white;
+}
+
+
 .form-creaProd{
     width: 600px;
     background-color: #24303c;
@@ -2256,3 +2258,13 @@ a {
     }
 }
 /*-------------------------------Merge End (e_r.css)---------------------------------*/
+
+
+
+.cantidadCarrito{
+    margin-bottom: 5px;
+}
+
+.errorInput{
+    border-color: red;
+}

@@ -14,31 +14,6 @@
     </head>
     <body id="bodyEntero">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-            <script>
-                function openNav() {
-                document.getElementById("mySidebar").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-                }
-                
-                function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft= "0";
-                }
-            </script>
-
-            <SCRIPT>
-                function ShowAndHide() {
-                    var x = document.getElementById("botonToggle");
-                    if (x.style.display == 'none') {
-                        x.style.display = 'block';
-                    } else {
-                        x.style.display = 'none';
-                    }
-                }
-            </SCRIPT>
-
-
         <%- include("../partials/header") %>
         
         <section class="bg-box" style="margin-top: 100px;" >
@@ -47,34 +22,48 @@
             <hr class="registro-hr">
             <br>
 
-            <form action="/users/registro" method="POST" enctype="multipart/form-data">
-            
-                <label for="nombres"></label>
-                <input class="datos_a_ingresar" type="text" name="nombres" id="nombres" value="<%= locals.oldData ? oldData.nombres : null %>" placeholder="Ingrese su Nombre">
-                <% if (locals.errors && errors.nombres) { %>
-                    <p class="textErrorForm"><%= errors.nombres.msg %></p>
-                <% } %>
-                <label for="apellidos"></label>
-                <input class="datos_a_ingresar" type="text" name="apellidos" id="apellidos" value="<%= locals.oldData ? oldData.apellidos : null %>" placeholder="Ingrese su Apellido">
-                <% if (locals.errors && errors.apellidos) { %>
-                    <p class="textErrorForm"><%= errors.apellidos.msg %></p>
-                <% } %>
-                <label for="correo"></label>
-                <input class="datos_a_ingresar" type="email" name="correo" id="correo" value="<%= locals.oldData ? oldData.correo : null %>" placeholder="Ingrese su Correo">
-                <% if (locals.errors && errors.correo) { %>
-                    <p class="textErrorForm"><%= errors.correo.msg %></p>
-                <% } %>
-                <label for="contraseña"></label>
-                <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-                <% if (locals.errors && errors.contraseña) { %>
-                    <p class="textErrorForm"><%= errors.contraseña.msg %></p>
-                <% } %>
-                <h4 class="fs-2" id="titulo-img-perfil">Seleccionar imagen de perfil</h4>
-                <label for="image"></label>
-                <input class="datos_a_ingresar" type="file" name="image" id="imagenPerfil" accept=".png, .img, .jpg, .jpeg">
-                <% if (locals.errors && errors.image) { %>
-                    <p class="textErrorForm"><%= errors.image.msg %></p>
-                <% } %>
+            <form class="formularioRegistro" action="/users/registro" method="POST" enctype="multipart/form-data">
+                <div class="formControl">
+                    <label for="nombres"></label>
+                    <input class="datos_a_ingresar" type="text" name="nombres" id="nombres" value="<%= locals.oldData ? oldData.nombres : null %>" placeholder="Ingrese su Nombre">
+                    <% if (locals.errors && errors.nombres) { %>
+                        <p class="textErrorForm"><%= errors.nombres.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+                </div>
+                <div class="formControl">
+                    <label for="apellidos"></label>
+                    <input class="datos_a_ingresar" type="text" name="apellidos" id="apellidos" value="<%= locals.oldData ? oldData.apellidos : null %>" placeholder="Ingrese su Apellido">
+                    <% if (locals.errors && errors.apellidos) { %>
+                        <p class="textErrorForm"><%= errors.apellidos.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+                </div>
+                <div class="formControl">
+                    <label for="correo"></label>
+                    <input class="datos_a_ingresar" type="email" name="correo" id="correo" value="<%= locals.oldData ? oldData.correo : null %>" placeholder="Ingrese su Correo">
+                    <% if (locals.errors && errors.correo) { %>
+                        <p class="textErrorForm"><%= errors.correo.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+                </div>
+                <div class="formControl">
+                    <label for="contraseña"></label>
+                    <input class="datos_a_ingresar" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+                    <% if (locals.errors && errors.contraseña) { %>
+                        <p class="textErrorForm"><%= errors.contraseña.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+                </div>
+                <div class="formControl">
+                    <h4 class="fs-2" id="titulo-img-perfil">Seleccionar imagen de perfil</h4>
+                    <label for="image"></label>
+                    <input class="datos_a_ingresar" type="file" name="image" id="imagenPerfil">
+                    <% if (locals.errors && errors.image) { %>
+                        <p class="textErrorForm"><%= errors.image.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+                </div>
                 <label for="boton"></label>
                 <div class="d-grid gap-2">
                     <input id="btn-registrarme" class="btn btn-primary" type="submit" value="Registrarme">              
@@ -104,6 +93,9 @@
         <br>
         <br>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="/js/menuHamburguesa.js" async></script>
+        <script src="/js/validacionRegistroUsuario.js" async></script>
         
     </body>
 

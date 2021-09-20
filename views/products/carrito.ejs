@@ -12,142 +12,50 @@
     </head>
 
     <body id="bodyEntero">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-        <script>
-            function openNav() {
-              document.getElementById("mySidebar").style.width = "250px";
-              document.getElementById("main").style.marginLeft = "250px";
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidebar").style.width = "0";
-              document.getElementById("main").style.marginLeft= "0";
-            }
-        </script>
-
-        <script>
-            function ShowAndHide() {
-                var x = document.getElementById("botonToggle");
-                if (x.style.display == 'none') {
-                    x.style.display = 'block';
-                } else {
-                    x.style.display = 'none';
-                }
-            }
-        </script>
 
 
         <%- include("../partials/header") %>
         
         <main class="cuerpo">
             <div class="container mt-5 mb-5">
-                <div class="resumen d-flex justify-content-center row">
+                <div class="resumen d-flex flex-wrap mx-auto justify-content-center row bg-box w-100 padding-0-responsive" >
                     <div class="col-md-8">
                         <div class="p-2">
-                            <h4 class="tit">Carrito de compras</h4>
-                            <div class="d-flex flex-row align-items-center pull-left"><span class="mr-1 tit">Ordenar por:</span> <form action="carrito.html" method="POST">
-                                <select>
-                                  <option value="1">Destacados</option>
-                                  <option value="2">Mayor precio</option>
-                                  <option value="3">Menor precio</option>
-                                </select>
-                            </form>
+                            <h4 class="tit fs-1 text-center">Carrito de compras</h4>
+                            
+                            <div class="d-flex flex-row align-items-center pull-left">
                                
                             </div>
                             <i class="fa fa-angle-down"></i>
                         </div>
                     </div>
                     <div class="carritoCompleto">
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
-                                <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 1</span>
-                                    <div class="d-flex flex-row product-desc">
-                                        <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;01</span></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
-                                    </form>
-                                </div>
-                                <div>
-                                    <h5 class="text-grey">$20.00</h5>
-                                </div>
-                                <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
-                                <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 2</span>
-                                    <div class="d-flex flex-row product-desc">
-                                        <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;02</span></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
-                                    </form>
-                                </div>
-                                <div>
-                                    <h5 class="text-grey">$20.00</h5>
-                                </div>
-                                <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
-                                <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 4</span>
-                                    <div class="d-flex flex-row product-desc">
-                                        <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;03</span></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
-                                    </form>
-                                </div>
-                                <div>
-                                    <h5 class="text-grey">$20.00</h5>
-                                </div>
-                                <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
-                            </div>
-                            <div class="d-flex flex-row justify-content-between align-items-center p-2 producto mt-4 px-3 rounded">
-                                <div class="mr-1"><img class="rounded" src="../public/img/Doge png.png" width="70"></div>
-                                <div class="d-flex flex-column align-items-center product-details"><span class="font-weight-bold">Doge Coin x 5</span>
-                                    <div class="d-flex flex-row product-desc">
-                                        <div class="size mr-1"><span class="text-grey">Codigo:</span><span class="font-weight-bold">&nbsp;04</span></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <form action="carrito.html">
-                                        <input type="number" id="quantity" name="quantity" min="1" max="99">
-                                    </form>
-                                </div>
-                                <div>
-                                    <h5 class="text-grey">$45.00</h5>
-                                </div>
-                                <button class="btn btn-outline-secondary botonTrash" type="button"><i class="fa fa-trash mb-1 text-danger"></i> Remover</button>
-                            </div>
+                        <hr class="productosRelacionados-hr">
+                    
+                        
+                        <div class="itemsCarrito p-0 mx-0">
+
                         </div>
-                        <div class="d-flex flex-row align-items-center mt-3 p-2 rounded"><input type="text" class="form-control border-0 gift-card" placeholder="Codigo de descuento / Gift card"><button class="btn btn-outline-warning btn-sm ml-2 btn-giftCard" type="button">Aplicar</button></div>
+
+                        <br>
+                        
                         <div class="contPago">
-                            <ul class="pago">
-                                <li class="d-flex flex-row align-items-center subTot">
-                                    <h5 class="des">Sub-total:</h5> <h5 class="text-grey dinero">$105.00</h5>
-                                </li>
-                                <li class="d-flex flex-row align-items-center imp">    
-                                    <h5 class="des">Impuestos:</h5> <h5 class="text-grey dinero">$22.05</h5>
-                                </li>
-                                <li class="d-flex flex-row align-items-center tot">
-                                    <h5 class="des">Total:</h5> <h5 class="text-grey dinero">$127.05</h5>
-                                </li>
-                            </ul>
+                            
                         </div>
-                        <div class="d-flex flex-row align-items-center mt-3 p-2 rounded"><button class="btn btn-warning btn-block btn-lg ml-2 pay-button" type="button">Continuar con el pago</button></div>
+                        <div class="d-flex flex-row justify-content-evenly gap-4 mt-3 p-2 ">
+                            <button class="btn-registrarme fs-2 text-wrap h-auto w-100 " id="botonVaciarCarrito" type="button">Vaciar</button>
+                            <a href="/products/pago" class="btn-registrarme fs-2 text-wrap h-auto w-100 " type="button">Comprar</a>
+                        </div>
                 </div>
             </div>
 
         </main>
 
         <%- include("../partials/footer") %>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="/js/menuHamburguesa.js" async></script>
+        <script src="/js/carrito.js" async></script>
 
     </body>
 

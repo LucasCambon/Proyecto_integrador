@@ -23,6 +23,9 @@ router.get("/perfil", authMiddleware,usersController.profile)
 router.get("/logout", usersController.logout);
 
 
+router.get("/borrar/:id", usersController.borrarUsuario);
+
+
 module.exports = router;
 
 /*const deleteFile = (req,file) => {

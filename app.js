@@ -4,6 +4,7 @@ const app = express();
 const mainRoutes = require("./src/routes/mainRoutes")
 const productsRoutes = require("./src/routes/productsRoutes")
 const usersRoutes = require("./src/routes/usersRoutes")
+const routesAPIS = require("./src/routes/routesAPIS")
 const methodOverride =  require('method-override');
 var path = require('path');
 const session = require("express-session");
@@ -39,3 +40,4 @@ app.set('view engine', 'ejs');
 app.use("/", mainRoutes)
 app.use("/products", productsRoutes)
 app.use("/users", usersRoutes)
+app.use("/APISpartan", routesAPIS)
