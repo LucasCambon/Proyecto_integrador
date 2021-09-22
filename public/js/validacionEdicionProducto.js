@@ -15,13 +15,13 @@ function ready () {
     for (let i = 0; i<formulario.length; i++) {
         let formularioRegistro = formulario[i]
         formularioRegistro.addEventListener("submit", (e) => {
-            e.preventDefault();
             checkInputs();
             if (checkErrores() == 0) {
                 alert("Producto editado con éxito")
                 e.submit()
             }
             else{
+                e.preventDefault();
                 alert("Revise los campos!")
             }
     

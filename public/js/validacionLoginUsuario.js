@@ -14,14 +14,13 @@ function ready () {
 
     for (let i = 0; i<formulario.length; i++) {
         let formularioRegistro = formulario[i]
-        formularioRegistro.addEventListener("submit", (e) => {
-            e.preventDefault();
+        formularioRegistro.addEventListener("submit", (e) => {    
             checkInputs();
             if (checkErrores() == 0) {
                 alert("Sesión iniciada con éxito")
-                e.submit()
             }
             else{
+                e.preventDefault();
                 alert("Revise los campos!")
             }
     

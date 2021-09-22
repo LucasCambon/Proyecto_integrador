@@ -14,14 +14,13 @@ function ready () {
 
     for (let i = 0; i<formulario.length; i++) {
         let formularioRegistro = formulario[i]
-        formularioRegistro.addEventListener("submit", (e) => {
-            e.preventDefault();
+        formularioRegistro.addEventListener("submit", (e) => {  
             checkInputs();
             if (checkErrores() == 0) {
                 alert("Producto cargado con éxito")
-                e.submit()
             }
             else{
+                e.preventDefault();
                 alert("Revise los campos!")
             }
         })
@@ -128,13 +127,13 @@ function checkErrores() {
     let errorRegis = document.getElementsByClassName("textErrorForm")
     for (i = 0; i<errorRegis.length; i++) {
         
-        if (errorRegis[i].value != "") {
+        if (errorRegis[i].innerText != "") {
             errores += 1
         }
         else{
             errores = errores
         }
-        console.log(errorRegis[i])
+        console.log(errorRegis[i].innerText)
     }
     return errores
 }

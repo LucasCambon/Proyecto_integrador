@@ -13,9 +13,14 @@ const controladorAPIS =
 	},
 	todosProductos: (req,res) => {
 		db.Producto.findAll()
-			.then(producto => {
+			.then(productos => {
+				let contador = 0;
+				for (let i = 0; i<productos.length; i++){
+					contador =+ 1
+				}
 				return res.status(200).json({
-					data: producto,
+					data: productos,
+					count: contador,
 					status: 200
 				})
 			})
@@ -33,11 +38,14 @@ const controladorAPIS =
 	todosUsuarios: (req,res) => {
 		db.Usuario.findAll()
 			.then(usuarios => {
+				let contador = 0;
                 for (let i=0; i<usuarios.length; i++){
                     usuarios[i].contrasenia = ""
+					contador += 1
                 }
 				return res.status(200).json({
 					data: usuarios,
+					count: contador,
 					status: 200
 				})
 			})

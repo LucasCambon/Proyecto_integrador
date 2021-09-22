@@ -15,14 +15,14 @@ function ready () {
     for (let i = 0; i<formulario.length; i++) {
         let formularioRegistro = formulario[i]
         formularioRegistro.addEventListener("submit", (e) => {
-            e.preventDefault();
             checkInputs();
             if (checkErrores() == 0) {
-                alert("Usuario registrado con éxito")
-                e.submit()
+                alert("registrado con exito")
             }
             else{
+                e.preventDefault();
                 alert("Revise los campos!")
+
             }
     
         })
@@ -129,13 +129,13 @@ function checkErrores() {
     let errorRegis = document.getElementsByClassName("textErrorForm")
     for (i = 0; i<errorRegis.length; i++) {
         
-        if (errorRegis[i].value != "") {
+        if (errorRegis[i].innerText != "") {
             errores += 1
         }
         else{
             errores = errores
         }
-        console.log(errorRegis[i])
+        console.log(errorRegis[i].innerText)
     }
     return errores
 }
