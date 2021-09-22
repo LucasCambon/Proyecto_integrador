@@ -15,9 +15,9 @@ const controladorAPIS =
 		db.Producto.findAll()
 			.then(productos => {
 				let contador = 0;
-				for (let i = 0; i<productos.length; i++){
-					contador =+ 1
-				}
+				for (let i=0; i<productos.length; i++){
+					contador += 1
+                }
 				return res.status(200).json({
 					data: productos,
 					count: contador,
