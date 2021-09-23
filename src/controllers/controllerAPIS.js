@@ -14,13 +14,30 @@ const controladorAPIS =
 	todosProductos: (req,res) => {
 		db.Producto.findAll()
 			.then(productos => {
-				let contador = 0;
+				let contadores = { total: 0, activos: 0, eliminados: 0, juegos: 0, items: 0, bundle: 0, coins: 0 ,merchandising: 0 }
+				
 				for (let i=0; i<productos.length; i++){
-					contador += 1
+					console.log(productos[i].category)
+					contadores.total += 1
+					if (productos[i].eliminado == false){
+						contadores.activos += 1
+						let categoria = productos[i].category
+						contadores[categoria] += 1
+					}
+					else {
+						contadores.eliminados +=1
+					}
                 }
 				return res.status(200).json({
 					data: productos,
-					count: contador,
+					totalCount: contadores.total,
+					activeCount: contadores.activos,
+					delCount: contadores.eliminados,
+					juegosCount: contadores.juegos,
+					itemsCount: contadores.items,
+					bundleCount: contadores.bundle,
+					coinsCount: contadores.coins,
+					merchCount: contadores.merchandising,
 					status: 200
 				})
 			})
