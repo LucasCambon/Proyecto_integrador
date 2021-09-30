@@ -13,6 +13,7 @@ const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware");
 
 
 
+
 /*** MIDDLEWARES ***/
 app.use(session({
     secret:"Shhh, It´s a secret",
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookies())
 app.use(userLoggedMiddleware);
+
 
 
 
