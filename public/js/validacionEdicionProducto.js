@@ -65,8 +65,8 @@ function checkInputs() {
 
     /// DESSCRIPCION
     let descriptionValue = description.value.trim()
-    if (descriptionValue === "" || descriptionValue.match(noPermitido) || /^\d+$/.test(descriptionValue) || descriptionValue.length < 50 || descriptionValue.length > 200) {
-        setError(description, "Ingrese la descripcion del producto, no puede contener números o caracteres especiales y debe tener entre 50 y 200 caracteres")
+    if (descriptionValue === "" || descriptionValue.match(noPermitido) || /^\d+$/.test(descriptionValue) || descriptionValue.length < 20 || descriptionValue.length > 200) {
+        setError(description, "Ingrese la descripcion del producto, no puede contener números o caracteres especiales y debe tener entre 20 y 200 caracteres")
     }
     else{
         setSucces(description)
