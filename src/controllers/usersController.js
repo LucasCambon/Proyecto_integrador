@@ -38,7 +38,8 @@ const controladorUsers  =
 					apellido: req.body.apellidos,
 					email: req.body.correo,
 					contrasenia: bcryptjs.hashSync(req.body.contraseña,10),
-					image: req.file.filename
+					image: req.file.filename,
+					administador: 0
 				})
 				.then(() => {
 					res.redirect("./ingreso");
@@ -113,7 +114,20 @@ const controladorUsers  =
 				id: req.params.id
 			}
 		})
-	}
+		return res.redirect("/")
+	},
+	adminUsuario: (req, res) => {
+
+		db.Usuario.update({
+			administrador: 1
+		},
+		{
+			where: {id: req.params.id}
+		}).then(() => {
+			return res.redirect("/")
+		})
+		
+}
 }
 
 

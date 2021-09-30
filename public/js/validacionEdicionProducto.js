@@ -17,12 +17,19 @@ function ready () {
         formularioRegistro.addEventListener("submit", (e) => {
             checkInputs();
             if (checkErrores() == 0) {
-                alert("Producto editado con éxito")
-                e.submit()
+                Swal.fire(
+                    'Exito!',
+                    'Producto editado correctamente!',
+                    'success'
+                  )
             }
             else{
                 e.preventDefault();
-                alert("Revise los campos!")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Revise los campos!'
+                })
             }
     
         })

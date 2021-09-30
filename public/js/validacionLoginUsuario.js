@@ -9,21 +9,21 @@ else{
 
 function ready () {
     let formulario = document.getElementsByClassName("formularioLogin")
-    console.log(formulario)
+
 
 
     for (let i = 0; i<formulario.length; i++) {
         let formularioRegistro = formulario[i]
         formularioRegistro.addEventListener("submit", (e) => {    
             checkInputs();
-            if (checkErrores() == 0) {
-                alert("Sesión iniciada con éxito")
-            }
-            else{
+            if (checkErrores() != 0) {
                 e.preventDefault();
-                alert("Revise los campos!")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Complete los campos!'
+                  })
             }
-    
         })
     }
 
@@ -57,7 +57,7 @@ function checkInputs() {
     let contraseñaValue = contraseña.value.trim()
     
     if (contraseñaValue == "") {
-        setError(contraseña, "Tiene que ingresar su correo electronico")
+        setError(contraseña, "Tiene que ingresar su contraseña")
     }
     else{
         setSucces(contraseña)
@@ -85,7 +85,7 @@ function checkErrores() {
     let errorRegis = document.getElementsByClassName("textErrorForm")
     for (i = 0; i<errorRegis.length; i++) {
         
-        if (errorRegis[i].value != "") {
+        if (errorRegis[i].innerText != "") {
             errores += 1
         }
         else{

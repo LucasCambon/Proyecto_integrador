@@ -24,13 +24,7 @@ router.get("/logout", usersController.logout);
 
 
 router.get("/borrar/:id", usersController.borrarUsuario);
-
+router.get('/admin/:id',usersController.adminUsuario); 
 
 module.exports = router;
 
-/*const deleteFile = (req,file) => {
-    let rutaArchivo = "../../public/img" + req.file.filename
-    fs.unlink(rutaArchivo, (err) => {
-        if (err) throw err;
-    })
-}*/

@@ -14,30 +14,40 @@ const controladorAPIS =
 	todosProductos: (req,res) => {
 		db.Producto.findAll()
 			.then(productos => {
-				let contadores = { total: 0, activos: 0, eliminados: 0, juegos: 0, items: 0, bundle: 0, coins: 0 ,merchandising: 0 }
-				
+				let productosCont = { total: 0, activos: 0}
+				let contadores = { juegos: 0, items: 0, bundle: 0, coins: 0 ,merchandising: 0 }
+				let contCat = 0;
+				let prodActivos = []
+				let prodEliminados = []
 				for (let i=0; i<productos.length; i++){
-					console.log(productos[i].category)
-					contadores.total += 1
+					productosCont.total += 1
 					if (productos[i].eliminado == false){
-						contadores.activos += 1
+						productosCont.activos += 1
 						let categoria = productos[i].category
 						contadores[categoria] += 1
+						prodActivos.push(productos[i])
 					}
-					else {
-						contadores.eliminados +=1
+					else{
+						prodEliminados.push(productos[i])
 					}
                 }
+				for (let categoria in contadores){
+					contCat += 1
+				}
 				return res.status(200).json({
-					data: productos,
-					totalCount: contadores.total,
-					activeCount: contadores.activos,
-					delCount: contadores.eliminados,
-					juegosCount: contadores.juegos,
-					itemsCount: contadores.items,
-					bundleCount: contadores.bundle,
-					coinsCount: contadores.coins,
-					merchCount: contadores.merchandising,
+					data: prodActivos,
+					eliminados: prodEliminados,
+					totalCount: productosCont.total,
+					activeCount: productosCont.activos,
+					categorias: [
+						{juegos: contadores.juegos},
+						{items: contadores.items},
+						{bundle: contadores.bundle},
+						{coins: contadores.coins},
+						{merch: contadores.merchandising}
+
+					],
+					categoryCount: contCat,
 					status: 200
 				})
 			})
@@ -45,11 +55,14 @@ const controladorAPIS =
     usuarioId: (req,res) => {
 		db.Usuario.findByPk(req.params.id)
 			.then(usuario => {
-                usuario.contrasenia = ""
+                usuario.contrasenia = undefined
 				return res.status(200).json({
 					data: usuario,
 					status: 200
 				})
+			})
+			.catch((e) => {
+				console.log(e)
 			})
 	},
 	todosUsuarios: (req,res) => {
@@ -57,7 +70,7 @@ const controladorAPIS =
 			.then(usuarios => {
 				let contador = 0;
                 for (let i=0; i<usuarios.length; i++){
-                    usuarios[i].contrasenia = ""
+                    usuarios[i].contrasenia = undefined
 					contador += 1
                 }
 				return res.status(200).json({

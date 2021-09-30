@@ -46,6 +46,11 @@ function agregarItem() {
         }
     }
     localStorage.setItem("productosEnCarrito", JSON.stringify(prodCarrito))
+    Swal.fire(
+        'Exito!',
+        'Producto agregado al carrito!',
+        'success'
+      )
     total ()
 }
 
