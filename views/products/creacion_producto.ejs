@@ -38,7 +38,7 @@
                 
                 <h4 class="fs-2">Seleccionar imagen</h4>
                 <label for="image"></label>
-                <input class="datos_a_ingresar" type="file" name="image" id="image" accept=".png, .img, .jpg, .jpeg">
+                <input class="datos_a_ingresar" type="file" name="image" id="image" accept=".png, .img, .jpg, .jpeg .webp">
                 <% if (locals.errors && errors.image) { %>
                     <p class="textErrorForm"><%= errors.image.msg %></p>
                 <% } %>

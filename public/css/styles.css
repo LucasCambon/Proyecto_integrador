@@ -787,6 +787,7 @@ body {
     margin-bottom: 25px;
     box-shadow: 10px 5px 5px rgb(54, 7, 134);
     background-color: black;
+    min-width: 2rem;
 }
 #col-img-prod {
     display: flex;

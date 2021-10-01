@@ -8,7 +8,7 @@ module.exports = [
     body("category").notEmpty().withMessage("Tienes que elegir la categoría del producto"),
     body("image").custom((value, {req}) => {
         let file = req.file;
-        let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg"]
+        let acceptedExtensions = [".jpg", ".png", ".gif", ".jpeg",".webp"]
         
         if (file == undefined){
             throw new Error("Adjunte una imagen con formato: " + acceptedExtensions + " y peso máximo 10mb.")

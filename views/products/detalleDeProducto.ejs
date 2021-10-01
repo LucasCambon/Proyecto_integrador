@@ -27,20 +27,20 @@
                     <h2 id="nomProd"><%=producto.name%></h2>
                     <hr id="hrPrecio">
                     <p class="lead"><%=producto.description%></p>
-                    <div class="cuadroPrecio">
+                    <div class="cuadroPrecio mx-auto">
                         <p class="display-2" id="priceProd">$<%=producto.price%></p>
                     </div>
                 </div>               
-                <div class="container" id="botones-edicion">
-                    <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
+                <div class="container text-center" id="botones-edicion">
+                    <form class="text-center" action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
                         <button type="submit" class="btn btn-outline-success btn-lg" id="boton-eliminar">ELIMINAR</button>
                     </form>    
-                    <a href="/products/edicion_producto/<%=producto.id%>" class="btn btn-outline-success btn-lg" id="boton-eliminar" >EDITAR PRODUCTO</a>
+                    <a href="/products/edicion_producto/<%=producto.id%>" class="btn btn-outline-success btn-lg text-center" id="boton-eliminar" >EDITAR PRODUCTO</a>
                 </div>
             </div>
             <div class="col" id="col-img-prod" >
                 <div id="carousel" >
-                    <img src="/img/<%=producto.image%>" class="img-prod" id="imgProdCarrito"  alt="<%=producto.image%>" >  
+                    <img src="/img/<%=producto.image%>" class="img-prod img-thumbnail " id="imgProdCarrito"  alt="<%=producto.image%>" >  
                 </div>
                 <section class="botones">
                     <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-heart fa-1.5x iconos-heart iconresponsive"></i>Wishlist</a>
