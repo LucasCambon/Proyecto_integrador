@@ -10,12 +10,16 @@ else{
 function ready () {
 
 
-    let emailLogeado = document.getElementsByClassName("emailLogeado")
-    for (let i = 0; i<emailLogeado.length; i++) {
-        let email = emailLogeado[i]
-        console.log(email.innerText)
-        localStorage.setItem("usuarioLogeado", email.innerText)
-    }
+    
+    let formularioLogin = document.getElementsByClassName("formularioLogin")
+    
+        for (let i = 0; i<formularioLogin.length; i++) {
+            let form = formularioLogin[i]
+            form.addEventListener("submit", (e) => {
+                guardarUsuario()
+            })
+        }
+        
 
 
     let botonCerrar = document.getElementsByClassName("cerrarSesion")
@@ -31,4 +35,14 @@ function ready () {
 
 function borrarUsuario() {
     localStorage.removeItem("usuarioLogeado")
+}
+
+function guardarUsuario() {
+
+    let emailLogeado = document.getElementById("correo")
+    let emailLogeadoValue = emailLogeado.value.trim()
+
+    localStorage.setItem("usuarioLogeado", emailLogeadoValue)
+
+
 }
