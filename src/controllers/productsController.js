@@ -90,7 +90,7 @@ const controladorProducts =
 			.catch((e) => {
 				console.log(e)
 			})
-			res.render("./products/mensaje-edicion")
+			return res.redirect("/")
 		}
 		
 	
@@ -174,7 +174,7 @@ const controladorProducts =
 			{
 				where: {id: req.params.id}
 			}).then(() => {
-				return res.render("./products/mensaje-borrado")
+				return res.redirect("/")
 			})
 			
 	}
