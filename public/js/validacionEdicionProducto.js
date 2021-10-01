@@ -9,7 +9,7 @@ else{
 
 function ready () {
     let formulario = document.getElementsByClassName("formularioRegistroProd")
-    
+    let botonEliminado = document.getElementsByClassName("botonEliminado")
 
 
     for (let i = 0; i<formulario.length; i++) {
@@ -32,6 +32,16 @@ function ready () {
                 })
             }
     
+        })
+    }
+    for (let i = 0; i<botonEliminado.length; i++) {
+        let boton = botonEliminado[i]
+        boton.addEventListener("submit", (e) => {
+            Swal.fire(
+                'Exito!',
+                'Producto eliminado correctamente!',
+                'success'
+              )
         })
     }
 
