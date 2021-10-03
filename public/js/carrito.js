@@ -144,6 +144,9 @@ function updateTotal () {
 
 function displayCarritoVacio () {
     let montoTotal = JSON.parse(localStorage.getItem("totalCarrito")); // valor total en memoria
+    if (!montoTotal) {
+        montoTotal = 0
+    }
     let totalAPagar = document.querySelector(".contPago"); // vista del total en el carrito
         totalAPagar.innerHTML = `
         <ul class="pago">

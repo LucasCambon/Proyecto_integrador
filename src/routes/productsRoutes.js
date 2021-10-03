@@ -20,7 +20,7 @@ router.get("/detalleDeProducto/:id",productsController.detalleDeProducto)
 
 /*** EDITAR PRODUCTO ***/
 router.get('/edicion_producto/:id',productsController.edicion_productos); 
-router.put('/edicion_producto/:id', validations,productsController.update); 
+router.put('/edicion_producto/:id',validations,productsController.update); 
 
 /*** LISTADO DE PRODUCTOS ***/
 router.get("/listado_productos",productsController.listado_productos);

@@ -26,6 +26,9 @@ module.exports = (sequelize, dataTypes) => {
         image:{
             type: dataTypes.STRING(255),
             allowNull: false
+        },
+        administrador:{
+            type: dataTypes.BOOLEAN,
         }
 
     }

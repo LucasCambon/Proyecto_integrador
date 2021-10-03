@@ -21,57 +21,78 @@
             <h4 class="fs-1">Modificar producto</h4>
             <hr class="registro-hr">
             <form action="<%= producto.id%>?_method=PUT" method="POST">
-            
-                <label for="name"></label>
+                
+                <div class="formControl">
 
-                <% if (locals.errors && errors.name) { %>
-                    <input class="datos_a_ingresar" type="text" name="name" value="<%= locals.oldData ? oldData.name : producto.name %>" id="name" placeholder="Nombre de Producto">
-                    <p class="textErrorForm"><%= errors.name.msg %></p>
-                <% } else { %>
-                    <input class="datos_a_ingresar" type="text" name="name" value="<%= locals.oldData ? oldData.name : producto.name %>" id="name" placeholder="Nombre de Producto">
-                <% } %>   
-                <label for="description"></label>
-                <% if (locals.errors && errors.description) { %>
-                    <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto"><%= locals.oldData ? oldData.description : producto.description %></textarea>
-                    <p class="textErrorForm"><%= errors.description.msg %></p>
-                <% } else { %>
-                    <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto"><%= locals.oldData ? oldData.description : producto.description %></textarea>
-                <% } %>  
-                <label for="price"></label>
-                <% if (locals.errors && errors.price) { %>
-                    <input class="datos_a_ingresar" type="text" name="price" value="<%= locals.oldData ? oldData.price : producto.price %>" id="price" placeholder="Precio del Producto">
-                    <p class="textErrorForm"><%= errors.price.msg %></p>
-                <% } else { %>
-                    <input class="datos_a_ingresar" type="text" name="price" value="<%= locals.oldData ? oldData.price : producto.price %>" id="price" placeholder="Precio del Producto">
-                <% } %>   
+                    <label for="name"></label>
+                    <% if (locals.errors && errors.name) { %>
+                        <input class="datos_a_ingresar" type="text" name="name" value="<%= locals.oldData ? oldData.name : producto.name %>" id="name" placeholder="Nombre de Producto">
+                        <p class="textErrorForm"><%= errors.name.msg %></p>
+                    <% } else { %>
+                        <input class="datos_a_ingresar" type="text" name="name" value="<%= locals.oldData ? oldData.name : producto.name %>" id="name" placeholder="Nombre de Producto">
+                    <% } %>
+                    <p class="textErrorForm"></p>   
 
-                <h4 class="fs-2">Seleccionar categoría de producto</h4>
-                <label for="categoriaProducto"></label>
-                <div class="tipoProd">
-                    <div class="tipoProdBox">    
-                        <input type="radio" name="category" id="category"value="juegos">
-                        <label class="tipoLabel" for="juegos">Juegos</label>
-                    </div>    
-                    <div class="tipoProdBox">    
-                        <input type="radio" name="category" id="category" value="items">
-                        <label class="tipoLabel" for="items">Items</label>
-                    </div>
-                    <div class="tipoProdBox">
-                        <input type="radio" name="category" id="category" value="bundle">
-                        <label class="tipoLabel" for="bundle">Bundle</label>
-                    </div>
-                    <div class="tipoProdBox">
-                        <input type="radio" name="category" id="category" value="coins">
-                        <label class="tipoLabel" for="coins">Spartan Coins</label>
-                    </div>
-                    <div class="tipoProdBox">
-                        <input type="radio" name="category" id="category" value="merchandising">
-                        <label class="tipoLabel" for="merchandising">Merchandising</label>
-                    </div>
                 </div>
-                <% if (locals.errors && errors.category) { %>
-                    <p class="textErrorForm"><%= errors.category.msg %></p>
-                <% } %>
+
+                <div class="formControl">
+
+                    <label for="description"></label>
+                    <% if (locals.errors && errors.description) { %>
+                        <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto"><%= locals.oldData ? oldData.description : producto.description %></textarea>
+                        <p class="textErrorForm"><%= errors.description.msg %></p>
+                    <% } else { %>
+                        <textarea class="datos_a_ingresar" type="text" name="description" id="description" placeholder="Descripcion del Producto"><%= locals.oldData ? oldData.description : producto.description %></textarea>
+                    <% } %>
+                    <p class="textErrorForm"></p>  
+
+                </div>
+
+                <div class="formControl">
+
+                    <label for="price"></label>
+                    <% if (locals.errors && errors.price) { %>
+                        <input class="datos_a_ingresar" type="text" name="price" value="<%= locals.oldData ? oldData.price : producto.price %>" id="price" placeholder="Precio del Producto">
+                        <p class="textErrorForm"><%= errors.price.msg %></p>
+                    <% } else { %>
+                        <input class="datos_a_ingresar" type="text" name="price" value="<%= locals.oldData ? oldData.price : producto.price %>" id="price" placeholder="Precio del Producto">
+                    <% } %>
+                    <p class="textErrorForm"></p>   
+
+                </div>
+                <h4 class="fs-2">Seleccionar categoría de producto</h4>
+
+                <div class="formControl">
+
+                    <label for="categoriaProducto"></label>
+                    <div class="tipoProd">
+                        <div class="tipoProdBox">    
+                            <input type="radio" name="category" id="category"value="juegos">
+                            <label class="tipoLabel" for="juegos">Juegos</label>
+                        </div>    
+                        <div class="tipoProdBox">    
+                            <input type="radio" name="category" id="category" value="items">
+                            <label class="tipoLabel" for="items">Items</label>
+                        </div>
+                        <div class="tipoProdBox">
+                            <input type="radio" name="category" id="category" value="bundle">
+                            <label class="tipoLabel" for="bundle">Bundle</label>
+                        </div>
+                        <div class="tipoProdBox">
+                            <input type="radio" name="category" id="category" value="coins">
+                            <label class="tipoLabel" for="coins">Spartan Coins</label>
+                        </div>
+                        <div class="tipoProdBox">
+                            <input type="radio" name="category" id="category" value="merchandising">
+                            <label class="tipoLabel" for="merchandising">Merchandising</label>
+                        </div>
+                    </div>
+                    <% if (locals.errors && errors.category) { %>
+                        <p class="textErrorForm"><%= errors.category.msg %></p>
+                    <% } %>
+                    <p class="textErrorForm"></p>
+
+                </div>
                 <label for="boton"></label>
                 <div class="d-grid gap-2">
                     <button id="btn-registrarme" class="btn btn-primary" type="submit">Guardar</button>              
@@ -79,8 +100,11 @@
                 <div class="d-grid gap-2">
                     <button id="btn-registrarme" class="btn btn-primary" type="reset">Reiniciar</button>           
                 </div>
+                
         </form>
-
+        <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
+            <button type="submit" class="btn btn-outline-success btn-lg botonEliminado" id="boton-eliminar">ELIMINAR</button>
+        </form> 
         </section>
         
         <br>
@@ -88,10 +112,11 @@
         <%- include("../partials/footer") %>
         <br>
         <br>
-
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
         <script src="/js/menuHamburguesa.js" async></script>
-        
+        <script src="/js/validacionEdicionProducto.js" async></script>
+        <script src="/js/authAdmin.js" async></script>
     </body>
 
 </html>
