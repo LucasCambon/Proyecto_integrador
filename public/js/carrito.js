@@ -7,9 +7,11 @@ if(document.readyState == "loading") {
 function ready () {
     console.log(JSON.parse(localStorage.getItem("productosEnCarrito")))
     if (JSON.parse(localStorage.getItem("productosEnCarrito")) == null){
+        updateTotal()
         displayCarritoVacio()
     }
     else{
+        updateTotal()
         displayCarrito ()
     }
 

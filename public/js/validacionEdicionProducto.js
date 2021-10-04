@@ -30,6 +30,7 @@ function ready () {
                     title: 'Oops...',
                     text: 'Revise los campos!'
                 })
+                location.reload
             }
     
         })

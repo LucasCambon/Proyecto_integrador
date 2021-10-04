@@ -12,8 +12,17 @@ function ready(){
     let botonAgregar = document.getElementsByClassName("agregarCarrito")
     for (let i = 0; i<botonAgregar.length; i++) {
         let boton = botonAgregar[i]
-        boton.addEventListener("click", agregarItem)
-    }
+        boton.addEventListener("click", (e) =>{
+            agregarItem()
+            Swal.fire(
+                'Exito!',
+                'Producto agregado al carrito!',
+                'success'
+              )
+            
+        }
+        
+    )}
 
 }
 
@@ -46,11 +55,6 @@ function agregarItem() {
         }
     }
     localStorage.setItem("productosEnCarrito", JSON.stringify(prodCarrito))
-    Swal.fire(
-        'Exito!',
-        'Producto agregado al carrito!',
-        'success'
-      )
     total ()
 }
 
