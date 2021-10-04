@@ -1,111 +1,75 @@
 [
   {
-    "id": 1,
-    "name": "Prueba 1",
-    "price": 20,
-    "discount": 4,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
-  },
-  {
-    "id": 2,
-    "name": "Prueba 2",
-    "price": 20,
-    "discount": 4,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
-  },
-  {
-    "id": 3,
-    "name": "Prueba 3",
-    "price": 60,
-    "discount": 8,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
-  },
-  {
     "id": 4,
-    "name": "Prueba 4",
-    "price": 120,
-    "discount": 16,
+    "name": "Pistola Mullticolor",
+    "price": "600.00",
+    "discount": 0,
     "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "description": "Pistola de baja cadencia y gran precisión",
+    "image": "1633200662773.png"
   },
   {
     "id": 5,
-    "name": "Prueba 5",
-    "price": 240,
-    "discount": 32,
+    "name": "Espada Artesana",
+    "price": "590.00",
+    "discount": 0,
     "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "description":"Espada legendaria Mágica",
+    "image":"1633215515894.png"
   },
   {
-    "id": 6,
-    "name": "Prueba 6",
-    "price": 480,
-    "discount": 64,
-    "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":6,
+    "name":"Rifle de asalto",
+    "price":"710.00",
+    "discount": 0,
+    "category":"Recomendado",
+    "description":"Rifle de asalto Vandal",
+    "image":"1633215636583.png"
   },
   {
-    "id": 7,
-    "name": "Prueba 7",
-    "price": 120,
-    "discount": 16,
-    "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":7,
+    "name":"Pistola Eclipse Ghost",
+    "price":"660.00",
+    "discount": 0,
+    "category":"Destacado",
+    "description":"Pistola con silenciador y  temática espacial",
+    "image":"1633215731366.png"
   },
   {
-    "id": 8,
-    "name": "Prueba 8",
-    "price": 240,
-    "discount": 32,
-    "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":8,
+    "name":"Pistola Ego",
+    "price":"650.00",
+    "discount": 0,
+    "category":"Recomendado",
+    "description":"Pistola Ego Ghost silenciada",
+    "image":"1633215834369.png"
   },
   {
-    "id": 9,
-    "name": "Prueba 9",
-    "price": 480,
-    "discount": 64,
-    "category": "Recomendado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":10,
+    "name":"Rifle de asalto Glitch Pop",
+    "price":"750.00",
+    "discount": 0,
+    "category":"Destacado",
+    "description":"Rifle de asalto Glitch Pop",
+    "image":"1633216976918.png"
   },
   {
-    "id": 10,
-    "name": "Prueba 10",
-    "price": 20,
-    "discount": 4,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":11,
+    "name":"KTAC Blade",
+    "price":"490.00",
+    "discount": 0,
+    "category":"Destacado",
+    "description":"Espada KTAC Blade optimizada",
+    "image":"1633217048801.png"
   },
   {
-    "id": 11,
-    "name": "Prueba 11",
-    "price": 20,
-    "discount": 4,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
-  },
-  {
-    "id": 12,
-    "name": "Prueba 12",
-    "price": 60,
-    "discount": 8,
-    "category": "Destacado",
-    "description": "producto de prueba",
-    "image": "imagen de producto prueba.png"
+    "id":12,
+    "name":"Rifle de asalto KTAC Vandal",
+    "price":"720.00",
+    "discount": 0,
+    "category":"Destacado",
+    "description":"Rifle de asalto KTAC Vandal",
+    "image":"1633217136825.png"
   },
   {
     "id": 13,
