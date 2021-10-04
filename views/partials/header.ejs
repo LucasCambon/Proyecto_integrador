@@ -44,7 +44,7 @@
                     <a class="btn btn-outline-secondary botonNavBar" href="/users/perfil" type="button"> <!--<img src="/img/<%= locals.userLogged.imagen %>" >--><%= locals.userLogged.nombre %></a>
                 </div>
             <% } else { %>
-                <div class="botones">
+                <div class="botones" style="z-index: 5;">
                     <button class="btn btn-outline-secondary dropdown-toggle botonNavBar botonCuenta " type="button" data-bs-toggle="dropdown" aria-expanded="false">Cuenta</button>
                     <ul class="dropdown-menu dropdown-menu-dark">
                         <li><a class="dropdown-item" href="/users/ingreso" type="button">Log In</a></li>
