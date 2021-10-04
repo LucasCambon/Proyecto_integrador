@@ -24,7 +24,7 @@ router.get("/logout", usersController.logout);
 
 
 router.get("/borrar/:id", usersController.borrarUsuario);
-router.get('/admin/:id',usersController.adminUsuario); 
+router.put('/admin/:id',usersController.adminUsuario); 
 
 module.exports = router;
 

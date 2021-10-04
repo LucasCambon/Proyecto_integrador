@@ -6,6 +6,7 @@ const productsController = require("../controllers/productsController")
 const logeadoPpagar = require("../middlewares/authLogeadoPagoMiddleware")
 const uploadFile = require("../middlewares/multerMiddleware")
 const validations = require("../middlewares/validationProductRegister")
+const validationsEdit = require("../middlewares/validationEditProduct")
 
 /*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
@@ -20,7 +21,7 @@ router.get("/detalleDeProducto/:id",productsController.detalleDeProducto)
 
 /*** EDITAR PRODUCTO ***/
 router.get('/edicion_producto/:id',productsController.edicion_productos); 
-router.put('/edicion_producto/:id',validations,productsController.update); 
+router.put('/edicion_producto/:id',validationsEdit,productsController.update); 
 
 /*** LISTADO DE PRODUCTOS ***/
 router.get("/listado_productos",productsController.listado_productos);

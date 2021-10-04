@@ -20,7 +20,8 @@
 
             <h4 class="fs-1">Modificar producto</h4>
             <hr class="registro-hr">
-            <form action="<%= producto.id%>?_method=PUT" method="POST">
+            
+            <form action="<%= producto.id %>?_method=PUT" method="POST">
                 
                 <div class="formControl">
 
@@ -101,10 +102,12 @@
                     <button id="btn-registrarme" class="btn btn-primary" type="reset">Reiniciar</button>           
                 </div>
                 
-        </form>
+            </form>
+
         <form action="/products/delete/<%= producto.id%>?_method=delete" method="POST"  >
             <button type="submit" class="btn btn-outline-success btn-lg botonEliminado" id="boton-eliminar">ELIMINAR</button>
         </form> 
+
         </section>
         
         <br>

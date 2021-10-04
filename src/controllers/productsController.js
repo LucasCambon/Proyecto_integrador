@@ -90,7 +90,7 @@ const controladorProducts =
 			.catch((e) => {
 				console.log(e)
 			})
-			return res.redirect("/")
+			res.redirect("/")
 		}
 		
 	
