@@ -34,11 +34,7 @@
             </div>
         </section>
         <section class="parteDer">   
-            <form class="busqueda">
-                <label class=".wrapper">
-                    <input class="barra" type="search" name="barraDeBusqueda" placeholder="  Buscar en la tienda"></input type="submit" value="buscar">
-                </label>
-            </form>
+            
             <% if (locals.isLogged) {%>
                 <div class="botones">
                     <a class="btn btn-outline-secondary botonNavBar" href="/users/perfil" type="button"> <!--<img src="/img/<%= locals.userLogged.imagen %>" >--><%= locals.userLogged.nombre %></a>

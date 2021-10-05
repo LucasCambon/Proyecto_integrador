@@ -30,7 +30,21 @@ function ready () {
         boton.addEventListener("click", eliminarProd)
     }
 
-    
+    let botonFinalizar = document.getElementsByClassName("botonFinalizar")
+    for (let i = 0; i<botonFinalizar.length; i++) {
+        let boton = botonFinalizar[i]
+        boton.addEventListener("click", (e) => {
+            Swal.fire(
+                'Compra finalizada!',
+                'Revise su casilla de correo para continuar!',
+                'success'
+              ).then(function() {
+                    vaciarCarrito()
+              })
+        })
+    }
+
+
 }
 
 function eliminarProd(event) {
