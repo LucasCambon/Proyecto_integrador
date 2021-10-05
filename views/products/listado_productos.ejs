@@ -17,7 +17,7 @@
         
         
         <%- include("../partials/headerCategorias") %>
-        <div id="carouselExampleCaptions" class="carousel slide w-50" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide w-50 h-fixed" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -63,18 +63,18 @@
             </div>
             <hr class="productosRelacionados-hr">
             <section class="container">
-                <div class="row" id="listadoProductos">
+                <div class="row mx-auto" id="listadoProductos">
                     <% for (let i=0; i<productos.length ; i++){%>
-                        <div class="productos col" id="box-productos-listado">
+                        <div class="productos col align-self-start" id="box-productos-listado">
                             <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                 <div class="fotos">
-                                    <img src="/img/<%= productos[i].image %>" alt="Coast">
+                                    <img class="" src="/img/<%= productos[i].image %>" alt="Coast">
                                 </div>
                             </a>
                             <div class="contDesc">
                                 <div class="precioDesc">
-                                    <p class="nombre"><%= productos[i].name %></p>
-                                    <p class="precio">$ <%=productos[i].price%></p>
+                                    <p class="nombre lead"><%= productos[i].name %></p>
+                                    <p class="precio lead">$ <%=productos[i].price%></p>
                                 </div>
                             </div>
                         </div>

@@ -23,11 +23,11 @@
         <div class="row" id="rowTop">
             <div class="col" id="col-left">    
                 <div class="h-100 p-5 text-white bg-dark rounded-3" id="cuadroProd">
-                    <h2 id="idProd"><%=producto.id%></h2>
+                    <h2 id="idProd" class="fs-5 text-secondary">Art.n°:<%=producto.id%></h2>
                     <h2 id="nomProd"><%=producto.name%></h2>
                     <hr id="hrPrecio">
                     <p class="lead"><%=producto.description%></p>
-                    <div class="cuadroPrecio">
+                    <div class="cuadroPrecio d-md-inline-flex">
                         <p class="display-2" id="priceProd">$<%=producto.price%></p>
                     </div>
                 </div>               
@@ -41,30 +41,28 @@
                     <img src="/img/<%=producto.image%>" class="img-prod" id="imgProdCarrito"  alt="<%=producto.image%>" >  
                 </div>
                 <section class="botones">
-                    <a class="btn btn-outline-success btn-lg" href="/products/carrito"><i class="fas fa-heart fa-1.5x iconos-heart iconresponsive"></i>Wishlist</a>
                     <a class="btn btn-outline-success btn-lg agregarCarrito"><i class="fas fa-shopping-cart fa-1.5x iconos-cart iconresponsive"></i>Al Carrito</a> 
-                    <a class="btn btn-success btn-lg" href="/products/carrito"><i class="fas fa-coins fa-1.5x iconos-coins iconresponsive"></i>Comprar</a> 
                 </section>  
             </div>
         </div>
         <div class="row" id="rowBottom">
         <section class="productosRelacionados"> 
-            <h2 class="productosRelacionados Titulo t-h2">Productos Relacionados</h2>
+            <h2 class="productosRelacionados Titulo t-h2">Otros Productos</h2>
             <hr class="productosRelacionados-hr">
-            <div class="row" id="row-prod-rel">
+            <div class="row d-flex align-items-center" id="row-prod-rel">
                 
                 
                 <div class="col" id="col-img-prod-rel">
-                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%=producto.image%>" alt="ImagenProductoA"></a>
-                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
+                    <a href="/products/detalleDeProducto/12"><img class="img-prod-rel" src="/img/1633217136825.png" alt="ImagenProductoA"></a>
+                    <h3 class="prod-rel-subtitle">Rifle de asalto KTAC Vandal</h3>
                 </div>
                 <div class="col" id="col-img-prod-rel">
-                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%=producto.image%>" alt="ImagenProductoB"></a>
-                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
+                    <a href="/products/detalleDeProducto/15"><img class="img-prod-rel" src="/img/1633217462390.png" alt="ImagenProductoB"></a>
+                    <h3 class="prod-rel-subtitle">Navaja Recon Balisong</h3>
                 </div>
                 <div class="col" id="col-img-prod-rel">
-                    <a href="/products/detalleDeProducto/<%=producto.id%>"><img class="img-prod-rel" src="/img/<%= producto.image%>" alt="ImagenProductoC"></a>
-                    <h3 class="prod-rel-subtitle"><%= producto.name%></h3>
+                    <a href="/products/detalleDeProducto/18"><img class="img-prod-rel" src="/img/1633217765715.png" alt="ImagenProductoC"></a>
+                    <h3 class="prod-rel-subtitle">Reliquia del Centinela</h3>
                 </div>
                 
 

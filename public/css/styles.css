@@ -517,7 +517,7 @@ select{
 
 /* Media Querys */
 
-@media only screen and (max-width: 997px) {
+/* @media only screen and (max-width: 997px) {
 
     div.stars{
         height: 190em;
@@ -531,7 +531,7 @@ select{
         height: 125em;
     }
 
-}
+} */
 @media only screen and (max-width: 769px) {
     
     div#bgListado{
@@ -540,7 +540,7 @@ select{
 
 }
 
-@media only screen and (max-width: 640px) {
+/* @media only screen and (max-width: 640px) {
 
 
     div.col{
@@ -558,7 +558,7 @@ select{
     div#bgListado{
         height: 145em;
     }
-}
+} */
 
 @media only screen and (max-width: 543px) {
     
@@ -804,7 +804,7 @@ body {
     padding: 0 2rem 0 2rem;
     background-color: rgba(78, 79, 165, 0.219);
     box-shadow: 10px 5px 5px rgb(54, 7, 134);
-    margin: 10% auto auto 23%;
+    
 }
 .display-2 {
     color: gold;
@@ -1054,7 +1054,7 @@ body {
 }
 
 /* RESPONSIVE DESIGN-------------------DETALLE DE PRODUCTO--------- */
-
+/*
 @media only screen and (max-width: 1400px) {
 
     .main {
@@ -1239,8 +1239,8 @@ body {
         margin-left: 50px; 
     }
 
-}
-/* MEDIA QUERY */
+} */
+/* MEDIA QUERY *//*
 @media only screen and (max-width: 880px) {
 
     #botones-edicion {
@@ -1985,7 +1985,7 @@ body {
 /*----------------------------------Merge End (normalize.css)----------------------------*/
 #bg-box-listado {
     padding-top: 0;
-    margin-top: 105px;
+    
 }
 
 #h4-prod-destacados-listado {

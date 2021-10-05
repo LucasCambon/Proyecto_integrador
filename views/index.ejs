@@ -46,7 +46,7 @@
                 <div class="row">
                 <% for (let i=0; i<productos.length ; i++){%>
                     <% if (productos[i].category === "Recomendado"){%>
-                        <div class="productos col" id="box-productos">
+                        <div class="productos col align-self-start" id="box-productos">
                                 <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                     <div class="fotos">
                                         <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -54,8 +54,8 @@
                                 </a>
                                 <div class="contDesc">
                                     <div class="precioDesc">
-                                        <p class="nombre"><%= productos[i].name %></p>
-                                        <p class="precio">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                        <p class="nombre lead" style="color: goldenrod;"><%= productos[i].name %></p>
+                                        <p class="precio lead" style="color: goldenrod;">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
                                     </div>
                                 </div>
                         </div>
@@ -72,7 +72,7 @@
                 <div class="row">
                     <% for (let i=0; i<productos.length ; i++){%>
                         <% if (productos[i].category === "Destacado"){%>
-                            <div class="productos col" id="box-productos">
+                            <div class="productos col align-self-start" id="box-productos">
                                 <a href="/products/detalleDeProducto/<%= productos[i].id%>">
                                     <div class="fotos">
                                         <img src="/img/<%= productos[i].image %>" alt="Coast">
@@ -80,8 +80,8 @@
                                 </a>
                                 <div class="contDesc">
                                     <div class="precioDesc">
-                                        <p class="nombre"><%= productos[i].name %></p>
-                                        <p class="precio">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
+                                        <p class="nombre lead" style="color: goldenrod;"><%= productos[i].name %></p>
+                                        <p class="precio lead"style="color: goldenrod;">$ <%= productos[i].price - ((productos[i].discount/100)*productos[i].price) %></p>
                                     </div>
                                 </div>
                             </div>
