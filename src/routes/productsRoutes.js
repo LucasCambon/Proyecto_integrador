@@ -10,6 +10,8 @@ const validationsEdit = require("../middlewares/validationEditProduct")
 
 /*** CARRITO ***/
 router.get("/carrito",productsController.carrito)
+router.get("/pago", logeadoPpagar, productsController.pagar)
+router.post("/carrito", productsController.facturacion)
 
 /*** CREAR PRODUCTO ***/
 router.get("/creacion_producto",productsController.creacion_producto)

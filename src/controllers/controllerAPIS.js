@@ -79,6 +79,34 @@ const controladorAPIS =
 					status: 200
 				})
 			})
+	},
+	facturas: (req,res) => {
+		db.Factura.findAll()
+			.then(facturas => {
+				let contador = 0;
+                for (let i=0; i<facturas.length; i++){
+					contador += 1
+                }
+				return res.status(200).json({
+					data: facturas,
+					count: contador,
+					status: 200
+				})
+			})
+	},
+	prodFactura: (req,res) => {
+		db.Producto_factura.findAll()
+			.then(prod => {
+				let contador = 0;
+                for (let i=0; i<prod.length; i++){
+					contador += 1
+                }
+				return res.status(200).json({
+					data: prod,
+					count: contador,
+					status: 200
+				})
+			})
 	}
 }
 
