@@ -179,29 +179,23 @@ function displayCarritoVacio () {
     `
 }
 
-/*let montoTotal = document.getElementById("montoTotal") // valor total en memoria
-let price = montoTotal.value
-console.log(monto)
 
-function enviarDatos(){
-    let datos = {
-        price
-    }
-
-
-    fetch("/products/carrito", {
-        method: "POST",
-        headers: {'Content-Type':'application/json'},
-        body: JSON.stringify(datos)
+function datoUsuario(){
+    let inputUsuario = document.getElementById("idUsuario")
+    fetch("http://localhost:3001/apiSpartan/usuarios")
+    .then(function(response){
+        return response.json();
     })
-    .then(function(res){ return res.json()})
-    .then(function(data){alert(JSON.stringify(data))})
-    .catch(e => {
-        console.log(e)
+    .then(function(data){
+        data.data.forEach(usuario => {
+            if (usuario.email == localStorage.getItem("usuarioLogeado")){
+                inputUsuario.value = usuario.id
+            }
+        });
     })
+    .catch( error => console.log(error))
 }
 
-*/
 
 function enviarCarrito(){
     let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
@@ -219,3 +213,4 @@ function enviarCarrito(){
 }
 
 enviarCarrito()
+datoUsuario()

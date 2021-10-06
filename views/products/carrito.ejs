@@ -45,6 +45,7 @@
                             <div class="d-flex flex-row justify-content-evenly gap-4 mt-3 p-2 ">
                                 <button class="btn-registrarme fs-2 text-wrap h-auto w-100 " id="botonVaciarCarrito" type="button">Vaciar</button>
                                 <form action="/products/carrito" method="POST"id="formCarrito">
+                                    <input type="hidden" name="idUsuario" value="" id="idUsuario">
                                     <input type="hidden" name="price" value="" id="totalCarrito">
                                     <input type="hidden" name="listadoCarrito" value="" id="itemsCarrito"> 
                                     <input  class="btn-registrarme fs-2 text-wrap h-auto w-100 botonFinalizar" type="submit" value="Comprar"></input>

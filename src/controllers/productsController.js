@@ -3,6 +3,7 @@ const { validationResult } = require("express-validator");
 const multer = require("multer");
 const mercadopago = require("mercadopago");
 const { push } = require("../middlewares/validationProductRegister");
+const nodemailer = require("nodemailer");
 
 
 mercadopago.configure({
@@ -186,6 +187,16 @@ const controladorProducts =
 			
 	},
 	facturacion: (req, res) => {
+
+		db.Factura.create({
+			fecha_factura: Date.now(),
+			total: req.body.price,
+			id_cliente: req.body.idUsuario
+		})
+		.catch((e) => {
+			console.log(e)
+		})
+
 		let prodCarrito = []
 		let carritoComplet = JSON.parse(req.body.listadoCarrito)
 		console.log(carritoComplet[0].name)
