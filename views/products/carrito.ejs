@@ -18,35 +18,41 @@
         
         <main class="cuerpo">
             <div class="container mt-5 mb-5">
-                <div class="resumen d-flex flex-wrap mx-auto justify-content-center row bg-box w-100 padding-0-responsive" >
-                    <div class="col-md-8">
-                        <div class="p-2">
-                            <h4 class="tit fs-1 text-center">Carrito de compras</h4>
-                            
-                            <div class="d-flex flex-row align-items-center pull-left">
-                               
+                    <div class="resumen d-flex flex-wrap mx-auto justify-content-center row bg-box w-100 padding-0-responsive" >
+                        <div class="col-md-8">
+                            <div class="p-2">
+                                <h4 class="tit fs-1 text-center">Carrito de compras</h4>
+                                
+                                <div class="d-flex flex-row align-items-center pull-left">
+                                
+                                </div>
+                                <i class="fa fa-angle-down"></i>
                             </div>
-                            <i class="fa fa-angle-down"></i>
+                        </div>
+                        <div class="carritoCompleto">
+                            <hr class="productosRelacionados-hr">
+                        
+                            
+                            <div class="itemsCarrito p-0 mx-0">
+
+                            </div>
+
+                            <br>
+                            
+                            <div class="contPago">
+                                
+                            </div>
+                            <div class="d-flex flex-row justify-content-evenly gap-4 mt-3 p-2 ">
+                                <button class="btn-registrarme fs-2 text-wrap h-auto w-100 " id="botonVaciarCarrito" type="button">Vaciar</button>
+                                <form action="/products/carrito" method="POST"id="formCarrito">
+                                    <input type="hidden" name="idUsuario" value="" id="idUsuario">
+                                    <input type="hidden" name="price" value="" id="totalCarrito">
+                                    <input type="hidden" name="listadoCarrito" value="" id="itemsCarrito"> 
+                                    <input  class="btn-registrarme fs-2 text-wrap h-auto w-100 botonFinalizar" type="submit" value="Comprar"></input>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="carritoCompleto">
-                        <hr class="productosRelacionados-hr">
-                    
-                        
-                        <div class="itemsCarrito p-0 mx-0">
-
-                        </div>
-
-                        <br>
-                        
-                        <div class="contPago">
-                            
-                        </div>
-                        <div class="d-flex flex-row justify-content-evenly gap-4 mt-3 p-2 ">
-                            <button class="btn-registrarme fs-2 text-wrap h-auto w-100 " id="botonVaciarCarrito" type="button">Vaciar</button>
-                            <button  class="btn-registrarme fs-2 text-wrap h-auto w-100 botonFinalizar" type="button">Comprar</button>
-                        </div>
-                </div>
             </div>
 
         </main>

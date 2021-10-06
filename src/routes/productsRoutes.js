@@ -7,9 +7,12 @@ const logeadoPpagar = require("../middlewares/authLogeadoPagoMiddleware")
 const uploadFile = require("../middlewares/multerMiddleware")
 const validations = require("../middlewares/validationProductRegister")
 const validationsEdit = require("../middlewares/validationEditProduct")
+const authMiddleware = require("../middlewares/authMiddlewares");
+
 
 /*** CARRITO ***/
-router.get("/carrito",productsController.carrito)
+router.get("/carrito",authMiddleware,productsController.carrito)
+router.post("/carrito", productsController.facturacion)
 
 /*** CREAR PRODUCTO ***/
 router.get("/creacion_producto",productsController.creacion_producto)

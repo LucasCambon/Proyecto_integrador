@@ -30,7 +30,13 @@ function ready () {
         boton.addEventListener("click", eliminarProd)
     }
 
-    let botonFinalizar = document.getElementsByClassName("botonFinalizar")
+    /*let formEnvio = document.getElementsByClassName("formEnvioCarrito")
+    for (let i = 0; i<formEnvio.length; i++) {
+        let form = formEnvio[i]
+        form.addEventListener("submit", enviarDatos)
+    }
+
+    /*let botonFinalizar = document.getElementsByClassName("botonFinalizar")
     for (let i = 0; i<botonFinalizar.length; i++) {
         let boton = botonFinalizar[i]
         boton.addEventListener("click", (e) => {
@@ -42,7 +48,7 @@ function ready () {
                     vaciarCarrito()
               })
         })
-    }
+    }*/
 
 
 }
@@ -126,7 +132,7 @@ function displayCarrito () {
     totalAPagar.innerHTML = `
         <ul class="pago">
             <li class="d-flex flex-row align-items-center tot">
-                <h5 class="des">Total:</h5> <h5 class="text-grey dinero totalCarrito">$ ${montoTotal}</h5>
+                <h5 class="des">Total: $</h5> <h5 class="text-grey dinero totalCarrito">${montoTotal} <input type="hidden" name="montoTotal" value="999" id="montoTotal"></input></h5>
             </li>
         </ul>
     `
@@ -172,3 +178,39 @@ function displayCarritoVacio () {
         </ul>
     `
 }
+
+
+function datoUsuario(){
+    let inputUsuario = document.getElementById("idUsuario")
+    fetch("http://localhost:3001/apiSpartan/usuarios")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        data.data.forEach(usuario => {
+            if (usuario.email == localStorage.getItem("usuarioLogeado")){
+                inputUsuario.value = usuario.id
+            }
+        });
+    })
+    .catch( error => console.log(error))
+}
+
+
+function enviarCarrito(){
+    let itemsCarrito = JSON.parse(localStorage.getItem("productosEnCarrito"));
+    let montoTotal = JSON.parse(localStorage.getItem("totalCarrito")); // valor total en memoria
+    let inputTotal = document.getElementById("totalCarrito")
+    let inputProd = document.getElementById("itemsCarrito")
+    let arrCarrito = []
+    for (producto in itemsCarrito){
+        arrCarrito.push(itemsCarrito[producto])
+    }
+    inputTotal.value = montoTotal
+    inputProd.value = JSON.stringify(arrCarrito)
+    console.log(inputProd)
+    
+}
+
+enviarCarrito()
+datoUsuario()

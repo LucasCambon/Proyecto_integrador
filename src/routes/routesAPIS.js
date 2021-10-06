@@ -13,5 +13,7 @@ router.get("/productos/:id",controllerAPIS.productoId)
 router.get("/usuarios",controllerAPIS.todosUsuarios)
 router.get("/usuarios/:id",controllerAPIS.usuarioId)
 
+router.get("/facturas",controllerAPIS.facturas)
+router.get("/prod_facturas",controllerAPIS.prodFactura)
 
 module.exports = router;

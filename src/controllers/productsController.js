@@ -1,12 +1,23 @@
 const db = require("../database/models")
 const { validationResult } = require("express-validator");
 const multer = require("multer");
+const mercadopago = require("mercadopago");
+const { push } = require("../middlewares/validationProductRegister");
+const nodemailer = require("nodemailer");
+
+
+mercadopago.configure({
+	access_token: 'APP_USR-6623451607855904-111502-1f258ab308efb0fb26345a2912a3cfa5-672708410'
+})
 
 const controladorProducts =
 {
     carrito: (req, res) => {
         res.render("./products/carrito");
     },
+	pagar: (req, res) => {
+		res.send("Pago completado")
+	},
     creacion_producto: (req, res) =>{
         res.render("./products/creacion_producto");
     },
@@ -174,6 +185,47 @@ const controladorProducts =
 				return res.redirect("/")
 			})
 			
+	},
+	facturacion: (req, res) => {
+
+		db.Factura.create({
+			fecha_factura: Date.now(),
+			total: req.body.price,
+			id_cliente: req.body.idUsuario
+		})
+		.catch((e) => {
+			console.log(e)
+		})
+
+		let prodCarrito = []
+		let carritoComplet = JSON.parse(req.body.listadoCarrito)
+		console.log(carritoComplet[0].name)
+		for (producto in carritoComplet){
+			prodCarrito.push({
+				title: carritoComplet[producto].name,
+				unit_price: parseInt(carritoComplet[producto].price),
+				quantity: parseInt(carritoComplet[producto].cantidad),
+			})
+		}
+		
+
+
+		let preference = {
+			items: prodCarrito,
+			back_urls: {
+			  success: "http://localhost:3001/",
+			  failure: "http://localhost:3001/products/carrito",
+			  pending: "http://localhost:3001/products/carrito"
+			}
+		  };
+		mercadopago.preferences.create(preference)
+		.then(function (response) {
+			
+			res.redirect(response.body.init_point);
+		
+		}).catch(function (error) {
+			console.log(error);
+		});
 	}
 }
 
